@@ -1,35 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 import { BehaviorSubject, Subject, Observable } from 'rxjs';
 
 @Injectable({
  providedIn: 'root'
 })
 export class FileService {
- private fileList: string[] = new Array<string>();
- private fileList$: Subject<string[]> = new Subject<string[]>();
+  DJANGO_SERVER: string = "http://127.0.0.1:8000";
+  constructor(private http: HttpClient) { }
 
- constructor() { }
-
- public upload(fileName: string, fileContent: string): void {
-   this.fileList.push(fileName);
-   this.fileList$.next(this.fileList);
- }
-
- public download(fileName: string): void {
-
- }
-
- public remove(fileName): void {
-   this.fileList.splice(this.fileList.findIndex(name => name === fileName), 1);
-   this.fileList$.next(this.fileList);
- }
-
- public list(): Observable<string[]> {
-   return this.fileList$;
- }
-
- private addFileToList(fileName: string): void {
-   this.fileList.push(fileName);
-   this.fileList$.next(this.fileList);
- }
+  public upload(formData) {
+    return this.http.post<any>(`${this.DJANGO_SERVER}/upload/`, formData);
+  }
 }

@@ -1,8 +1,1 @@
 <h1>Your Files</h1>
-<ul>
-    <li *ngFor="let fileName of fileList$ | async" >
-        {{fileName}}&nbsp;&nbsp;
-        <span (click)="download(fileName)">Download</span>&nbsp;
-        <span (click)="remove(fileName)">Remove</span>
-    </li>
-</ul>

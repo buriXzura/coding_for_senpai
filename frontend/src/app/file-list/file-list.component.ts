@@ -9,19 +9,11 @@ import { Observable } from 'rxjs';
 })
 export class FileListComponent implements OnInit {
 
-  public fileList$: Observable<string[]> = this.fileService.list();
 
   constructor(private fileService: FileService) { }
 
   ngOnInit(): void {
   }
 
-  public download(fileName: string): void {
-    this.fileService.download(fileName);
-  }
-
-  public remove(fileName: string): void {
-    this.fileService.remove(fileName);
-  }
 
 }

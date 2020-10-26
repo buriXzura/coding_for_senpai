@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FileUploader, FileLikeObject } from 'ng2-file-upload';
+import { concat } from  'rxjs';
+import {MatDialog} from '@angular/material/dialog';
 import { FileService } from '../service/file.service';
 
 @Component({
@@ -9,35 +11,50 @@ import { FileService } from '../service/file.service';
 })
 export class UploadComponent implements OnInit {
 
-  public formGroup = this.fb.group({
-    file: [null, Validators.required]
-  });
- 
-  private fileName;
+  URL: string = "http://127.0.0.1:8000/upload/";
+  public uploader: FileUploader = new FileUploader({ });
+  public hasBaseDropZoneOver: boolean = false;
 
-  constructor(private fb: FormBuilder, private fileService: FileService) { }
+  constructor(
+    private fileService: FileService,
+    public dialog: MatDialog
+    ) {}
 
   ngOnInit(): void {
   }
 
-  public onFileChange(event) {
-    const reader = new FileReader();
- 
-    if (event.target.files && event.target.files.length) {
-      this.fileName = event.target.files[0].name;
-      const [file] = event.target.files;
-      reader.readAsDataURL(file);
-     
-      reader.onload = () => {
-        this.formGroup.patchValue({
-          file: reader.result
-        });
-      };
-    } 
+
+  fileOverBase(event): void {
+    this.hasBaseDropZoneOver = event;
   }
 
-  public onSubmit(): void {
-    this.fileService.upload(this.fileName, this.formGroup.get('file').value);
+  getFiles(): FileLikeObject[] {
+    return this.uploader.queue.map((fileItem) => {
+      return fileItem.file;
+    });
   }
+
   
+
+  upload() {
+    let files = this.getFiles();
+    this.uploader.clearQueue();
+    console.log(files);
+    let requests = [];
+    files.forEach((file) => {
+      let formData = new FormData();
+      formData.append('file', file.rawFile, file.name);
+      requests.push(this.fileService.upload(formData));
+    });
+    
+    concat(...requests).subscribe(
+      (res) => {
+        console.log(res);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
 }
