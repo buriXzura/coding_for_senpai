@@ -9,10 +9,13 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FileUploadModule } from 'ng2-file-upload';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
 import { ChngpswdComponent } from './chngpswd/chngpswd.component';
 import { HomeComponent } from './home/home.component';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,17 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     ProfileComponent,
     ChngpswdComponent,
-    HomeComponent
+    HomeComponent,
+    UploadComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FileUploadModule,
+    BrowserAnimationsModule
   ],
   providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
