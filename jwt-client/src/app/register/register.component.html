@@ -1,0 +1,33 @@
+<div class="grid-container">
+  <div class="grid-x">
+    <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Sign Up</h2>
+        <p>Please enter your details</p>
+        <label class="full-width-input">
+          Email
+          <input type="text" placeholder="Email" formControlName="email" required>
+        </label>
+        <label class="full-width-input">
+          Name
+          <input type="text" placeholder="Name" formControlName="name" required>
+        </label>
+        <label class="full-width-input">
+          Organisation name
+          <input type="text" placeholder="Organisation name" formControlName="orgname" required>
+        </label>
+        <label class="full-width-input">
+          Password (min. 8 characters)
+          <input type="password" placeholder="Password" formControlName="password" required>
+        </label>
+        <label class="full-width-input">
+          Confirm password
+          <input type="password" placeholder="Password" formControlName="ckpassword" required>
+        </label>
+        <button class="button">Register</button>
+      </form>
+      <p class="msg"> {{ message }} </p>
+      <p>Already registered? <a routerLink="/login">Login Here!</a></p>
+    </div>
+  </div>
+</div>

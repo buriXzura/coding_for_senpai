@@ -1,0 +1,25 @@
+<div class="grid-container" style="margin:2em;">
+  <div class="grid-x">
+    <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h3 style="font-family:serif;">Red Plag: CodingForSenpai</h3>
+        <p>Please login to continue</p>
+        <label class="full-width-input">
+          Email
+          <input type="text" placeholder="Email" formControlName="email" required>
+        </label>
+        <label class="full-width-input">
+          Password
+          <input type="password" placeholder="Password" formControlName="password" required>
+        </label>
+        <label class="full-width-input">
+          Organisation password
+          <input type="password" placeholder="Organisation password" formControlName="orgpswd" required>
+        </label>
+        <button class="button">Login</button>
+      </form>
+      <p class="msg"> {{ message }} </p>
+      <p> Not yet registered? <a routerLink="/register">Register Here!</a></p>
+    </div>
+  </div>
+</div>

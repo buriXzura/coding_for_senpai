@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <div class="grid-x">
+    <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell" style="padding:1em;">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Change Password</h2>
+        <p>Complete the below form to change the password for the account linked to {{ email }}.</p>
+        <label class="full-width-input">
+          Current password
+          <input type="password" placeholder="Current password" formControlName="password" required>
+        </label>
+        <label class="full-width-input">
+          New password (min. 8 characters)
+          <input type="password" placeholder="New password" formControlName="newpswd" required>
+        </label>
+        <label class="full-width-input">
+          Confirm new password
+          <input type="password" placeholder="New password" formControlName="confpswd" required>
+        </label>
+        <button class="button">Update Password</button>
+      </form>
+      <p class="msg"> {{ message }} </p>
+      <p> Changed your mind? You can go back to your profile <a routerLink="/profile">here</a>!</p>
+    </div>
+  </div>
+</div>
