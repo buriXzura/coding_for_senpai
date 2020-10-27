@@ -63,25 +63,25 @@ router.get('/profile', jwtAuth, function(req, res, next) {
   });
 });
 
-router.get('/chngchk', jwtAuth, function(req,res) {
-  db.get("SELECT password FROM users "
-        + "WHERE email=?", req.body.email, function (err, user) {
+router.post('/chngchk', jwtAuth, function(req,res,next) {
+  db.get("SELECT password FROM users WHERE email=?",
+  req.body.email, function (err, user) {
     if (err) return res.status(500).send({status: 'Server error', err:err});
     if (!user) return res.status(404).send('User not found');
 
     if (!bcrypt.compareSync(req.body.password, user.password)) {
       return res.status(401).send("Incorrect password");
     }
-    res.status(200).send("Password matches. Continue.");
+    res.status(200).send({ status: 'ok' });
   });
 });
 
-router.post('/chngpswd', jwtAuth, function(req,res) {
+router.post('/chngpswd', jwtAuth, function(req,res,next) {
   var hashedPassword = bcrypt.hashSync(req.body.password, 8);
 
-  db.run("UPDATE users" + " SET password = ?" + " WHERE email = ?", [hashedPassword, req.body.email], function(err, user) {
+  db.get("UPDATE users" + " SET password = ?"
+        + " WHERE email = ?", hashedPassword, req.body.email, function(err) {
     if (err) return res.status(500).send("An error occurred during changing password");
-    if (!user) return res.status(404).send('User not found');
 
     res.status(200).send({ status: 'ok' });
   });
