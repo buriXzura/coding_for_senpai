@@ -1,0 +1,60 @@
+import { Component, OnInit } from '@angular/core';
+import { FileUploader, FileLikeObject } from 'ng2-file-upload';
+import { concat } from  'rxjs';
+import {MatDialog} from '@angular/material/dialog';
+import { FileService } from '../service/file.service';
+
+@Component({
+  selector: 'app-upload',
+  templateUrl: './upload.component.html',
+  styleUrls: ['./upload.component.css']
+})
+export class UploadComponent implements OnInit {
+
+  URL: string = "http://127.0.0.1:8000/upload/";
+  public uploader: FileUploader = new FileUploader({ });
+  public hasBaseDropZoneOver: boolean = false;
+
+  constructor(
+    private fileService: FileService,
+    public dialog: MatDialog
+    ) {}
+
+  ngOnInit(): void {
+  }
+
+
+  fileOverBase(event): void {
+    this.hasBaseDropZoneOver = event;
+  }
+
+  getFiles(): FileLikeObject[] {
+    return this.uploader.queue.map((fileItem) => {
+      return fileItem.file;
+    });
+  }
+
+  
+
+  upload() {
+    let files = this.getFiles();
+    this.uploader.clearQueue();
+    console.log(files);
+    let requests = [];
+    files.forEach((file) => {
+      let formData = new FormData();
+      formData.append('file', file.rawFile, file.name);
+      requests.push(this.fileService.upload(formData));
+    });
+    
+    concat(...requests).subscribe(
+      (res) => {
+        console.log(res);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
+}
