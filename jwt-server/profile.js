@@ -7,7 +7,11 @@ const config = require('./config');
 const db = new sqlite3.Database('userinfo.db');
 
 db.serialize(() => {
-  db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, email TEXT, password TEXT)");
+  db.exec('PRAGMA foreign_keys = ON;');
+  db.run("CREATE TABLE IF NOT EXISTS org (oname TEXT PRIMARY KEY, opassword TEXT)");
+  db.run("INSERT OR IGNORE INTO org (oname, opassword) VALUES (?,?), (?,?), (?,?)", ["iitbadmin","solar","iitbteacher","sso","iitbstudent","captcha"]);
+  db.run("UPDATE org" + " SET opassword = ?" + " WHERE oname = ?", ["happy", "iitbadmin"]);
+  db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, email TEXT UNIQUE, password TEXT, orgname TEXT, FOREIGN KEY (orgname) REFERENCES org(oname))");
 });
 
 const router = express.Router();
@@ -15,8 +19,8 @@ const router = express.Router();
 router.post('/register', function(req, res) {
   var hashedPassword = bcrypt.hashSync(req.body.password, 8);
 
-  db.run("INSERT INTO users (name, email, password) "
-        + "VALUES (?, ?, ?)", req.body.name, req.body.email, hashedPassword,
+  db.run("INSERT INTO users (name, email, password, orgname) "
+        + "VALUES (?, ?, ?, ?)", req.body.name, req.body.email, hashedPassword, req.body.orgname,
   function (err) {
     if (err) return res.status(500).send("An error occurred during registration");
 
@@ -25,12 +29,16 @@ router.post('/register', function(req, res) {
 });
 
 router.post('/login', function(req, res) {
-  db.get("SELECT id, name, email, password FROM users "
-        + "WHERE email=?", req.body.email, function (err, user) {
+  db.get("SELECT users.id, users.name, users.email, users.password, org.opassword FROM users INNER JOIN org ON org.oname=users.orgname WHERE users.email=?",
+  req.body.email, function (err, user) {
     if (err) return res.status(500).send({status: 'Server error', err:err});
     if (!user) return res.status(404).send('User not found');
 
     if (!bcrypt.compareSync(req.body.password, user.password)) {
+      return res.status(401).send({ auth: false, token: null });
+    }
+
+    if(user.opassword!=req.body.orgpswd) {
       return res.status(401).send({ auth: false, token: null });
     }
 
@@ -52,6 +60,30 @@ router.get('/profile', jwtAuth, function(req, res, next) {
       return res.status(404).send("No user found.");
     }
     res.status(200).send(user);
+  });
+});
+
+router.get('/chngchk', jwtAuth, function(req,res) {
+  db.get("SELECT password FROM users "
+        + "WHERE email=?", req.body.email, function (err, user) {
+    if (err) return res.status(500).send({status: 'Server error', err:err});
+    if (!user) return res.status(404).send('User not found');
+
+    if (!bcrypt.compareSync(req.body.password, user.password)) {
+      return res.status(401).send("Incorrect password");
+    }
+    res.status(200).send("Password matches. Continue.");
+  });
+});
+
+router.post('/chngpswd', jwtAuth, function(req,res) {
+  var hashedPassword = bcrypt.hashSync(req.body.password, 8);
+
+  db.run("UPDATE users" + " SET password = ?" + " WHERE email = ?", [hashedPassword, req.body.email], function(err, user) {
+    if (err) return res.status(500).send("An error occurred during changing password");
+    if (!user) return res.status(404).send('User not found');
+
+    res.status(200).send({ status: 'ok' });
   });
 });
 
