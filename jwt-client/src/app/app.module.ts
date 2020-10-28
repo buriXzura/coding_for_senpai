@@ -9,13 +9,13 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FileUploadModule } from 'ng2-file-upload';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
 import { ChngpswdComponent } from './chngpswd/chngpswd.component';
 import { HomeComponent } from './home/home.component';
-import { UploadComponent } from './upload/upload.component';
+import { FileWorkComponent } from './file-work/file-work.component';
+import { FileUploaderComponent } from './file-uploader/file-uploader.component';
+import { FileListComponent } from './file-list/file-list.component';
 
 @NgModule({
   declarations: [
@@ -25,16 +25,16 @@ import { UploadComponent } from './upload/upload.component';
     ProfileComponent,
     ChngpswdComponent,
     HomeComponent,
-    UploadComponent,
+    FileWorkComponent,
+    FileUploaderComponent,
+    FileListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    FileUploadModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule
   ],
   providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]

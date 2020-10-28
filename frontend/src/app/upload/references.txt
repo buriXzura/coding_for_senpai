@@ -1,5 +1,0 @@
-https://valor-software.com/ng2-file-upload/
-http://geniuscarrier.com/how-to-style-a-html-file-upload-button-in-pure-css/
-https://github.com/valor-software/ng2-file-upload/blob/development/demo/src/app/components/file-upload/simple-demo.html
-https://dzone.com/articles/how-to-implement-file-upload-in-angular
-https://www.techiediaries.com/angular-10-django-3-formdata-multiple-image-files-upload/

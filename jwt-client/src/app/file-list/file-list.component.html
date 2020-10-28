@@ -1,0 +1,14 @@
+<div class="grid-container" style="margin:2em;">
+  <div class="grid-x">
+    <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell">
+      <h3>Your files</h3>
+      <ul>
+       <li *ngFor="let fileName of fileList$ | async" >
+         {{fileName}}&nbsp;&nbsp;
+         <span (click)="download(fileName)">download</span>&nbsp;
+         <span (click)="remove(fileName)">remove</span>
+       </li>
+      </ul>
+    </div>
+  </div>
+</div>

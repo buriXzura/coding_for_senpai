@@ -1,0 +1,11 @@
+<div class="grid-container" style="margin:2em;">
+  <div class="grid-x">
+    <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell">
+      <h3>Upload file</h3>
+      <form [formGroup] = "formGroup" (ngSubmit)="onSubmit()">
+       <input type="file" (change)="onFileChange($event)" />
+       <input type="submit" [disabled]="formGroup.invalid" value="upload" />
+      </form>
+    </div>
+  </div>
+</div>
