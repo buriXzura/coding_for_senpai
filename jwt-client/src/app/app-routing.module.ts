@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ChngpswdComponent } from './chngpswd/chngpswd.component';
 import { HomeComponent } from './home/home.component';
 import { UploadComponent } from './upload/upload.component';
+import { MainComponent } from './main/main.component';
 import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
   { path: 'chngpswd', component: ChngpswdComponent, canActivate: [AuthGuardService]},
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService]},
+  { path: 'main', component: MainComponent, canActivate: [AuthGuardService]},
   { path: '**', redirectTo: '' }
 ];
 

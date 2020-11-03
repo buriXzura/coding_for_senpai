@@ -1,0 +1,33 @@
+
+<div class="col-md-2">
+<table class="table">
+
+    <thead>
+        <tr>
+            <th colspan="2" style="text-align: center;">Files</th>
+        </tr>
+    </thead>
+    
+    <tbody class="scroller">
+        <tr *ngFor="let file of Files">
+            <td>{{ name(file.file) }}</td>
+            <td style="white-space:nowrap">
+                <button type="button" class="btn btn-danger btn-xs" (click)="delete(file)" >
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="2" style="white-space:nowrap; text-align: center;">
+                <button type="button" class="btn btn-danger btn-s" (click)="deleteall()" [disabled]="!Files || Files.length == 0" >
+                    <span class="glyphicon glyphicon-trash"></span> Remove all
+                </button>                
+            </td>
+        </tr>
+    </tfoot>
+
+</table>
+</div>

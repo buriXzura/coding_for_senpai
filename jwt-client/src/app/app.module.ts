@@ -16,6 +16,9 @@ import { AuthGuardService } from './auth-guard.service';
 import { ChngpswdComponent } from './chngpswd/chngpswd.component';
 import { HomeComponent } from './home/home.component';
 import { UploadComponent } from './upload/upload.component';
+import { DeleteComponent } from './delete/delete.component';
+import { StubComponent } from './stub/stub.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { UploadComponent } from './upload/upload.component';
     ChngpswdComponent,
     HomeComponent,
     UploadComponent,
+    DeleteComponent,
+    StubComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

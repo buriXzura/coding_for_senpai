@@ -1,0 +1,63 @@
+<div class="col-md-3">
+    <div class="panel panel-default" style="color: gray;">
+        <div class="panel-heading" style="text-align: center;"><strong>Stub File</strong></div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2" style="text-align: center;">
+                    <div class="fileUpload btn btn-primary" [ngClass]="{'disableDiv': uploader?.queue?.length || Files.length}">
+                        <span>Browse</span>
+                        <input #fileInput type="file" ng2FileSelect [uploader]="uploader" onclick="this.value=null;"/>
+                    </div>
+                </th>
+            </tr>
+            <!--
+            <tr>
+                <th colspan="2">
+                    <div ng2FileDrop
+                        [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+                        (fileOver)="fileOverBase($event)"
+                        [uploader]="uploader"
+                        class="well my-drop-zone">
+                        Drop File Here
+                </div>
+                </th>
+            </tr>
+            -->
+        </thead>
+        <tbody class="scroller">
+            <tr *ngFor="let item of uploader.queue">
+                <td>{{item?.file?.name}}</td>
+                <td style="white-space:nowrap">
+                    <button type="button" class="btn btn-success btn-xs" (click)="upload()">
+                        <span class="glyphicon glyphicon-upload"></span>Upload
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs" (click)="item.remove()">
+                        <span class="glyphicon glyphicon-trash"></span>Remove
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2" style="text-align: center;">Uploaded</th>
+            </tr>
+        </thead>
+        <tbody class="scroller">
+            <tr *ngFor="let file of Files">
+                <td><strong>{{ name(file.file) }}</strong></td>
+                <td style="white-space:nowrap">
+                    <button type="button" class="btn btn-danger btn-xs" (click)="delete()" >
+                        <span class="glyphicon glyphicon-trash"></span> Remove
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

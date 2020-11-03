@@ -1,0 +1,9 @@
+.scroller{
+    display: block;
+    overflow: auto;
+    height: 75vh;
+}
+
+.scroller tr td{
+    width: 100%;
+}

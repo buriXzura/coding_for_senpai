@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { FileService } from '../service/file.service';
 import { FileUploader, FileLikeObject } from 'ng2-file-upload';
 import { concat } from  'rxjs';
-import { FileService } from '../service/file.service';
 
 @Component({
-  selector: 'app-upload',
-  templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.css']
+  selector: 'app-stub',
+  templateUrl: './stub.component.html',
+  styleUrls: ['./stub.component.css']
 })
-export class UploadComponent implements OnInit {
+export class StubComponent implements OnInit {
 
   public uploader: FileUploader = new FileUploader({ });
   public hasBaseDropZoneOver: boolean = false;
-  temp: string = "rahul";
+  sss: string = "rahul/stub";
+  Files: Blob[] = [];
 
-  constructor(
-    private fileService: FileService,
-    ) {}
+  constructor(private fileService: FileService) { }
 
   ngOnInit(): void {
+    this.get_stubs();
   }
 
   fileOverBase(event): void {
@@ -38,7 +38,7 @@ export class UploadComponent implements OnInit {
     files.forEach((file) => {
       let formData = new FormData();
       formData.append('file', file.rawFile, file.name);
-      formData.append('session',this.temp);
+      formData.append('session',this.sss);
       requests.push(this.fileService.upload(formData));
     });
     
@@ -46,12 +46,29 @@ export class UploadComponent implements OnInit {
       (res) => {
       	this.uploader.queue.shift();
         console.log(res);
+        this.get_stubs();
       },
       (err) => {
       	alert("Something went wrong TT__TT")
         console.log(err);
       }
     );
+  }
+
+  get_stubs(){
+    this.fileService.stubList()
+      .subscribe(
+        files => this.Files=files
+      )
+  }
+
+  delete(){
+    this.fileService.deleteStub()
+      .subscribe( () => this.Files=[] )
+  }
+
+  name(file){
+    return file.split('/').pop()
   }
 
 }
