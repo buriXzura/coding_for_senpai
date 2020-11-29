@@ -19,6 +19,7 @@ import { UploadComponent } from './upload/upload.component';
 import { DeleteComponent } from './delete/delete.component';
 import { StubComponent } from './stub/stub.component';
 import { MainComponent } from './main/main.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MainComponent } from './main/main.component';
     DeleteComponent,
     StubComponent,
     MainComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,
