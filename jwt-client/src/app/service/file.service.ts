@@ -15,8 +15,8 @@ export class FileService {
     return this.http.post<any>(`${this.DJANGO_SERVER}/file/upload`, formData);
   }
 
-  public download(formData) {
-    return this.http.post<any>(`${this.DJANGO_SERVER}/file/download`, formData);
+  public DownloadResults() {
+    return this.http.get(`${this.DJANGO_SERVER}/file/results/download/${this.session}`, {responseType: 'arraybuffer'});
   }
 
   public list() {

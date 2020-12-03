@@ -4,41 +4,6 @@
     </div>
 
     <table class="table">
-        <thead>
-            <tr>
-                <th colspan="2" style="text-align: center;">
-                    <div class="fileUpload btn btn-primary" >
-                        <span>Browse</span>
-                        <input type="file" ng2FileSelect [uploader]="uploader" multiple/>
-                    </div>
-                </th>
-            </tr>
-            <button type="button" class="btn btn-success btn-xs" (click)="upload()">
-                <span class="glyphicon glyphicon-upload"></span>UploadAll
-            </button>
-        </thead>
-        
-        <tbody class="scroller">
-            <tr *ngFor="let item of uploader.queue">
-                <td>{{item?.file?.name}}</td>
-                <td style="white-space:nowrap">
-                    <!--<button type="button" class="btn btn-success btn-xs" (click)="upload()">
-                        <span class="glyphicon glyphicon-upload"></span>Upload
-                    </button>-->
-                    
-                    
-
-                    <button type="button" class="btn btn-danger btn-xs" (click)="item.remove()">
-                        <span class="glyphicon glyphicon-trash"></span>Remove
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-
-    </table>
-    
-
-    <table class="table">
 
         <thead>
             <tr>
