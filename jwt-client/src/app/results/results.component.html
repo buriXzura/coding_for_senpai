@@ -18,8 +18,8 @@
             <tr *ngFor="let file of Files">
                 <td><strong>{{ name(file.file) }}</strong></td>
                 <td style="white-space:nowrap">
-                    <button type="button" class="btn btn-danger btn-xs" (click)="DownloadFile()" >
-                        <span class="glyphicon glyphicon-trash"></span> Download
+                    <button type="button" class="btn btn-success btn-xs" (click)="DownloadFile()" >
+                        <span class="glyphicon glyphicon-download"></span> Download
                     </button>
                     <button type="button" class="btn btn-danger btn-xs" (click)="delete()" >
                         <span class="glyphicon glyphicon-trash"></span> Remove

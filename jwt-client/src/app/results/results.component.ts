@@ -33,7 +33,7 @@ export class ResultsComponent implements OnInit {
     var blob = new Blob([data],{type: 'text/*'});
     var url = window.URL.createObjectURL(blob);
     saveAs(blob,"results.csv");
-    window.open(url);
+    //window.open(url);
   }
 
   DownloadFile(){
@@ -55,7 +55,9 @@ export class ResultsComponent implements OnInit {
 
   generate() {
     this.fileService.generate()
-      .subscribe()
+      .subscribe(
+        () => this.get_results()
+      )
   }
  
 }
