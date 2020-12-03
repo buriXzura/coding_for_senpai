@@ -1,0 +1,43 @@
+.scroller{
+    display: block;
+    overflow: auto;
+    height: 15vh;
+}
+
+.scroller tr td{
+    width: 100%;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin-top: -2px;
+  }
+
+.fileUpload input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+.my-drop-zone { 
+    border: dotted 3px lightgray; 
+}
+.nv-file-over { 
+    border: dotted 3px red; 
+}
+
+.disableDiv{
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.disableDiv input{
+    pointer-events:none;
+}

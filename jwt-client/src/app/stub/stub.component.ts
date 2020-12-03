@@ -13,7 +13,7 @@ export class StubComponent implements OnInit {
   public uploader: FileUploader = new FileUploader({ });
   public hasBaseDropZoneOver: boolean = false;
   sss: string = "rahul/stub";
-  Files: Blob[] = [];
+  Filess: Blob[] = [];
 
   constructor(private fileService: FileService) { }
 
@@ -56,15 +56,15 @@ export class StubComponent implements OnInit {
   }
 
   get_stubs(){
-    this.fileService.stubList()
+    this.fileService.List1()
       .subscribe(
-        files => this.Files=files
+        files => this.Filess=files
       )
   }
 
   delete(){
-    this.fileService.deleteStub()
-      .subscribe( () => this.Files=[] )
+    this.fileService.delete1()
+      .subscribe( () => this.Filess=[] )
   }
 
   name(file){

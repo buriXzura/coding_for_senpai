@@ -20,6 +20,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { StubComponent } from './stub/stub.component';
 import { MainComponent } from './main/main.component';
 import { ResultsComponent } from './results/results.component';
+import { UploadDownloadComponent } from './upload-download/upload-download.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ResultsComponent } from './results/results.component';
     StubComponent,
     MainComponent,
     ResultsComponent,
+    UploadDownloadComponent,
   ],
   imports: [
     BrowserModule,
