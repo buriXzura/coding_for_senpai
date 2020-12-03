@@ -139,4 +139,24 @@ class ResultsDownloadView(APIView):
 
         return response
 
+class ResultsProcessView(APIView):
+	parser_class = (FileUploadParser,)
+
+	def get(self, request, ss):
+		sss=ss+"/results"
+		files=File()
+		try:
+			os.makedirs(settings.MEDIA_ROOT+"/"+sss)
+		except OSError as e:
+			pass
+		f=open(settings.MEDIA_ROOT+"/"+sss+'/result.txt','w+')
+		f.write('hemlo fraandz')
+		f.close()
+		files.file='media/'+sss+'/result.txt'
+		files.session=sss
+		files.save()
+
+		filess = File.objects.filter(session=sss)
+		file_serializer = FileSerializer(filess, many=True)
+		return Response(file_serializer.data, status=status.HTTP_200_OK)
 

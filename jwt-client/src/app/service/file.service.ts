@@ -47,4 +47,8 @@ export class FileService {
     return this.http.get<Blob[]>(`${this.DJANGO_SERVER}/file/results/list/${this.session}`);
   }
 
+  public generate() {
+    return this.http.get(`${this.DJANGO_SERVER}/file/results/generate/${this.session}`);
+  }
+
 }

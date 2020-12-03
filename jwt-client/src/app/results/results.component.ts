@@ -52,5 +52,10 @@ export class ResultsComponent implements OnInit {
   name(file){
     return file.split('/').pop()
   }
+
+  generate() {
+    this.fileService.generate()
+      .subscribe()
+  }
  
 }
