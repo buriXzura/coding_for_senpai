@@ -1,7 +1,7 @@
 .scroller{
     display: block;
     overflow: auto;
-    height: 5vh;
+    height: 5.5vh;
 }
 
 .scroller tr td{

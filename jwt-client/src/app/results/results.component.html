@@ -7,7 +7,7 @@
         <thead>
             <tr>
                 <th colspan="2" style="text-align: center;">
-                    <button type="button" class="btn btn-primary" (click)="generate()">
+                    <button type="button" class="btn btn-primary" (click)="generate()" [ngClass]="{'disableDiv':Files.length}">
                         <span>Generate</span>
                     </button>
                 </th>
