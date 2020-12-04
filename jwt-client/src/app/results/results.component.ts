@@ -91,7 +91,7 @@ export class ResultsComponent implements OnInit {
     //alert(this.imageToShow)
   } 
 
-  isImageLoading: any;
+  isImageLoading = true;
   getImageFromService() {
     
     this.isImageLoading = true;

@@ -8,7 +8,7 @@ from django.http import FileResponse
 
 from .serializers import FileSerializer
 
-import os
+import os,subprocess
 
 
 class FileUploadView(APIView):
@@ -75,6 +75,7 @@ class StubFileDeleteView(APIView):
         try:
             files = File.objects.filter(session=sss)
             for fl in files:
+                print (fl)
                 fl.file.delete()
                 fl.delete()
         except:
@@ -102,7 +103,9 @@ class ResultsFileDeleteView(APIView):
         sss = ss + "/results"
         try:
             files = File.objects.filter(session=sss)
+            
             for fl in files:
+                print (fl)
                 fl.file.delete()
                 fl.delete()
         except:
@@ -131,7 +134,7 @@ class ResultsDownloadView(APIView):
         files = File.objects.filter(session=sss)
         instance=files[0]
         file_handle = instance.file.open()
-
+        print (file_handle)
         # send file
         response = FileResponse(file_handle, content_type='whatever')
         response['Content-Length'] = instance.file.size
@@ -140,23 +143,60 @@ class ResultsDownloadView(APIView):
         return response
 
 class ResultsProcessView(APIView):
-	parser_class = (FileUploadParser,)
+    parser_class = (FileUploadParser,)
+   
+    def get(self, request, ss):
+        sss=ss+"/results"
+        #print (sss)
+        cmd = 'python3 plag_check.py "' + settings.MEDIA_ROOT + '/' + ss + '" F'
+        #print (settings.MEDIA_ROOT)
+        os.system(cmd)
+        files = File()
+        files.file=sss+'/result.csv'
+        files.session=sss
+        files.save()
+        filess = File.objects.filter(session=sss)
+        file_serializer = FileSerializer(filess, many=True)
+        return Response(file_serializer.data, status=status.HTTP_200_OK)
 
-	def get(self, request, ss):
-		sss=ss+"/results"
-		files=File()
-		try:
-			os.makedirs(settings.MEDIA_ROOT+"/"+sss)
-		except OSError as e:
-			pass
-		f=open(settings.MEDIA_ROOT+"/"+sss+'/result.txt','w+')
-		f.write('hemlo fraandz')
-		f.close()
-		files.file='media/'+sss+'/result.txt'
-		files.session=sss
-		files.save()
+class CreatePlotsView(APIView):
 
-		filess = File.objects.filter(session=sss)
-		file_serializer = FileSerializer(filess, many=True)
-		return Response(file_serializer.data, status=status.HTTP_200_OK)
+    def get(self, request, ss):
+        #print (ss)
+        sss=ss+"/plots"
 
+        files = File.objects.filter(session=sss)
+        for fl in files:
+            fl.file.delete()
+            fl.delete()
+        
+        cmd = 'python3 plots_create.py "' + settings.MEDIA_ROOT + '/' + ss + '" F'
+        #print (settings.MEDIA_ROOT)
+        os.system(cmd)
+        files = File()
+        files.file=sss+'/surfacePlot.png'
+        files.session=sss
+        files.save()
+        
+        '''
+        files = File()
+        files.file=sss+'/heatmap.png'
+        files.session=sss
+        files.save()
+        
+        '''
+
+        files = File.objects.filter(session=sss)
+        #print (sss)
+        #print (files)
+        instance=files[0]
+        file_handle = instance.file.open()
+        print(file_handle)
+
+        # send file
+        response = FileResponse(file_handle, content_type='whatever')
+        response['Content-Length'] = instance.file.size
+        response['Content-Disposition'] = 'attachment; filename="%s"' % instance.file.name
+
+        return response
+        
