@@ -1,7 +1,9 @@
+
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FileLikeObject } from 'ng2-file-upload';
 import { BehaviorSubject, Subject, Observable } from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Injectable({
  providedIn: 'root'
@@ -49,6 +51,10 @@ export class FileService {
 
   public generate() {
     return this.http.get(`${this.DJANGO_SERVER}/file/results/generate/${this.session}`);
+  }
+
+  public getImage(): Observable<Blob> {
+    return this.http.get(`${this.DJANGO_SERVER}/file/plots/show/${this.session}`, {responseType: 'blob'});
   }
 
 }

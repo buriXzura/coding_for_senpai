@@ -31,3 +31,14 @@
     </table>
 
 </div>
+
+<button type="button" class="btn btn-success btn-xs" (click)="getImageFromService()" >
+    <span class="glyphicon"></span> Show
+</button>
+
+<img [src]="imageToShow"
+     alt="Place image title"
+     *ngIf="!isImageLoading; else noImageFound">
+<ng-template #noImageFound>
+     <div>bad Luck</div>
+</ng-template>
