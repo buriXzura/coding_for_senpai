@@ -9,8 +9,16 @@
     </thead>
     
     <tbody class="scroller">
-        <tr *ngFor="let file of Files">
+        <tr *ngFor="let file of Files; let i = index">
             <td>{{ name(file.file) }}</td>
+            <!-- <td>
+                <mat-checkbox></mat-checkbox>
+            </td> -->
+
+            <td style="white-space:nowrap">
+                <input type="checkbox" class="checkbox" [checked]="complete[i]" (click)="updatecheckall(i)">
+            </td>
+
             <td style="white-space:nowrap">
                 <button type="button" class="btn btn-danger btn-xs" (click)="delete(file)" >
                     <span class="glyphicon glyphicon-trash"></span>
@@ -21,9 +29,18 @@
 
     <tfoot>
         <tr>
-            <td colspan="2" style="white-space:nowrap; text-align: center;">
+            <td style="white-space:nowrap;  text-align: center;">
+                <input type="checkbox" class="checkbox" id="allfile" [checked]="allComplete" (click)="toggleall();">
+                <label for="allfile">Select All</label>
+
+                <!-- <mat-checkbox class="example-margin"
+                  [checked]="allComplete"
+                  [indeterminate]="someComplete()"
+                  (change)="setAll($event.checked)">
+                    Select All
+                </mat-checkbox> -->
                 <button type="button" class="btn btn-danger btn-s" (click)="deleteall()" [disabled]="!Files || Files.length == 0" >
-                    <span class="glyphicon glyphicon-trash"></span> Remove all
+                    <span class="glyphicon glyphicon-trash"></span>Remove all
                 </button>                
             </td>
         </tr>
