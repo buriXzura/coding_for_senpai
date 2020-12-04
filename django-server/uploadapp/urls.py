@@ -12,6 +12,9 @@ urlpatterns = [
     url(r'^results/list/(?P<ss>[a-z]+)$', ResultsListView.as_view()),
     url(r'^results/delete/(?P<ss>[a-z]+)$', ResultsFileDeleteView.as_view()),
     url(r'^results/download/(?P<ss>[a-z]+)$', ResultsDownloadView.as_view()),
-    url(r'^results/generate/(?P<ss>[a-z]+)$', ResultsProcessView.as_view()),
+    url(r'^results/generate/true/(?P<ss>[a-z]+)$', TrueResultsProcessView.as_view()),
+    url(r'^results/generate/false/(?P<ss>[a-z]+)$', FalseResultsProcessView.as_view()),
     url(r'^plots/show/(?P<ss>[a-z]+)$', CreatePlotsView.as_view()),
+    url(r'^plots/heat/(?P<ss>[a-z]+)$', HeatMapView.as_view()),
+    url(r'^plots/marker/(?P<ss>[a-z]+)$', MarkersView.as_view()),
 ]

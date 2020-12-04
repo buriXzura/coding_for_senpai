@@ -1,4 +1,11 @@
-<div class="col-md-3">
+
+
+<div id='top-left' >
+    <app-stub></app-stub>
+</div>
+
+
+<div class="col-md-3" id='middle-left' >
     <div class="panel panel-default" style="color: gray;">
         <div class="panel-heading" style="text-align: center;"><strong>Result File</strong></div>
     </div>
@@ -6,10 +13,25 @@
     <table class="table">
         <thead>
             <tr>
-                <th colspan="2" style="text-align: center;">
-                    <button type="button" class="btn btn-primary" (click)="generate()" [ngClass]="{'disableDiv':Files.length}">
+                <th colspan="2" >
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary" (click)="generate()" [disabled]="Files.length" style="margin-bottom: 10px; margin-top: -20px; width: 100px;">
                         <span>Compute</span>
                     </button>
+                    
+                    <!-- <div class="fileUpload btn btn-primary" [ngClass]="{'disableDiv': uploader?.queue?.length || Filess.length}">
+                        <span>Browse</span>
+                        <input #fileInput type="file" ng2FileSelect [uploader]="uploader" onclick="this.value=null;"/>
+                    </div>-->
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <input type="checkbox" id="switch"
+                                class="checkbox" [checked]="iscpp" (click)="toggle()"/> 
+                    <label for="switch" class="toggle" >
+                        <br>
+                        <strong>IsCpp?</strong>
+                    </label>  
                 </th>
             </tr>
         </thead>
@@ -18,6 +40,7 @@
             <tr *ngFor="let file of Files">
                 <td><strong>{{ name(file.file) }}</strong></td>
                 <td style="white-space:nowrap">
+                    
                     <button type="button" class="btn btn-success btn-xs" (click)="DownloadFile()" >
                         <span class="glyphicon glyphicon-download"></span> Download
                     </button>
@@ -27,18 +50,47 @@
                 </td>
             </tr>
         </tbody>
-    
+
     </table>
 
+    
+        <button type="button" class="btn btn-success btn-xl" style="width: 250px; height: 70px; " (click)="getImageFromService()" [disabled]="!Files.length" >
+            <span class="glyphicon"></span> <strong>Show Plots</strong>
+        </button>
+    
 </div>
 
-<button type="button" class="btn btn-success btn-xs" (click)="getImageFromService()" >
-    <span class="glyphicon"></span> Show
-</button>
+<!--
+<div *ngIf="!isImageLoading;" >
+    <p style="white-space: pre;">{{Text}}</p>
+    <a [href]="TextURL" download="markers.txt">Download Markers</a>
+</div>
+-->
 
-<img [src]="imageToShow"
-     alt="Place image title"
-     *ngIf="!isImageLoading; else noImageFound">
-<ng-template #noImageFound>
-     <div>bad Luck</div>
-</ng-template>
+
+
+
+<div class="col-sm-3 mb-3" *ngIf="!isImageLoading;" style="float: right; text-align: center;">
+    <div id="bottom-right" >
+        <img [src]="Heat" alt="Place image title">
+        <a [href]="Heat" download="heatmap" class="btn btn-primary" >Download HeatMap</a>
+    </div>
+    <br><br>
+    <div id="bottom-left" >
+        <div style="height: 150px; overflow-y: scroll; background-color: rgb(235, 232, 232);">
+        <p style="white-space: pre; text-align: left;">{{Text}}</p>
+        </div>
+        <a [href]="TextURL" download="markers.txt" class="btn btn-primary" >Download Markers</a>
+    </div>
+    
+</div>
+
+
+<div class="col-sm-4 mb-3" *ngIf="!isImageLoading;" style="float: left; text-align: center;">
+    
+    <a [href]="imageToShow" download="SurfacePlot" class="btn btn-primary" >Download SurfacePlot</a>
+    
+    <img [src]="imageToShow" alt="Place image title">
+</div>
+
+

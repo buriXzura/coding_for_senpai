@@ -45,11 +45,14 @@ ax1.zaxis.set_major_formatter('{x:.02f}')
 fig.colorbar(surf,orientation="horizontal")
 plt.savefig(directory+"/plots/surfacePlot.png",dpi=120)
 plt.close()
-'''
+
 fig = plt.figure(figsize=(4,4))
 heatmap = plt.pcolor(data,cmap=cm.coolwarm)
 fig.colorbar(heatmap)
-plt.savefig(directory+"plots/heatmap.png")
+plt.savefig(directory+"/plots/heatmap.png")
 plt.close()
 
-'''
+
+with open(directory+"/plots/markers.txt",'w') as Markers:
+    for i in range(len(files)):
+        Markers.write(str(i)+": "+files[i]+"\n")

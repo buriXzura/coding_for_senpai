@@ -14,9 +14,13 @@ import { DomSanitizer } from '@angular/platform-browser'
 export class ResultsComponent implements OnInit {
 
   sss: string = "rahul/results";
+  iscpp = false;
 
   Files: Blob[]=[];
   imageToShow: any;
+  Heat: any;
+  Text: any;
+  TextURL: any;
 
   constructor(private fileService: FileService,
       private domSanitizer: DomSanitizer,
@@ -36,8 +40,8 @@ export class ResultsComponent implements OnInit {
   }
 
   downLoadFile(data: any) {
-    var blob = new Blob([data],{type: 'text/txt'});
-    var url = window.URL.createObjectURL(blob);
+    var blob = new Blob([data],{type: 'text/csv'});
+    //var url = window.URL.createObjectURL(blob);
     saveAs(blob,"results.csv");
     //window.open(url);
   }
@@ -60,7 +64,7 @@ export class ResultsComponent implements OnInit {
   }
 
   generate() {
-    this.fileService.generate()
+    this.fileService.generate(this.iscpp)
       .subscribe(
         () => this.get_results()
       )
@@ -77,18 +81,6 @@ export class ResultsComponent implements OnInit {
     var url = window.URL.createObjectURL(blob);
     //url=url.substring(5)
     this.imageToShow = this.domSanitizer.bypassSecurityTrustUrl(url)
-    //alert(url)
-    //window.open(url)
-    /*
-    let reader = new FileReader();
-    reader.addEventListener("load", () => {
-       this.imageToShow = reader.result;
-    }, false);
-
-    if (image) {
-       reader.readAsDataURL(image);
-    }*/
-    //alert(this.imageToShow)
   } 
 
   isImageLoading = true;
@@ -97,12 +89,51 @@ export class ResultsComponent implements OnInit {
     this.isImageLoading = true;
     this.fileService.getImage().subscribe(data => {
       this.createImageFromBlob(data);
+      this.getMarkersFromService();
       this.isImageLoading = false;
     }, error => {
       console.log(error);
       this.isImageLoading = false;
     });
   }
+
+  createMarkers(data) {
+    var blob = new Blob([data],{type: 'text/txt'})
+    var url = window.URL.createObjectURL(blob);
+    //url=url.substring(5)
+    this.TextURL = this.domSanitizer.bypassSecurityTrustResourceUrl(url)
+  }
+
+  getMarkersFromService() {
+    this.fileService.getMarkers().subscribe(data =>{
+      this.createMarkers(data);
+      this.Text=data;
+      this.getHeatFromService();
+    }, error => {
+      console.log(error);
+    });
+  }
+
+
+  createHeat(image: Blob) {
+    var blob = new Blob([image],{type: 'image/png'})
+    var url = window.URL.createObjectURL(blob);
+    //url=url.substring(5)
+    this.Heat = this.domSanitizer.bypassSecurityTrustUrl(url)
+  }
+
+  getHeatFromService() {
+    this.fileService.getHeat().subscribe(data =>{
+      this.createHeat(data);
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  toggle() {
+    this.iscpp = !this.iscpp;
+  }
+
 //downLoadFile(data: any) {
   //var blob = new Blob([data],{type: 'text/*'});
   //var url = window.URL.createObjectURL(blob);

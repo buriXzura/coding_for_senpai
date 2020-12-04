@@ -130,9 +130,9 @@ class ResultsDownloadView(APIView):
     parser_class = (FileUploadParser,)
 
     def get(self, request, ss):
-        sss = ss+"/results"
-        files = File.objects.filter(session=sss)
-        instance=files[0]
+        sss = ss+"/results/result.csv"
+        #files = File.objects.get(session=sss)
+        instance=File.objects.get(file=sss)
         file_handle = instance.file.open()
         print (file_handle)
         # send file
@@ -142,7 +142,7 @@ class ResultsDownloadView(APIView):
 
         return response
 
-class ResultsProcessView(APIView):
+class FalseResultsProcessView(APIView):
     parser_class = (FileUploadParser,)
    
     def get(self, request, ss):
@@ -159,6 +159,24 @@ class ResultsProcessView(APIView):
         file_serializer = FileSerializer(filess, many=True)
         return Response(file_serializer.data, status=status.HTTP_200_OK)
 
+class TrueResultsProcessView(APIView):
+    parser_class = (FileUploadParser,)
+   
+    def get(self, request, ss):
+        sss=ss+"/results"
+        #print (sss)
+        cmd = 'python3 plag_check.py "' + settings.MEDIA_ROOT + '/' + ss + '" T'
+        #print (settings.MEDIA_ROOT)
+        os.system(cmd)
+        files = File()
+        files.file=sss+'/result.csv'
+        files.session=sss
+        files.save()
+        filess = File.objects.filter(session=sss)
+        file_serializer = FileSerializer(filess, many=True)
+        return Response(file_serializer.data, status=status.HTTP_200_OK)
+
+
 class CreatePlotsView(APIView):
 
     def get(self, request, ss):
@@ -167,6 +185,7 @@ class CreatePlotsView(APIView):
 
         files = File.objects.filter(session=sss)
         for fl in files:
+            print (fl)
             fl.file.delete()
             fl.delete()
         
@@ -178,20 +197,23 @@ class CreatePlotsView(APIView):
         files.session=sss
         files.save()
         
-        '''
+        
         files = File()
         files.file=sss+'/heatmap.png'
         files.session=sss
         files.save()
         
-        '''
+        files = File()
+        files.file=sss+'/markers.txt'
+        files.session=sss
+        files.save()
 
-        files = File.objects.filter(session=sss)
+        #files = File.objects.filter(session=sss)
         #print (sss)
         #print (files)
-        instance=files[0]
+        instance=File.objects.get(file=sss+"/surfacePlot.png")
         file_handle = instance.file.open()
-        print(file_handle)
+        #print(file_handle)
 
         # send file
         response = FileResponse(file_handle, content_type='whatever')
@@ -200,3 +222,32 @@ class CreatePlotsView(APIView):
 
         return response
         
+class HeatMapView(APIView):
+
+    def get(self, request, ss):
+        sss = ss+"/plots/heatmap.png"
+
+        instance=File.objects.get(file=sss)
+        file_handle = instance.file.open()
+        print (file_handle)
+        # send file
+        response = FileResponse(file_handle, content_type='whatever')
+        response['Content-Length'] = instance.file.size
+        response['Content-Disposition'] = 'attachment; filename="%s"' % instance.file.name
+
+        return response
+
+class MarkersView(APIView):
+
+    def get(self, request, ss):
+        sss = ss+"/plots/markers.txt"
+
+        instance=File.objects.get(file=sss)
+        file_handle = instance.file.open()
+        print (file_handle)
+        # send file
+        response = FileResponse(file_handle, content_type='whatever')
+        response['Content-Length'] = instance.file.size
+        response['Content-Disposition'] = 'attachment; filename="%s"' % instance.file.name
+
+        return response    

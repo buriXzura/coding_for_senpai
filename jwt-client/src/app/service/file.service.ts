@@ -49,12 +49,21 @@ export class FileService {
     return this.http.get<Blob[]>(`${this.DJANGO_SERVER}/file/results/list/${this.session}`);
   }
 
-  public generate() {
-    return this.http.get(`${this.DJANGO_SERVER}/file/results/generate/${this.session}`);
+  public generate(cpp: boolean) {
+    if(cpp) return this.http.get(`${this.DJANGO_SERVER}/file/results/generate/true/${this.session}`);
+    else return this.http.get(`${this.DJANGO_SERVER}/file/results/generate/false/${this.session}`);
   }
 
   public getImage(): Observable<Blob> {
     return this.http.get(`${this.DJANGO_SERVER}/file/plots/show/${this.session}`, {responseType: 'blob'});
+  }
+
+  public getMarkers() {
+    return this.http.get(`${this.DJANGO_SERVER}/file/plots/marker/${this.session}`, {responseType: 'text' as 'json'});
+  }
+
+  public getHeat(): Observable<Blob> {
+    return this.http.get(`${this.DJANGO_SERVER}/file/plots/heat/${this.session}`, {responseType: 'blob'});
   }
 
 }
