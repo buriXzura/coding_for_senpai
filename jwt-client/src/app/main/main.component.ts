@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  public name: string;
+  public email: string;
 
-  ngOnInit(): void {
+  constructor(private server: ServerService) { }
+
+  ngOnInit() {
+    this.server.request('GET', '/profile').subscribe((user: any) => {
+      if (user) {
+        this.name = user.name;
+        this.email = user.email;
+      }
+    });
   }
 
 }
