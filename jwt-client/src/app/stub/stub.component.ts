@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FileService } from '../service/file.service';
 import { FileUploader, FileLikeObject } from 'ng2-file-upload';
 import { concat } from  'rxjs';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-stub',
@@ -15,10 +16,15 @@ export class StubComponent implements OnInit {
   sss: string = "rahul/stub";
   Filess: Blob[] = [];
 
-  constructor(private fileService: FileService) { }
+  constructor(private fileService: FileService, private server: ServerService) { }
 
   ngOnInit(): void {
-    this.get_stubs();
+    this.server.request('GET', '/profile').subscribe((user: any) => {
+      if (user) {
+        this.fileService.get_session(user.email);
+        this.get_stubs();
+      }
+    });
   }
 
   fileOverBase(event): void {
@@ -35,24 +41,31 @@ export class StubComponent implements OnInit {
     let files = this.getFiles();
     console.log(files);
     let requests = [];
-    files.forEach((file) => {
-      let formData = new FormData();
-      formData.append('file', file.rawFile, file.name);
-      formData.append('session',this.sss);
-      requests.push(this.fileService.upload(formData));
-    });
     
-    concat(...requests).subscribe(
-      (res) => {
-      	this.uploader.queue.shift();
-        console.log(res);
-        this.get_stubs();
-      },
-      (err) => {
-      	alert("Something went wrong TT__TT")
-        console.log(err);
+    this.server.request('GET', '/profile').subscribe((user: any) => {
+      if (user) {
+        this.sss = user.email + "/stub";
+        files.forEach((file) => {
+          let formData = new FormData();
+          formData.append('file', file.rawFile, file.name);
+          formData.append('session',this.sss);
+          requests.push(this.fileService.upload(formData));
+        });
+        
+        concat(...requests).subscribe(
+          (res) => {
+            this.uploader.queue.shift();
+            console.log(res);
+            this.get_stubs();
+          },
+          (err) => {
+            alert("Something went wrong TT__TT")
+            console.log(err);
+          }
+        );
       }
-    );
+    });
+
   }
 
   get_stubs(){

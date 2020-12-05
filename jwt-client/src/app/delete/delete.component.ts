@@ -1,8 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FileService } from '../service/file.service';
-import {ThemePalette} from '@angular/material/core';
-import { stringify } from 'querystring';
-import { saveAs } from 'file-saver';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-delete',
@@ -13,11 +11,16 @@ export class DeleteComponent implements OnInit {
 
   Files: any=[];
 
-  constructor(private fileService: FileService) { }
+  constructor(private fileService: FileService, private server: ServerService) { }
 
   ngOnInit(): void {
-    this.fileService.list()
-      .subscribe( files => {this.Files=files; this.createarray();} );
+    this.server.request('GET', '/profile').subscribe((user: any) => {
+      if (user) {
+        this.fileService.get_session(user.email);
+        this.fileService.list()
+          .subscribe( files => {this.Files=files; this.createarray();} );
+      }
+    });
     
   }
 

@@ -301,3 +301,21 @@ class SomePlotView(APIView):
         response['Content-Disposition'] = 'attachment; filename="%s"' % instance.file.name
 
         return response
+
+class DeletePlotsView(APIView):
+
+     def delete(self, request, ss):
+        sss = ss+"/plots" 
+        try:
+            files = File.objects.filter(session=sss)
+            for fl in files:
+                fl.file.delete()
+                fl.delete()
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        try:
+            path = os.path.join(settings.MEDIA_ROOT, sss)
+            os.rmdir(path)
+        except:
+            pass
+        return Response(status=status.HTTP_200_OK)

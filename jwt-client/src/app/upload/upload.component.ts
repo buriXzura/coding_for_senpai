@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FileUploader, FileLikeObject } from 'ng2-file-upload';
 import { concat } from  'rxjs';
 import { FileService } from '../service/file.service';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-upload',
@@ -15,7 +16,7 @@ export class UploadComponent implements OnInit {
   temp: string = "rahul";
 
   constructor(
-    private fileService: FileService
+    private fileService: FileService, private server: ServerService,
     ) {}
 
   ngOnInit() : void {}
@@ -31,26 +32,33 @@ export class UploadComponent implements OnInit {
   }
 
   upload() {
+    
     let files = this.getFiles();
     console.log(files);
     let requests = [];
-    files.forEach((file) => {
-      let formData = new FormData();
-      formData.append('file', file.rawFile, file.name);
-      formData.append('session',this.temp);
-      requests.push(this.fileService.upload(formData));
-    });
-
-    concat(...requests).subscribe(
-      (res) => {
-      	this.uploader.queue.shift();
-        console.log(res);
-      },
-      (err) => {
-      	alert("Something went wrong TT__TT")
-        console.log(err);
+    this.server.request('GET', '/profile').subscribe((user: any) => {
+      if (user) {
+        this.temp = user.email;
+        files.forEach((file) => {
+          let formData = new FormData();
+          formData.append('file', file.rawFile, file.name);
+          formData.append('session',this.temp);
+          requests.push(this.fileService.upload(formData));
+        });
+    
+        concat(...requests).subscribe(
+          (res) => {
+            this.uploader.queue.shift();
+            console.log(res);
+          },
+          (err) => {
+            alert("Something went wrong TT__TT")
+            console.log(err);
+          }
+        );
       }
-    );
+    });
+    
   }
 
 }

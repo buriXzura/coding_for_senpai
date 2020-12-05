@@ -14,10 +14,10 @@ export class FileService {
   DJANGO_SERVER: string = "http://127.0.0.1:8000";
   session: string = "to_be_gotten";
 
-  constructor(private http: HttpClient, private server: ServerService) {
-    this.server.request('GET', '/profile').subscribe((user: any) => {
-      if (user) {this.session = user.email;}
-    });
+  constructor(private http: HttpClient, private server: ServerService) {}
+
+  public get_session(ss: string){
+    this.session = ss;
   }
 
   public upload(formData) {
@@ -79,6 +79,10 @@ export class FileService {
 
   public someplot() {
     return this.http.get(`${this.DJANGO_SERVER}/file/plots/some/${this.session}`, {responseType: 'blob'});
+  }
+
+  public deleteplots() {
+    return this.http.delete(`${this.DJANGO_SERVER}/file/plots/delete/${this.session}`);
   }
 
 }

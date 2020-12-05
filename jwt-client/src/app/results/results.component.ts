@@ -4,7 +4,7 @@ import { FileUploader, FileLikeObject } from 'ng2-file-upload';
 import { concat, from } from  'rxjs';
 import { saveAs } from 'file-saver';
 import { DomSanitizer } from '@angular/platform-browser'
-
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-results',
@@ -24,11 +24,17 @@ export class ResultsComponent implements OnInit {
   TextURL: any;
 
   constructor(private fileService: FileService,
-      private domSanitizer: DomSanitizer,
+      private domSanitizer: DomSanitizer, 
+      private server: ServerService,
     ) { }
 
   ngOnInit(): void {
-    this.get_results();
+    this.server.request('GET', '/profile').subscribe((user: any) => {
+      if (user) {
+        this.fileService.get_session(user.email);
+        this.get_results();
+      }
+    });
     //this.getImageFromService();
   }
 
