@@ -18,6 +18,17 @@ with open(result,'r') as ft:
 
 data = np.genfromtxt(result, dtype=float, delimiter=',', skip_header=1) 
 
+if sys.argv[2]=='S':
+    my_dict = {}
+    for i in range(len(files)):
+        my_dict[files[i]] = i
+    files = sys.argv[3].split(',')
+    a = np.empty([len(files),len(files)])
+    for i in range(len(files)):
+        for j in range(len(files)):
+            a[i][j] = data[my_dict[files[i]]][my_dict[files[j]]]
+    data = a
+    
 
 x = np.linspace(0, len(files), len(files))
 y = np.linspace(0, len(files), len(files))

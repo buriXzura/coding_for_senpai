@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { FileService } from '../service/file.service';
 import { FileUploader, FileLikeObject } from 'ng2-file-upload';
 import { concat, from } from  'rxjs';
@@ -140,5 +140,31 @@ export class ResultsComponent implements OnInit {
   //saveAs(blob,"results.csv");
   //window.open(url);
 //}
+
+  @Output() getlist = new EventEmitter();
+
+  hi(files){
+    //console.log(files);
+    //console.log(files[1]);
+    const formData = new FormData();
+    formData.append('list', files);
+    this.fileService.sendList(formData)
+      .subscribe( 
+        () => this.getSomeFromService()
+       );
+  }
+
+  getSomeFromService() {
+    
+    this.isImageLoading = true;
+    this.fileService.someplot().subscribe(data => {
+      this.createImageFromBlob(data);
+      this.getMarkersFromService();
+      this.isImageLoading = false;
+    }, error => {
+      console.log(error);
+      this.isImageLoading = false;
+    });
+  }
  
 }

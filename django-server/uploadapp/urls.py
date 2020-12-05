@@ -17,4 +17,6 @@ urlpatterns = [
     url(r'^plots/show/(?P<ss>[a-z]+)$', CreatePlotsView.as_view()),
     url(r'^plots/heat/(?P<ss>[a-z]+)$', HeatMapView.as_view()),
     url(r'^plots/marker/(?P<ss>[a-z]+)$', MarkersView.as_view()),
+    url(r'^plots/list/(?P<ss>[a-z]+)$', GetListView.as_view()),
+    url(r'^plots/some/(?P<ss>[a-z]+)$', SomePlotView.as_view()),
 ]

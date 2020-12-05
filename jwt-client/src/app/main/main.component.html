@@ -1,2 +1,2 @@
-<app-delete></app-delete>
-<app-results></app-results>
+<app-delete #list (allPlot)="result.getImageFromService()" (someplots)="result.hi($event)"></app-delete>
+<app-results #result (getlist)="list.listSelected()" ></app-results>

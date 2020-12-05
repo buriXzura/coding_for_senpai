@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FileService } from '../service/file.service';
 import {ThemePalette} from '@angular/material/core';
+import { stringify } from 'querystring';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-delete',
@@ -9,14 +11,13 @@ import {ThemePalette} from '@angular/material/core';
 })
 export class DeleteComponent implements OnInit {
 
-  Files: Blob[]=[];
+  Files: any=[];
 
   constructor(private fileService: FileService) { }
 
   ngOnInit(): void {
     this.fileService.list()
       .subscribe( files => {this.Files=files; this.createarray();} );
-    
     
   }
 
@@ -85,5 +86,28 @@ export class DeleteComponent implements OnInit {
     }
   }
 
+  @Output() allPlot = new EventEmitter();
+  @Output() someplots = new EventEmitter<String[]>();
+
+  
+  
+  listSelected(){
+    if(this.allComplete) {
+        this.allPlot.emit();
+    }
+    else {
+      let lst = new Array<String>(this.checked);
+      let j=0;
+
+      for( let i = 0; i < this.Files.length; i++ ){
+        if(this.complete[i]){
+          lst[j++] = this.name(this.Files[i].file);
+          //this.someplots.emit(this.Files[i]);
+          //break;
+        }
+      }
+      this.someplots.emit(lst);
+    }
+  }
 
 }

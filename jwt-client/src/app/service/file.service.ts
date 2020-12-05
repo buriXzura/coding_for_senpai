@@ -22,7 +22,7 @@ export class FileService {
   }
 
   public list() {
-    return this.http.get<Blob[]>(`${this.DJANGO_SERVER}/file/list/${this.session}`);
+    return this.http.get(`${this.DJANGO_SERVER}/file/list/${this.session}`);
   }
 
   public delete(id) {
@@ -64,6 +64,14 @@ export class FileService {
 
   public getHeat(): Observable<Blob> {
     return this.http.get(`${this.DJANGO_SERVER}/file/plots/heat/${this.session}`, {responseType: 'blob'});
+  }
+
+  public sendList(formData) {
+    return this.http.post<any>(`${this.DJANGO_SERVER}/file/plots/list/${this.session}`, formData);
+  }
+
+  public someplot() {
+    return this.http.get(`${this.DJANGO_SERVER}/file/plots/some/${this.session}`, {responseType: 'blob'});
   }
 
 }
