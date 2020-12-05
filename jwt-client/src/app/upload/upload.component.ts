@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FileUploader, FileLikeObject } from 'ng2-file-upload';
 import { concat } from  'rxjs';
 import { FileService } from '../service/file.service';
-import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-upload',
@@ -14,21 +13,12 @@ export class UploadComponent implements OnInit {
   public uploader: FileUploader = new FileUploader({ });
   public hasBaseDropZoneOver: boolean = false;
   temp: string = "rahul";
-  name: string;
-  email: string;
 
   constructor(
-    private fileService: FileService, private server: ServerService
+    private fileService: FileService
     ) {}
 
-  ngOnInit() {
-    this.server.request('GET', '/profile').subscribe((user: any) => {
-      if (user) {
-        this.name = user.name;
-        this.email = user.email;
-      }
-    });
-  }
+  ngOnInit() : void {}
 
   fileOverBase(event): void {
     this.hasBaseDropZoneOver = event;

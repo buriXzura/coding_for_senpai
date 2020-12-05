@@ -4,14 +4,21 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FileLikeObject } from 'ng2-file-upload';
 import { BehaviorSubject, Subject, Observable } from 'rxjs';
 import {map} from 'rxjs/operators';
+import { ServerService } from '../server.service';
 
 @Injectable({
  providedIn: 'root'
 })
 export class FileService {
+
   DJANGO_SERVER: string = "http://127.0.0.1:8000";
-  session: string = "rahul";
-  constructor(private http: HttpClient) { }
+  session: string = "to_be_gotten";
+
+  constructor(private http: HttpClient, private server: ServerService) {
+    this.server.request('GET', '/profile').subscribe((user: any) => {
+      if (user) {this.session = user.email;}
+    });
+  }
 
   public upload(formData) {
     return this.http.post<any>(`${this.DJANGO_SERVER}/file/upload`, formData);
