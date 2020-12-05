@@ -47,8 +47,8 @@ def tokenization(file,cpp):
         data = re.sub('\/\*([^\*\/]+|[^\*]+|[^\/]+)\*\/', '', data)
         #comments removal
 
-    data = re.sub('"+[^"]+"+|\'+[^\']+\'+|`+[^`]+`+', 'x', data)
-    data = re.sub(' |;|,|\n|\.', '', data)
+    #data = re.sub('"+[^"]+"+|\'+[^\']+\'+|`+[^`]+`+', 'x', data)
+    data = re.sub(' |;|,|\n|\.|`|\'|"', '', data)
     data = re.sub('[A-Z]', lambda pat: pat.group(0).lower(), data)
 
     return data
