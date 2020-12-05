@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { ServerService } from './server.service';
+import { FileService } from './service/file.service';
 
 @Injectable()
 export class AuthService {
@@ -13,7 +14,7 @@ export class AuthService {
     return this.loggedIn.asObservable();
   }
 
-  constructor(private router: Router, private server: ServerService) {
+  constructor(private router: Router, private server: ServerService, private fileService: FileService) {
     console.log('Auth Service');
     const userData = localStorage.getItem('user');
     this.authorized = false;
@@ -52,6 +53,11 @@ export class AuthService {
   }
 
   logout() {
+    this.fileService.deleteall();
+    this.fileService.delete1();
+    this.fileService.deleteResults();
+    this.fileService.deleteplots();
+
     this.server.setLoggedIn(false);
     delete this.token;
 
