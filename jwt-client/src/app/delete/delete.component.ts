@@ -96,17 +96,22 @@ export class DeleteComponent implements OnInit {
         this.allPlot.emit();
     }
     else {
-      let lst = new Array<String>(this.checked);
-      let j=0;
-
-      for( let i = 0; i < this.Files.length; i++ ){
-        if(this.complete[i]){
-          lst[j++] = this.name(this.Files[i].file);
-          //this.someplots.emit(this.Files[i]);
-          //break;
-        }
+      if (this.checked<=1){
+        alert("Select more than 1 file.")
       }
-      this.someplots.emit(lst);
+      else{
+        let lst = new Array<String>(this.checked);
+        let j=0;
+
+        for( let i = 0; i < this.Files.length; i++ ){
+          if(this.complete[i]){
+            lst[j++] = this.name(this.Files[i].file);
+            //this.someplots.emit(this.Files[i]);
+            //break;
+          }
+        }
+        this.someplots.emit(lst);
+      }
     }
   }
 

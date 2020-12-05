@@ -1,2 +1,2 @@
 <app-delete #list (allPlot)="result.getImageFromService()" (someplots)="result.hi($event)"></app-delete>
-<app-results #result (getlist)="list.listSelected()" ></app-results>
+<app-results #result (getlist)="list.listSelected()" [num]="list.Files.length"></app-results>

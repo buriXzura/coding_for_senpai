@@ -3,6 +3,9 @@ import re,os,sys,csv
 Dictionary = { '=': 0, '!': 1, '%': 2, '^': 4, '&': 5, '*': 6, '+': 7, '-': 8, ':': 9, '|': 10, '\\': 11, '/': 12, '<': 13, '>': 14, '?': 15, '~': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25, '0': 26, '[': 27, ']': 28, '{': 29, '}': 30, '(': 31, ')': 32, '@': 33, '$': 34, '#': 35, 'a': 36, 'b': 37, 'c': 38, 'd': 39, 'e': 40, 'f': 41, 'g': 42, 'h': 43, 'i': 44, 'j': 45, 'k': 46, 'l': 47, 'm': 48, 'n': 49, 'o': 50, 'p': 51, 'q': 52, 'r': 53, 's': 54, 't': 55, 'u': 56, 'v': 57, 'w': 58, 'x': 59, 'y': 60, 'z': 61, '_': 3 }
 
 def window (w, has):
+    if len(has)==0 :
+        return {}
+
     h = [has[0]]*w #INT_MAX
     r = 0
     Min = 0
@@ -52,7 +55,8 @@ def tokenization(file,cpp):
 
 def hashing (KGrams, K):
     Hashes = [0]*len(KGrams)
-    
+    if len(KGrams)==0 or len(KGrams[0])<K :
+        return [] 
     for i in range(K):
         Hashes[0] += Dictionary[KGrams[0][K-1-i]]*(62**i)
 
@@ -248,12 +252,15 @@ for i in range(len(files)):
         else:
             m=i
             n=j
-        for k in fingerprints[m]:
-            if k in fingerprints[n]:
-                inter += min(fingerprints[i][k],fingerprints[j][k])
-        Ans1 = inter/(sizes[i]+sizes[j]-inter)
-        Ans2 = inter/sizes[m]
-        Cov[i][j] = Cov[j][i] = (1-Ans2)*Ans1 + Ans2*Ans2
+        if sizes[m]==0:
+            Cov[i][j] = Cov[j][i] = 0
+        else:
+            for k in fingerprints[m]:
+                if k in fingerprints[n]:
+                    inter += min(fingerprints[i][k],fingerprints[j][k])
+            Ans1 = inter/(sizes[i]+sizes[j]-inter)
+            Ans2 = inter/sizes[m]
+            Cov[i][j] = Cov[j][i] = (1-Ans2)*Ans1 + Ans2*Ans2
 
 for i in range(len(files)):
     Cov[i][i] = 1.0

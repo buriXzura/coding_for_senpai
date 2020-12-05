@@ -15,7 +15,7 @@
             <tr>
                 <th colspan="2" >
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="button" class="btn btn-primary" (click)="generate()" [disabled]="Files.length" style="margin-bottom: 10px; margin-top: -20px; width: 100px;">
+                    <button type="button" class="btn btn-primary" (click)="generate()" [disabled]="Files.length || num==0 || num==1" style="margin-bottom: 10px; margin-top: -20px; width: 100px;">
                         <span>Compute</span>
                     </button>
                     
@@ -86,11 +86,27 @@
 </div>
 
 
-<div class="col-sm-4 mb-3" *ngIf="!isImageLoading;" style="float: left; text-align: center;">
+<div class="col-sm-4 mb-3" *ngIf="!isImageLoading;" style="float: right; text-align: center;">
     
     <a [href]="imageToShow" download="SurfacePlot" class="btn btn-primary" >Download SurfacePlot</a>
     
     <img [src]="imageToShow" alt="Place image title">
 </div>
 
+<div class="col-md-2" style="float: left; border: 1px ridge; border-color: blue; border-radius: 10px;">
+    <h2><u>Instructions</u></h2>
+    <div >
+        
+        <ul>
+            <li>Upload the stub-file if any.</li>
+            <li>Click 'Compute' to compute result as .csv for the uploaded files.</li>
+            <li>Select if files are type cpp.</li>
+            <li>Plot button generates SurfacePlot and HeatMap of the similarity measure.</li>
+            <li>Markers maps the plot-marks to filenames.</li>
+            <li>Select the files for which you want the plot.</li>
+            <li>If you update the files then follow the same as above.</li>
+        </ul>
+        
+    </div>
+</div>
 

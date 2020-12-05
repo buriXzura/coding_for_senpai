@@ -15,6 +15,7 @@ export class ResultsComponent implements OnInit {
 
   sss: string = "rahul/results";
   iscpp = false;
+  @Input() num: number ;
 
   Files: Blob[]=[];
   imageToShow: any;
@@ -144,8 +145,7 @@ export class ResultsComponent implements OnInit {
   @Output() getlist = new EventEmitter();
 
   hi(files){
-    //console.log(files);
-    //console.log(files[1]);
+    
     const formData = new FormData();
     formData.append('list', files);
     this.fileService.sendList(formData)
