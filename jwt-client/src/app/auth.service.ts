@@ -53,17 +53,22 @@ export class AuthService {
   }
 
   logout() {
-    this.fileService.deleteall();
-    this.fileService.delete1();
-    this.fileService.deleteResults();
-    this.fileService.deleteplots();
 
-    this.server.setLoggedIn(false);
-    delete this.token;
+    this.fileService.deleteplots().subscribe(
+        () => {this.fileService.deleteResults().subscribe(
+              () => {this.fileService.delete1().subscribe(
+                    () => {this.fileService.deleteall().subscribe(
+                          () => {
+                            this.server.setLoggedIn(false);
+                            delete this.token;
+                            this.loggedIn.next(false);
+                            this.authorized = false;
+                            localStorage.clear();
+                            this.router.navigate(['/']);
+                          })
+                    })
+              })
+        });
+    }
 
-    this.loggedIn.next(false);
-    this.authorized = false;
-    localStorage.clear();
-    this.router.navigate(['/']);
-  }
 }

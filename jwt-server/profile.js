@@ -44,7 +44,8 @@ router.post('/login', function(req, res) {
 
     var jwt = nJwt.create({ id: user.id }, config.secret);
     jwt.setExpiration(new Date().getTime() + (24*60*60*1000));
-
+    var tt = jwt.toString();
+    console.log("This token is " + tt);
     res.status(200).send({ auth: true, token: jwt.compact() });
   });
 });

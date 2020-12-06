@@ -7,6 +7,7 @@ import { ChngpswdComponent } from './chngpswd/chngpswd.component';
 import { HomeComponent } from './home/home.component';
 import { UploadComponent } from './upload/upload.component';
 import { MainComponent } from './main/main.component';
+import { RedirComponent } from './redir/redir.component';
 import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'chngpswd', component: ChngpswdComponent, canActivate: [AuthGuardService]},
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService]},
   { path: 'main', component: MainComponent, canActivate: [AuthGuardService]},
+  { path: 'redir', component: RedirComponent, canActivate: [AuthGuardService]},
   { path: '**', redirectTo: '' }
 ];
 
