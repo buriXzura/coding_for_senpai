@@ -33,7 +33,7 @@
 *   User data backend: Express JS (Node 10.1.0)
 *   File upload/download backend: Django 2.7.1
 *  JS: express, cors, body-parser, express-bearer-token, bcryptjs, sqlite3, njwt
-*  Python: re,os,sys,csv,matplotlib,numpy
+*  Python: re, os, sys, csv, matplotlib, numpy
 *  Django server: autopep8==1.4.3, django-cors-headers==2.5.0, django rest framework==3.9.2, pycodestyle==2.5.0, pytz==2018.9
 
 **How the tool is supposed to be run:**
