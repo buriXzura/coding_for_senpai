@@ -5,8 +5,8 @@
 \item 
 def \mbox{\hyperlink{namespaceplag__check_a268f64fcd888c7d68682cf777576f526}{window}} (w, has)
 \begin{DoxyCompactList}\small\item\em This function builds windows and selects fingerprints using hash values passed. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{namespaceplag__check_a3b2aba03324447ea51d834c5cbcefa17}{tokenization}} (file, \mbox{\hyperlink{namespaceplag__check_af5dc55049c9faea66128791bf5b2debc}{cpp}})
-\begin{DoxyCompactList}\small\item\em This function is for refining the data file passed by the following steps\+: -\/if the data file given is a cpp file $\ast$removing the comments(single line \& multi lined) -\/if cpp/not cpp $\ast$replace the strings and variables by X $\ast$remove punctuations,newline char,spaces and convert all letters to lowercase. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceplag__check_a9f3543d14aa80e82357181d8432b3934}{tokenization}} (file, py)
+\begin{DoxyCompactList}\small\item\em This function is for refining the data file passed by the following steps\+: \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceplag__check_ad8168749dbce6954dc043987121724d1}{hashing}} (\mbox{\hyperlink{namespaceplag__check_a161b26342abb693d578d36cfb682d62a}{K\+Grams}}, \mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}})
 \begin{DoxyCompactList}\small\item\em This function maps an arbitrarily large string (K\+Grams) to hashes which uniquely identify the original string. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceplag__check_a1ed3cc039900d1e0489fca820cf6b9e7}{hash\+Table\+\_\+\+G\+ST}} (\mbox{\hyperlink{namespaceplag__check_a6b20a61379c99bb09483889215c02101}{Hashes}})
@@ -36,7 +36,7 @@ int \mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}
 \begin{DoxyCompactList}\small\item\em value of K for the K\+Grams function \end{DoxyCompactList}\item 
 \mbox{\hyperlink{file_8service_8js_ab13d51f45a37423e955d7d9203cbbe44}{list}} \mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}} = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub\char`\"{}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub/\char`\"{}+name)\mbox{]}\mbox{[}0\mbox{]}
 \begin{DoxyCompactList}\small\item\em storing path of the stubfile in the directory \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}} = \mbox{\hyperlink{namespaceplag__check_a3b2aba03324447ea51d834c5cbcefa17}{tokenization}}(\mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}},\mbox{\hyperlink{namespaceplag__check_af5dc55049c9faea66128791bf5b2debc}{cpp}})
+def \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}} = \mbox{\hyperlink{namespaceplag__check_a9f3543d14aa80e82357181d8432b3934}{tokenization}}(\mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}},\mbox{\hyperlink{namespaceplag__check_af5dc55049c9faea66128791bf5b2debc}{cpp}})
 \begin{DoxyCompactList}\small\item\em stores tokenized form of the stub file \end{DoxyCompactList}\item 
 \mbox{\hyperlink{file_8service_8js_ab13d51f45a37423e955d7d9203cbbe44}{list}} \mbox{\hyperlink{namespaceplag__check_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}{Stub\+\_\+\+K\+Grams}} = \mbox{[} \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}\mbox{[}x\+:x+\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}\mbox{]} for x in range(len(\mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}})-\/\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}+1) \mbox{]}
 \begin{DoxyCompactList}\small\item\em stores the result of performing K\+Grams on the tokenized stub file \end{DoxyCompactList}\item 
@@ -163,21 +163,25 @@ This function gives the length of maximum string match at the given starting fro
 \begin{DoxyReturn}{Returns}
 returns the size of the match 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespaceplag__check_a3b2aba03324447ea51d834c5cbcefa17}\label{namespaceplag__check_a3b2aba03324447ea51d834c5cbcefa17}} 
+\mbox{\Hypertarget{namespaceplag__check_a9f3543d14aa80e82357181d8432b3934}\label{namespaceplag__check_a9f3543d14aa80e82357181d8432b3934}} 
 \index{plag\_check@{plag\_check}!tokenization@{tokenization}}
 \index{tokenization@{tokenization}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{tokenization()}{tokenization()}}
-{\footnotesize\ttfamily def plag\+\_\+check.\+tokenization (\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{cpp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def plag\+\_\+check.\+tokenization (\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{py }\end{DoxyParamCaption})}
 
 
 
-This function is for refining the data file passed by the following steps\+: -\/if the data file given is a cpp file $\ast$removing the comments(single line \& multi lined) -\/if cpp/not cpp $\ast$replace the strings and variables by X $\ast$remove punctuations,newline char,spaces and convert all letters to lowercase. 
+This function is for refining the data file passed by the following steps\+: 
+
+If the data file given is a py file (1) removing the comments (2) renaming all the identifiers to \textquotesingle{}x\textquotesingle{} (3) removing import statement(s)
+
+If the data file is any other type\+: remove punctuations, newline char, spaces, etc. and convert all letters to lowercase
 
 
 \begin{DoxyParams}{Parameters}
 {\em file} & files to be tokenized \\
 \hline
-{\em cpp} & boolean value depicting whether passed file is cpp or not \\
+{\em py} & boolean value depicting whether passed file is py or not \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -354,7 +358,7 @@ storing path of the stubfile in the directory
 \index{plag\_check@{plag\_check}!stub\_data@{stub\_data}}
 \index{stub\_data@{stub\_data}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{stub\_data}{stub\_data}}
-{\footnotesize\ttfamily def stub\+\_\+data = \mbox{\hyperlink{namespaceplag__check_a3b2aba03324447ea51d834c5cbcefa17}{tokenization}}(\mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}},\mbox{\hyperlink{namespaceplag__check_af5dc55049c9faea66128791bf5b2debc}{cpp}})}
+{\footnotesize\ttfamily def stub\+\_\+data = \mbox{\hyperlink{namespaceplag__check_a9f3543d14aa80e82357181d8432b3934}{tokenization}}(\mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}},\mbox{\hyperlink{namespaceplag__check_af5dc55049c9faea66128791bf5b2debc}{cpp}})}
 
 
 

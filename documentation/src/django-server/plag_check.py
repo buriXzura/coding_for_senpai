@@ -59,30 +59,42 @@ def window (w, has):
 
     return Fingerprint
 
-def tokenization(file,cpp):
+def tokenization(file,py):
     """! This function is for refining the data file passed by the following steps:
-    -if the data file given is a cpp file
-        *removing the comments(single line & multi lined)
-    -if cpp/not cpp
-        *replace the strings and variables by X
-        *remove punctuations,newline char,spaces and convert all letters to lowercase
+
+    If the data file given is a py file (1) removing the comments (2) renaming all the identifiers to 'x'
+     (3) removing import statement(s)
+
+    If the data file is any other type: remove punctuations, newline char, spaces, etc. and convert all letters to lowercase
 
     @param file files to be tokenized
-    @param cpp boolean value depicting whether passed file is cpp or not
+    @param py boolean value depicting whether passed file is py or not
     @return  tokenized data ie. data free from punctuations, comments, newline char, comments having transformed variables
     """
 
     with open(file, 'r') as file:
         data = file.read()
 
+    if py:
+        tree = ast.parse(data)
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Name):
+                node.id = "x"
+            elif isinstance(node, ast.arg):
+                node.arg = "x"
+            elif isinstance(node, ast.FunctionDef):
+                node.name = "x"
+            elif isinstance(node,ast.Attribute):
+                node.attr = "x"
+        data = astunparse.unparse(tree)
+        data = re.sub('#[^\n]+', '', data)
+        #data = re.sub('//[^\n]+', '', data)
+        #data = re.sub('\/\*([^\*\/]+|[^\*]+|[^\/]+)\*\/', '', data)
+        #comments removal
+        #data = re.sub('"+[^"]+"+|\'+[^\']+\'+|`+[^`]+`+', 'x', data)
 
-    if cpp:
-        data = re.sub('//[^\n]+', '', data)
-        data = re.sub('\/\*([^\*\/]+|[^\*]+|[^\/]+)\*\/', '', data)
-        #removal of comments
-
-    data = re.sub('"+[^"]+"+|\'+[^\']+\'+|`+[^`]+`+', 'x', data)
-    data = re.sub(' |;|,|\n|\.', '', data)
+    #data = re.sub('"+[^"]+"+|\'+[^\']+\'+|`+[^`]+`+', 'x', data)
+    data = re.sub(' |;|,|\n|\.|`|\'|"|\t', '', data)
     data = re.sub('[A-Z]', lambda pat: pat.group(0).lower(), data)
 
     return data
