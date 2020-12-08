@@ -1,6 +1,14 @@
 var searchData=
 [
-  ['w_64',['W',['../namespaceplag__check.html#a2dd51e03005d5cb52315290d27f61870',1,'plag_check']]],
-  ['window_65',['window',['../namespaceplag__check.html#a268f64fcd888c7d68682cf777576f526',1,'plag_check']]],
-  ['write_66',['write',['../namespaceplag__check.html#a0328b2b476ba0d019492a722f334d2b6',1,'plag_check']]]
+  ['parser_5fclass_75',['parser_class',['../classviews_1_1_file_upload_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.FileUploadView.parser_class()'],['../classviews_1_1_file_list_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.FileListView.parser_class()'],['../classviews_1_1_file_delete_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.FileDeleteView.parser_class()'],['../classviews_1_1_delete_all_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.DeleteAllView.parser_class()'],['../classviews_1_1_stub_file_delete_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.StubFileDeleteView.parser_class()'],['../classviews_1_1_stub_list_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.StubListView.parser_class()'],['../classviews_1_1_results_file_delete_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.ResultsFileDeleteView.parser_class()'],['../classviews_1_1_results_list_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.ResultsListView.parser_class()'],['../classviews_1_1_results_download_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.ResultsDownloadView.parser_class()'],['../classviews_1_1_false_results_process_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.FalseResultsProcessView.parser_class()'],['../classviews_1_1_true_results_process_view.html#a9731b74a10637eafda354101c4e3c755',1,'views.TrueResultsProcessView.parser_class()']]],
+  ['plag_5fcheck_76',['plag_check',['../namespaceplag__check.html',1,'']]],
+  ['plag_5fcheck_2epy_77',['plag_check.py',['../plag__check_8py.html',1,'']]],
+  ['plots_5fcreate_78',['plots_create',['../namespaceplots__create.html',1,'']]],
+  ['plots_5fcreate_2epy_79',['plots_create.py',['../plots__create_8py.html',1,'']]],
+  ['port_80',['port',['../index_8js.html#a8919360cd4b4bb6c42169b3735ca2a39',1,'index.js']]],
+  ['post_81',['post',['../classviews_1_1_file_upload_view.html#a3a35debc9ba8363a01d9088960cc0349',1,'views.FileUploadView.post()'],['../classviews_1_1_get_list_view.html#a66d0238c52124114cedaa72be4b95b47',1,'views.GetListView.post()']]],
+  ['profile_82',['profile',['../index_8js.html#ad71185e6cb2b367a40c7e3d3c6b59d6e',1,'index.js']]],
+  ['profile_2ejs_83',['profile.js',['../profile_8js.html',1,'']]],
+  ['pyclass_84',['PyClass',['../classttt_1_1_py_class.html',1,'ttt']]],
+  ['pymethod_85',['PyMethod',['../classttt_1_1_py_class.html#a06331a3bf023b9e7a180422e737b0381',1,'ttt::PyClass']]]
 ];

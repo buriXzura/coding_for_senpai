@@ -1,2 +1,114 @@
 \hypertarget{profile_8js}{}\doxysection{/\+Users/shabnamsahay/\+Documents/cs-\/251-\/ssl/project/coding\+\_\+for\+\_\+senpai/documentation/src/jwt-\/server/profile.js File Reference}
 \label{profile_8js}\index{/Users/shabnamsahay/Documents/cs-\/251-\/ssl/project/coding\_for\_senpai/documentation/src/jwt-\/server/profile.js@{/Users/shabnamsahay/Documents/cs-\/251-\/ssl/project/coding\_for\_senpai/documentation/src/jwt-\/server/profile.js}}
+
+
+Method implementations for login/authentication server.  
+
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{profile_8js_a7f3341255b805bd92d1033378a0a0c6b}{express}}
+\begin{DoxyCompactList}\small\item\em Importing the express library. \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{profile_8js_a747d1b72de6ab889492fc886b4568fc2}{bcrypt}}
+\begin{DoxyCompactList}\small\item\em Importing the bcryptjs library. \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{profile_8js_a0f2658a9fb6f28777aa3320892c7014b}{sqlite3}}
+\begin{DoxyCompactList}\small\item\em Importing the sqlite3 library. \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{profile_8js_a803dd7ac38c3ed9050878f3ccf4cd7ba}{n\+Jwt}}
+\begin{DoxyCompactList}\small\item\em Importing the njwt library. \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{profile_8js_aeac120c9ce32d189166215752b0b1a76}{config}}
+\begin{DoxyCompactList}\small\item\em Defining the path for the config file. \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{profile_8js_ac6a1b1fd00c35062aea99d6f37a15054}{db}}
+\begin{DoxyCompactList}\small\item\em Defining the path for the user information database. \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{profile_8js_af100c40b3949fbe4f9f71d346fc5f852}{router}}
+\begin{DoxyCompactList}\small\item\em Initializes the router for the server. \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{profile_8js_afeaa7f12ff7df455f65b0216e165d017}{jwt\+Auth}}
+\begin{DoxyCompactList}\small\item\em Defining a variable to pass to methods which require authentication to be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Method implementations for login/authentication server. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{profile_8js_a747d1b72de6ab889492fc886b4568fc2}\label{profile_8js_a747d1b72de6ab889492fc886b4568fc2}} 
+\index{profile.js@{profile.js}!bcrypt@{bcrypt}}
+\index{bcrypt@{bcrypt}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{bcrypt}{bcrypt}}
+{\footnotesize\ttfamily var bcrypt}
+
+
+
+Importing the bcryptjs library. 
+
+\mbox{\Hypertarget{profile_8js_aeac120c9ce32d189166215752b0b1a76}\label{profile_8js_aeac120c9ce32d189166215752b0b1a76}} 
+\index{profile.js@{profile.js}!config@{config}}
+\index{config@{config}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily var config}
+
+
+
+Defining the path for the config file. 
+
+\mbox{\Hypertarget{profile_8js_ac6a1b1fd00c35062aea99d6f37a15054}\label{profile_8js_ac6a1b1fd00c35062aea99d6f37a15054}} 
+\index{profile.js@{profile.js}!db@{db}}
+\index{db@{db}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily var db}
+
+
+
+Defining the path for the user information database. 
+
+\mbox{\Hypertarget{profile_8js_a7f3341255b805bd92d1033378a0a0c6b}\label{profile_8js_a7f3341255b805bd92d1033378a0a0c6b}} 
+\index{profile.js@{profile.js}!express@{express}}
+\index{express@{express}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{express}{express}}
+{\footnotesize\ttfamily var express}
+
+
+
+Importing the express library. 
+
+\mbox{\Hypertarget{profile_8js_afeaa7f12ff7df455f65b0216e165d017}\label{profile_8js_afeaa7f12ff7df455f65b0216e165d017}} 
+\index{profile.js@{profile.js}!jwtAuth@{jwtAuth}}
+\index{jwtAuth@{jwtAuth}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{jwtAuth}{jwtAuth}}
+{\footnotesize\ttfamily var jwt\+Auth}
+
+
+
+Defining a variable to pass to methods which require authentication to be used. 
+
+\mbox{\Hypertarget{profile_8js_a803dd7ac38c3ed9050878f3ccf4cd7ba}\label{profile_8js_a803dd7ac38c3ed9050878f3ccf4cd7ba}} 
+\index{profile.js@{profile.js}!nJwt@{nJwt}}
+\index{nJwt@{nJwt}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{nJwt}{nJwt}}
+{\footnotesize\ttfamily var n\+Jwt}
+
+
+
+Importing the njwt library. 
+
+\mbox{\Hypertarget{profile_8js_af100c40b3949fbe4f9f71d346fc5f852}\label{profile_8js_af100c40b3949fbe4f9f71d346fc5f852}} 
+\index{profile.js@{profile.js}!router@{router}}
+\index{router@{router}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{router}{router}}
+{\footnotesize\ttfamily var router}
+
+
+
+Initializes the router for the server. 
+
+\mbox{\Hypertarget{profile_8js_a0f2658a9fb6f28777aa3320892c7014b}\label{profile_8js_a0f2658a9fb6f28777aa3320892c7014b}} 
+\index{profile.js@{profile.js}!sqlite3@{sqlite3}}
+\index{sqlite3@{sqlite3}!profile.js@{profile.js}}
+\doxysubsubsection{\texorpdfstring{sqlite3}{sqlite3}}
+{\footnotesize\ttfamily var sqlite3}
+
+
+
+Importing the sqlite3 library. 
+

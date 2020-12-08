@@ -1,2 +1,302 @@
 \hypertarget{file_8service_8js}{}\doxysection{/\+Users/shabnamsahay/\+Documents/cs-\/251-\/ssl/project/coding\+\_\+for\+\_\+senpai/documentation/src/jwt-\/client/file.service.\+js File Reference}
 \label{file_8service_8js}\index{/Users/shabnamsahay/Documents/cs-\/251-\/ssl/project/coding\_for\_senpai/documentation/src/jwt-\/client/file.service.js@{/Users/shabnamsahay/Documents/cs-\/251-\/ssl/project/coding\_for\_senpai/documentation/src/jwt-\/client/file.service.js}}
+
+
+A\+PI endpoint\+: file server connection service for frontend. Actual implementation is in .ts; relevant parts transposed to .js only for documentation.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_download_results}{Download\+Results}}
+\begin{DoxyCompactList}\small\item\em allows the user to download the result(.csv) file registered in the model \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_list1}{List1}}
+\begin{DoxyCompactList}\small\item\em provides the list of stub files (single/no file in our case) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{file_8service_8js_a42ccf0e174a31486b751b2ad7ef2709b}{get\+\_\+session}} (String ss)
+\begin{DoxyCompactList}\small\item\em Sets the current session id. \end{DoxyCompactList}\item 
+File\+Like\+Object \mbox{\hyperlink{file_8service_8js_a77337659d00969a74d1a0c9be8203f36}{upload}} (Form\+Data form\+Data)
+\begin{DoxyCompactList}\small\item\em updates the session with the email id retrieved from the server \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{file_8service_8js_ab13d51f45a37423e955d7d9203cbbe44}{list}} ()
+\begin{DoxyCompactList}\small\item\em gets the list of files uploaded \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{file_8service_8js_a4a1b8ca320dc719b50f9e5cee1f1c975}{delete}} (number id)
+\begin{DoxyCompactList}\small\item\em deletes the file from the data base as well as from the backend \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{file_8service_8js_a210f1904a302a93e614c803655311b58}{deleteall}} ()
+\begin{DoxyCompactList}\small\item\em deletes all the files wth a given session \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{file_8service_8js_a44eb39bf9642fb6021d0ac0a1e7e65b1}{delete1}} ()
+\begin{DoxyCompactList}\small\item\em deletes the stub file provided (if any) \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{file_8service_8js_a6de2c2b4a6bf4f32cfe0ec1832e5507e}{delete\+Results}} ()
+\begin{DoxyCompactList}\small\item\em deleted the generated result file \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{file_8service_8js_ad4bbae55a669a5553dbaf66c51f56380}{results\+List}} ()
+\begin{DoxyCompactList}\small\item\em provides the result file\textquotesingle{}s information \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{file_8service_8js_afb79b8b31e70f790b41712bdea1eb973}{generate}} (boolean cpp)
+\begin{DoxyCompactList}\small\item\em generates the result (.csv) file \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{file_8service_8js_a604568673adb9552425d7af198938a85}{get\+Image}} ()
+\begin{DoxyCompactList}\small\item\em requests the server to create plots and return the surface plot \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{file_8service_8js_abe4e448e1959d6287f5817d95ee58d5f}{get\+Markers}} ()
+\begin{DoxyCompactList}\small\item\em requests the server for markers.\+txt file \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{file_8service_8js_a50e21421efe29d62d735c6e5f6187be7}{get\+Heat}} ()
+\begin{DoxyCompactList}\small\item\em requests the server for heatmap.\+png file \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{file_8service_8js_a312b1e8a3dc296feb9b269f459307db8}{send\+List}} (Form\+Data form\+Data)
+\begin{DoxyCompactList}\small\item\em sends the list of files for which plots are requested to the server and asks for the computation \end{DoxyCompactList}\item 
+var \mbox{\hyperlink{file_8service_8js_af29a6b8a7e73dd5f0003d003e89f3369}{someplot}} ()
+\begin{DoxyCompactList}\small\item\em requests the server for surface\+Plot.\+png file \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{file_8service_8js_a11e2221523400965bec54784fc54b68d}{deleteplots}} ()
+\begin{DoxyCompactList}\small\item\em requests the server to delete the plots and markers file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{file_8service_8js_a9086dc242806a6a42ad9cd9295d5fec8}{D\+J\+A\+N\+G\+O\+\_\+\+S\+E\+R\+V\+ER}}
+\begin{DoxyCompactList}\small\item\em Defining the U\+RL at which to access the file server. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{file_8service_8js_a2056d3c90b3758ec0ebafa55e2a645af}{session}}
+\begin{DoxyCompactList}\small\item\em stores the current session id using the user email id in order to ensure each user can accesses only their own files in the backend \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI endpoint\+: file server connection service for frontend. Actual implementation is in .ts; relevant parts transposed to .js only for documentation. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{file_8service_8js_a4a1b8ca320dc719b50f9e5cee1f1c975}\label{file_8service_8js_a4a1b8ca320dc719b50f9e5cee1f1c975}} 
+\index{file.service.js@{file.service.js}!delete@{delete}}
+\index{delete@{delete}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily object delete (\begin{DoxyParamCaption}\item[{number}]{id }\end{DoxyParamCaption})}
+
+
+
+deletes the file from the data base as well as from the backend 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the primary key of the file regitered in model \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status of delete request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a44eb39bf9642fb6021d0ac0a1e7e65b1}\label{file_8service_8js_a44eb39bf9642fb6021d0ac0a1e7e65b1}} 
+\index{file.service.js@{file.service.js}!delete1@{delete1}}
+\index{delete1@{delete1}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{delete1()}{delete1()}}
+{\footnotesize\ttfamily object delete1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deletes the stub file provided (if any) 
+
+\begin{DoxyReturn}{Returns}
+the status of the delete request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a210f1904a302a93e614c803655311b58}\label{file_8service_8js_a210f1904a302a93e614c803655311b58}} 
+\index{file.service.js@{file.service.js}!deleteall@{deleteall}}
+\index{deleteall@{deleteall}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{deleteall()}{deleteall()}}
+{\footnotesize\ttfamily object deleteall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deletes all the files wth a given session 
+
+\begin{DoxyReturn}{Returns}
+the status of the delete request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a11e2221523400965bec54784fc54b68d}\label{file_8service_8js_a11e2221523400965bec54784fc54b68d}} 
+\index{file.service.js@{file.service.js}!deleteplots@{deleteplots}}
+\index{deleteplots@{deleteplots}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{deleteplots()}{deleteplots()}}
+{\footnotesize\ttfamily Object deleteplots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+requests the server to delete the plots and markers file 
+
+\begin{DoxyReturn}{Returns}
+status of the delete request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a6de2c2b4a6bf4f32cfe0ec1832e5507e}\label{file_8service_8js_a6de2c2b4a6bf4f32cfe0ec1832e5507e}} 
+\index{file.service.js@{file.service.js}!deleteResults@{deleteResults}}
+\index{deleteResults@{deleteResults}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{deleteResults()}{deleteResults()}}
+{\footnotesize\ttfamily object delete\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deleted the generated result file 
+
+\begin{DoxyReturn}{Returns}
+the status of the delete request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_afb79b8b31e70f790b41712bdea1eb973}\label{file_8service_8js_afb79b8b31e70f790b41712bdea1eb973}} 
+\index{file.service.js@{file.service.js}!generate@{generate}}
+\index{generate@{generate}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily Object generate (\begin{DoxyParamCaption}\item[{boolean}]{cpp }\end{DoxyParamCaption})}
+
+
+
+generates the result (.csv) file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpp} & defines whether the files to be processed are cpp files or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the data associated with the generated file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a42ccf0e174a31486b751b2ad7ef2709b}\label{file_8service_8js_a42ccf0e174a31486b751b2ad7ef2709b}} 
+\index{file.service.js@{file.service.js}!get\_session@{get\_session}}
+\index{get\_session@{get\_session}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{get\_session()}{get\_session()}}
+{\footnotesize\ttfamily void get\+\_\+session (\begin{DoxyParamCaption}\item[{String}]{ss }\end{DoxyParamCaption})}
+
+
+
+Sets the current session id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ss} & the string to which the session id is to be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file_8service_8js_a50e21421efe29d62d735c6e5f6187be7}\label{file_8service_8js_a50e21421efe29d62d735c6e5f6187be7}} 
+\index{file.service.js@{file.service.js}!getHeat@{getHeat}}
+\index{getHeat@{getHeat}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{getHeat()}{getHeat()}}
+{\footnotesize\ttfamily var get\+Heat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+requests the server for heatmap.\+png file 
+
+\begin{DoxyReturn}{Returns}
+type\+:Observable$<$\+Blob$>$ the contents of heatmap.\+png file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a604568673adb9552425d7af198938a85}\label{file_8service_8js_a604568673adb9552425d7af198938a85}} 
+\index{file.service.js@{file.service.js}!getImage@{getImage}}
+\index{getImage@{getImage}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily var get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+requests the server to create plots and return the surface plot 
+
+\begin{DoxyReturn}{Returns}
+type\+:Observable$<$\+Blob$>$ the contents of surface\+Plot.\+png file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_abe4e448e1959d6287f5817d95ee58d5f}\label{file_8service_8js_abe4e448e1959d6287f5817d95ee58d5f}} 
+\index{file.service.js@{file.service.js}!getMarkers@{getMarkers}}
+\index{getMarkers@{getMarkers}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{getMarkers()}{getMarkers()}}
+{\footnotesize\ttfamily J\+S\+ON get\+Markers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+requests the server for markers.\+txt file 
+
+\begin{DoxyReturn}{Returns}
+the contents of markers.\+txt file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_ab13d51f45a37423e955d7d9203cbbe44}\label{file_8service_8js_ab13d51f45a37423e955d7d9203cbbe44}} 
+\index{file.service.js@{file.service.js}!list@{list}}
+\index{list@{list}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}}
+{\footnotesize\ttfamily Object list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets the list of files uploaded 
+
+\begin{DoxyReturn}{Returns}
+the list of files requested 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_ad4bbae55a669a5553dbaf66c51f56380}\label{file_8service_8js_ad4bbae55a669a5553dbaf66c51f56380}} 
+\index{file.service.js@{file.service.js}!resultsList@{resultsList}}
+\index{resultsList@{resultsList}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{resultsList()}{resultsList()}}
+{\footnotesize\ttfamily Object results\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+provides the result file\textquotesingle{}s information 
+
+\begin{DoxyReturn}{Returns}
+the result file\textquotesingle{}s associated data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a312b1e8a3dc296feb9b269f459307db8}\label{file_8service_8js_a312b1e8a3dc296feb9b269f459307db8}} 
+\index{file.service.js@{file.service.js}!sendList@{sendList}}
+\index{sendList@{sendList}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{sendList()}{sendList()}}
+{\footnotesize\ttfamily Object send\+List (\begin{DoxyParamCaption}\item[{Form\+Data}]{form\+Data }\end{DoxyParamCaption})}
+
+
+
+sends the list of files for which plots are requested to the server and asks for the computation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form\+Data} & the list of the concerned files \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status of the request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_af29a6b8a7e73dd5f0003d003e89f3369}\label{file_8service_8js_af29a6b8a7e73dd5f0003d003e89f3369}} 
+\index{file.service.js@{file.service.js}!someplot@{someplot}}
+\index{someplot@{someplot}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{someplot()}{someplot()}}
+{\footnotesize\ttfamily var someplot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+requests the server for surface\+Plot.\+png file 
+
+\begin{DoxyReturn}{Returns}
+type\+:Observable$<$\+Blob$>$ the contents of surface\+Plot.\+png file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file_8service_8js_a77337659d00969a74d1a0c9be8203f36}\label{file_8service_8js_a77337659d00969a74d1a0c9be8203f36}} 
+\index{file.service.js@{file.service.js}!upload@{upload}}
+\index{upload@{upload}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{upload()}{upload()}}
+{\footnotesize\ttfamily File\+Like\+Object upload (\begin{DoxyParamCaption}\item[{Form\+Data}]{form\+Data }\end{DoxyParamCaption})}
+
+
+
+updates the session with the email id retrieved from the server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form\+Data} & information of the file to be uploaded and its contents \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the data associated with registering of the file in the model 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{file_8service_8js_a9086dc242806a6a42ad9cd9295d5fec8}\label{file_8service_8js_a9086dc242806a6a42ad9cd9295d5fec8}} 
+\index{file.service.js@{file.service.js}!DJANGO\_SERVER@{DJANGO\_SERVER}}
+\index{DJANGO\_SERVER@{DJANGO\_SERVER}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{DJANGO\_SERVER}{DJANGO\_SERVER}}
+{\footnotesize\ttfamily String D\+J\+A\+N\+G\+O\+\_\+\+S\+E\+R\+V\+ER}
+
+
+
+Defining the U\+RL at which to access the file server. 
+
+\mbox{\Hypertarget{file_8service_8js_a2056d3c90b3758ec0ebafa55e2a645af}\label{file_8service_8js_a2056d3c90b3758ec0ebafa55e2a645af}} 
+\index{file.service.js@{file.service.js}!session@{session}}
+\index{session@{session}!file.service.js@{file.service.js}}
+\doxysubsubsection{\texorpdfstring{session}{session}}
+{\footnotesize\ttfamily String session}
+
+
+
+stores the current session id using the user email id in order to ensure each user can accesses only their own files in the backend 
+

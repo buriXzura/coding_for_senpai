@@ -17,17 +17,17 @@ string \mbox{\hyperlink{namespaceplots__create_a7c4682f71f44768fe514fcb55f7fcf40
 dictionary \mbox{\hyperlink{namespaceplots__create_a2d163db2dd2050926a0bc5e76f88c4d8}{my\+\_\+dict}} = \{\}
 \begin{DoxyCompactList}\small\item\em stores the data from the result file corresponding to the selected files \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_a4124bc0a9335c27f086f24ba207a4912}{a}} = np.\+empty(\mbox{[}len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}),len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}})\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em temporary 2D np array for processing the data \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = np.\+linspace(0, len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}), len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}))
-\item 
+\begin{DoxyCompactList}\small\item\em x axis dimension \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}} = np.\+linspace(0, len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}), len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}))
-\item 
+\begin{DoxyCompactList}\small\item\em y axis dimension \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_ac51b57a703ba1c5869228690c93e1701}{X}}
-\item 
+\begin{DoxyCompactList}\small\item\em x and y grid \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_a0867f43e27585e019c13f7f4b7c4ab6b}{Y}}
 \item 
 \mbox{\hyperlink{namespaceplots__create_a64aa603bc3c6c1587e7c6542452481ac}{fig}} = plt.\+figure(figsize=(6,6))
-\item 
+\begin{DoxyCompactList}\small\item\em figure that will contain the surface plot \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_af8dd95942a665dc2de84d6fb11fe52e5}{ax1}} = fig.\+add\+\_\+subplot(111,projection=\textquotesingle{}3d\textquotesingle{})
 \item 
 \mbox{\hyperlink{namespaceplots__create_a74bd156b084de6e36332db67fdc1a4f0}{my\+\_\+col}} = cm.\+jet(\mbox{\hyperlink{namespaceplots__create_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}/np.\+amax(\mbox{\hyperlink{namespaceplots__create_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}))
@@ -39,7 +39,7 @@ dictionary \mbox{\hyperlink{namespaceplots__create_a2d163db2dd2050926a0bc5e76f88
 \mbox{\hyperlink{namespaceplots__create_ab4024db5b48e2ddd9bcd43847f10f016}{dpi}}
 \item 
 \mbox{\hyperlink{namespaceplots__create_a4c6f2549afdecf016a32812b531c474b}{heatmap}} = plt.\+pcolor(\mbox{\hyperlink{namespaceplots__create_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},cmap=cm.\+coolwarm)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em heatmap figure object that uses color gradient to depict values \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Variable Documentation}
@@ -48,6 +48,10 @@ dictionary \mbox{\hyperlink{namespaceplots__create_a2d163db2dd2050926a0bc5e76f88
 \index{a@{a}!plots\_create@{plots\_create}}
 \doxysubsubsection{\texorpdfstring{a}{a}}
 {\footnotesize\ttfamily a = np.\+empty(\mbox{[}len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}),len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}})\mbox{]})}
+
+
+
+temporary 2D np array for processing the data 
 
 \mbox{\Hypertarget{namespaceplots__create_af8dd95942a665dc2de84d6fb11fe52e5}\label{namespaceplots__create_af8dd95942a665dc2de84d6fb11fe52e5}} 
 \index{plots\_create@{plots\_create}!ax1@{ax1}}
@@ -88,6 +92,10 @@ the directory where the result csv file is present and the plots are to be saved
 \doxysubsubsection{\texorpdfstring{fig}{fig}}
 {\footnotesize\ttfamily fig = plt.\+figure(figsize=(6,6))}
 
+
+
+figure that will contain the surface plot 
+
 \mbox{\Hypertarget{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}\label{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}} 
 \index{plots\_create@{plots\_create}!files@{files}}
 \index{files@{files}!plots\_create@{plots\_create}}
@@ -113,6 +121,10 @@ one line from results.\+csv
 \index{heatmap@{heatmap}!plots\_create@{plots\_create}}
 \doxysubsubsection{\texorpdfstring{heatmap}{heatmap}}
 {\footnotesize\ttfamily heatmap = plt.\+pcolor(\mbox{\hyperlink{namespaceplots__create_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},cmap=cm.\+coolwarm)}
+
+
+
+heatmap figure object that uses color gradient to depict values 
 
 \mbox{\Hypertarget{namespaceplots__create_a74bd156b084de6e36332db67fdc1a4f0}\label{namespaceplots__create_a74bd156b084de6e36332db67fdc1a4f0}} 
 \index{plots\_create@{plots\_create}!my\_col@{my\_col}}
@@ -158,17 +170,29 @@ the address of results.\+csv
 \doxysubsubsection{\texorpdfstring{x}{x}}
 {\footnotesize\ttfamily x = np.\+linspace(0, len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}), len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}))}
 
+
+
+x axis dimension 
+
 \mbox{\Hypertarget{namespaceplots__create_ac51b57a703ba1c5869228690c93e1701}\label{namespaceplots__create_ac51b57a703ba1c5869228690c93e1701}} 
 \index{plots\_create@{plots\_create}!X@{X}}
 \index{X@{X}!plots\_create@{plots\_create}}
 \doxysubsubsection{\texorpdfstring{X}{X}}
 {\footnotesize\ttfamily X}
 
+
+
+x and y grid 
+
 \mbox{\Hypertarget{namespaceplots__create_a2fb1c5cf58867b5bbc9a1b145a86f3a0}\label{namespaceplots__create_a2fb1c5cf58867b5bbc9a1b145a86f3a0}} 
 \index{plots\_create@{plots\_create}!y@{y}}
 \index{y@{y}!plots\_create@{plots\_create}}
 \doxysubsubsection{\texorpdfstring{y}{y}}
 {\footnotesize\ttfamily y = np.\+linspace(0, len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}), len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}))}
+
+
+
+y axis dimension 
 
 \mbox{\Hypertarget{namespaceplots__create_a0867f43e27585e019c13f7f4b7c4ab6b}\label{namespaceplots__create_a0867f43e27585e019c13f7f4b7c4ab6b}} 
 \index{plots\_create@{plots\_create}!Y@{Y}}

@@ -65,10 +65,454 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">file.service.js File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>API endpoint: file server connection service for frontend. Actual implementation is in .ts; relevant parts transposed to .js only for documentation.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_download_results.html">DownloadResults</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">allows the user to download the result(.csv) file registered in the model  <a href="class_download_results.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_list1.html">List1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the list of stub files (single/no file in our case)  <a href="class_list1.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a42ccf0e174a31486b751b2ad7ef2709b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a42ccf0e174a31486b751b2ad7ef2709b">get_session</a> (String ss)</td></tr>
+<tr class="memdesc:a42ccf0e174a31486b751b2ad7ef2709b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current session id.  <a href="file_8service_8js.html#a42ccf0e174a31486b751b2ad7ef2709b">More...</a><br /></td></tr>
+<tr class="separator:a42ccf0e174a31486b751b2ad7ef2709b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77337659d00969a74d1a0c9be8203f36"><td class="memItemLeft" align="right" valign="top">FileLikeObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a77337659d00969a74d1a0c9be8203f36">upload</a> (FormData formData)</td></tr>
+<tr class="memdesc:a77337659d00969a74d1a0c9be8203f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the session with the email id retrieved from the server  <a href="file_8service_8js.html#a77337659d00969a74d1a0c9be8203f36">More...</a><br /></td></tr>
+<tr class="separator:a77337659d00969a74d1a0c9be8203f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13d51f45a37423e955d7d9203cbbe44"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#ab13d51f45a37423e955d7d9203cbbe44">list</a> ()</td></tr>
+<tr class="memdesc:ab13d51f45a37423e955d7d9203cbbe44"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the list of files uploaded  <a href="file_8service_8js.html#ab13d51f45a37423e955d7d9203cbbe44">More...</a><br /></td></tr>
+<tr class="separator:ab13d51f45a37423e955d7d9203cbbe44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1b8ca320dc719b50f9e5cee1f1c975"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a4a1b8ca320dc719b50f9e5cee1f1c975">delete</a> (number id)</td></tr>
+<tr class="memdesc:a4a1b8ca320dc719b50f9e5cee1f1c975"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the file from the data base as well as from the backend  <a href="file_8service_8js.html#a4a1b8ca320dc719b50f9e5cee1f1c975">More...</a><br /></td></tr>
+<tr class="separator:a4a1b8ca320dc719b50f9e5cee1f1c975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210f1904a302a93e614c803655311b58"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a210f1904a302a93e614c803655311b58">deleteall</a> ()</td></tr>
+<tr class="memdesc:a210f1904a302a93e614c803655311b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes all the files wth a given session  <a href="file_8service_8js.html#a210f1904a302a93e614c803655311b58">More...</a><br /></td></tr>
+<tr class="separator:a210f1904a302a93e614c803655311b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44eb39bf9642fb6021d0ac0a1e7e65b1"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a44eb39bf9642fb6021d0ac0a1e7e65b1">delete1</a> ()</td></tr>
+<tr class="memdesc:a44eb39bf9642fb6021d0ac0a1e7e65b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the stub file provided (if any)  <a href="file_8service_8js.html#a44eb39bf9642fb6021d0ac0a1e7e65b1">More...</a><br /></td></tr>
+<tr class="separator:a44eb39bf9642fb6021d0ac0a1e7e65b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de2c2b4a6bf4f32cfe0ec1832e5507e"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a6de2c2b4a6bf4f32cfe0ec1832e5507e">deleteResults</a> ()</td></tr>
+<tr class="memdesc:a6de2c2b4a6bf4f32cfe0ec1832e5507e"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted the generated result file  <a href="file_8service_8js.html#a6de2c2b4a6bf4f32cfe0ec1832e5507e">More...</a><br /></td></tr>
+<tr class="separator:a6de2c2b4a6bf4f32cfe0ec1832e5507e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bbae55a669a5553dbaf66c51f56380"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#ad4bbae55a669a5553dbaf66c51f56380">resultsList</a> ()</td></tr>
+<tr class="memdesc:ad4bbae55a669a5553dbaf66c51f56380"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the result file's information  <a href="file_8service_8js.html#ad4bbae55a669a5553dbaf66c51f56380">More...</a><br /></td></tr>
+<tr class="separator:ad4bbae55a669a5553dbaf66c51f56380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79b8b31e70f790b41712bdea1eb973"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#afb79b8b31e70f790b41712bdea1eb973">generate</a> (boolean cpp)</td></tr>
+<tr class="memdesc:afb79b8b31e70f790b41712bdea1eb973"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the result (.csv) file  <a href="file_8service_8js.html#afb79b8b31e70f790b41712bdea1eb973">More...</a><br /></td></tr>
+<tr class="separator:afb79b8b31e70f790b41712bdea1eb973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604568673adb9552425d7af198938a85"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a604568673adb9552425d7af198938a85">getImage</a> ()</td></tr>
+<tr class="memdesc:a604568673adb9552425d7af198938a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">requests the server to create plots and return the surface plot  <a href="file_8service_8js.html#a604568673adb9552425d7af198938a85">More...</a><br /></td></tr>
+<tr class="separator:a604568673adb9552425d7af198938a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4e448e1959d6287f5817d95ee58d5f"><td class="memItemLeft" align="right" valign="top">JSON&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#abe4e448e1959d6287f5817d95ee58d5f">getMarkers</a> ()</td></tr>
+<tr class="memdesc:abe4e448e1959d6287f5817d95ee58d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">requests the server for markers.txt file  <a href="file_8service_8js.html#abe4e448e1959d6287f5817d95ee58d5f">More...</a><br /></td></tr>
+<tr class="separator:abe4e448e1959d6287f5817d95ee58d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e21421efe29d62d735c6e5f6187be7"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a50e21421efe29d62d735c6e5f6187be7">getHeat</a> ()</td></tr>
+<tr class="memdesc:a50e21421efe29d62d735c6e5f6187be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">requests the server for heatmap.png file  <a href="file_8service_8js.html#a50e21421efe29d62d735c6e5f6187be7">More...</a><br /></td></tr>
+<tr class="separator:a50e21421efe29d62d735c6e5f6187be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312b1e8a3dc296feb9b269f459307db8"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a312b1e8a3dc296feb9b269f459307db8">sendList</a> (FormData formData)</td></tr>
+<tr class="memdesc:a312b1e8a3dc296feb9b269f459307db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">sends the list of files for which plots are requested to the server and asks for the computation  <a href="file_8service_8js.html#a312b1e8a3dc296feb9b269f459307db8">More...</a><br /></td></tr>
+<tr class="separator:a312b1e8a3dc296feb9b269f459307db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29a6b8a7e73dd5f0003d003e89f3369"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#af29a6b8a7e73dd5f0003d003e89f3369">someplot</a> ()</td></tr>
+<tr class="memdesc:af29a6b8a7e73dd5f0003d003e89f3369"><td class="mdescLeft">&#160;</td><td class="mdescRight">requests the server for surfacePlot.png file  <a href="file_8service_8js.html#af29a6b8a7e73dd5f0003d003e89f3369">More...</a><br /></td></tr>
+<tr class="separator:af29a6b8a7e73dd5f0003d003e89f3369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e2221523400965bec54784fc54b68d"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a11e2221523400965bec54784fc54b68d">deleteplots</a> ()</td></tr>
+<tr class="memdesc:a11e2221523400965bec54784fc54b68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">requests the server to delete the plots and markers file  <a href="file_8service_8js.html#a11e2221523400965bec54784fc54b68d">More...</a><br /></td></tr>
+<tr class="separator:a11e2221523400965bec54784fc54b68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9086dc242806a6a42ad9cd9295d5fec8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a9086dc242806a6a42ad9cd9295d5fec8">DJANGO_SERVER</a></td></tr>
+<tr class="memdesc:a9086dc242806a6a42ad9cd9295d5fec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defining the URL at which to access the file server.  <a href="file_8service_8js.html#a9086dc242806a6a42ad9cd9295d5fec8">More...</a><br /></td></tr>
+<tr class="separator:a9086dc242806a6a42ad9cd9295d5fec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2056d3c90b3758ec0ebafa55e2a645af"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8service_8js.html#a2056d3c90b3758ec0ebafa55e2a645af">session</a></td></tr>
+<tr class="memdesc:a2056d3c90b3758ec0ebafa55e2a645af"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the current session id using the user email id in order to ensure each user can accesses only their own files in the backend  <a href="file_8service_8js.html#a2056d3c90b3758ec0ebafa55e2a645af">More...</a><br /></td></tr>
+<tr class="separator:a2056d3c90b3758ec0ebafa55e2a645af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>API endpoint: file server connection service for frontend. Actual implementation is in .ts; relevant parts transposed to .js only for documentation. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4a1b8ca320dc719b50f9e5cee1f1c975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1b8ca320dc719b50f9e5cee1f1c975">&#9670;&nbsp;</a></span>delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object delete </td>
+          <td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes the file from the data base as well as from the backend </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the primary key of the file regitered in model </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the status of delete request </dd></dl>
+
+</div>
+</div>
+<a id="a44eb39bf9642fb6021d0ac0a1e7e65b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44eb39bf9642fb6021d0ac0a1e7e65b1">&#9670;&nbsp;</a></span>delete1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object delete1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes the stub file provided (if any) </p>
+<dl class="section return"><dt>Returns</dt><dd>the status of the delete request </dd></dl>
+
+</div>
+</div>
+<a id="a210f1904a302a93e614c803655311b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210f1904a302a93e614c803655311b58">&#9670;&nbsp;</a></span>deleteall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object deleteall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes all the files wth a given session </p>
+<dl class="section return"><dt>Returns</dt><dd>the status of the delete request </dd></dl>
+
+</div>
+</div>
+<a id="a11e2221523400965bec54784fc54b68d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e2221523400965bec54784fc54b68d">&#9670;&nbsp;</a></span>deleteplots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object deleteplots </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>requests the server to delete the plots and markers file </p>
+<dl class="section return"><dt>Returns</dt><dd>status of the delete request </dd></dl>
+
+</div>
+</div>
+<a id="a6de2c2b4a6bf4f32cfe0ec1832e5507e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de2c2b4a6bf4f32cfe0ec1832e5507e">&#9670;&nbsp;</a></span>deleteResults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object deleteResults </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deleted the generated result file </p>
+<dl class="section return"><dt>Returns</dt><dd>the status of the delete request </dd></dl>
+
+</div>
+</div>
+<a id="afb79b8b31e70f790b41712bdea1eb973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb79b8b31e70f790b41712bdea1eb973">&#9670;&nbsp;</a></span>generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object generate </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>generates the result (.csv) file </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpp</td><td>defines whether the files to be processed are cpp files or not </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the data associated with the generated file </dd></dl>
+
+</div>
+</div>
+<a id="a42ccf0e174a31486b751b2ad7ef2709b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ccf0e174a31486b751b2ad7ef2709b">&#9670;&nbsp;</a></span>get_session()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void get_session </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ss</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the current session id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ss</td><td>the string to which the session id is to be set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50e21421efe29d62d735c6e5f6187be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e21421efe29d62d735c6e5f6187be7">&#9670;&nbsp;</a></span>getHeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var getHeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>requests the server for heatmap.png file </p>
+<dl class="section return"><dt>Returns</dt><dd>type:Observable&lt;Blob&gt; the contents of heatmap.png file </dd></dl>
+
+</div>
+</div>
+<a id="a604568673adb9552425d7af198938a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604568673adb9552425d7af198938a85">&#9670;&nbsp;</a></span>getImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var getImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>requests the server to create plots and return the surface plot </p>
+<dl class="section return"><dt>Returns</dt><dd>type:Observable&lt;Blob&gt; the contents of surfacePlot.png file </dd></dl>
+
+</div>
+</div>
+<a id="abe4e448e1959d6287f5817d95ee58d5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4e448e1959d6287f5817d95ee58d5f">&#9670;&nbsp;</a></span>getMarkers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JSON getMarkers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>requests the server for markers.txt file </p>
+<dl class="section return"><dt>Returns</dt><dd>the contents of markers.txt file </dd></dl>
+
+</div>
+</div>
+<a id="ab13d51f45a37423e955d7d9203cbbe44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13d51f45a37423e955d7d9203cbbe44">&#9670;&nbsp;</a></span>list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object list </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>gets the list of files uploaded </p>
+<dl class="section return"><dt>Returns</dt><dd>the list of files requested </dd></dl>
+
+</div>
+</div>
+<a id="ad4bbae55a669a5553dbaf66c51f56380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4bbae55a669a5553dbaf66c51f56380">&#9670;&nbsp;</a></span>resultsList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object resultsList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>provides the result file's information </p>
+<dl class="section return"><dt>Returns</dt><dd>the result file's associated data </dd></dl>
+
+</div>
+</div>
+<a id="a312b1e8a3dc296feb9b269f459307db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312b1e8a3dc296feb9b269f459307db8">&#9670;&nbsp;</a></span>sendList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object sendList </td>
+          <td>(</td>
+          <td class="paramtype">FormData&#160;</td>
+          <td class="paramname"><em>formData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sends the list of files for which plots are requested to the server and asks for the computation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">formData</td><td>the list of the concerned files </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status of the request </dd></dl>
+
+</div>
+</div>
+<a id="af29a6b8a7e73dd5f0003d003e89f3369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29a6b8a7e73dd5f0003d003e89f3369">&#9670;&nbsp;</a></span>someplot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var someplot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>requests the server for surfacePlot.png file </p>
+<dl class="section return"><dt>Returns</dt><dd>type:Observable&lt;Blob&gt; the contents of surfacePlot.png file </dd></dl>
+
+</div>
+</div>
+<a id="a77337659d00969a74d1a0c9be8203f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77337659d00969a74d1a0c9be8203f36">&#9670;&nbsp;</a></span>upload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FileLikeObject upload </td>
+          <td>(</td>
+          <td class="paramtype">FormData&#160;</td>
+          <td class="paramname"><em>formData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>updates the session with the email id retrieved from the server </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">formData</td><td>information of the file to be uploaded and its contents </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the data associated with registering of the file in the model </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a9086dc242806a6a42ad9cd9295d5fec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9086dc242806a6a42ad9cd9295d5fec8">&#9670;&nbsp;</a></span>DJANGO_SERVER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String DJANGO_SERVER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defining the URL at which to access the file server. </p>
+
+</div>
+</div>
+<a id="a2056d3c90b3758ec0ebafa55e2a645af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2056d3c90b3758ec0ebafa55e2a645af">&#9670;&nbsp;</a></span>session</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String session</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>stores the current session id using the user email id in order to ensure each user can accesses only their own files in the backend </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

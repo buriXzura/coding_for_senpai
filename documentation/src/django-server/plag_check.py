@@ -69,7 +69,6 @@ def tokenization(file,cpp):
 
     @param file files to be tokenized
     @param cpp boolean value depicting whether passed file is cpp or not
-    @param data storing data in single file out of a list of files passed
     @return  tokenized data ie. data free from punctuations, comments, newline char, comments having transformed variables
     """
 
@@ -142,7 +141,7 @@ def max_match (pattern_hash, index, s, Hashes, string_index, pattern_marks, stri
     @param string_index the index for string 2 from where the match is to be found
     @param s the value of K for the K-gram hashing
     @param pattern_marks the closest index in the right neighbourhood for which a match's already found in string1
-    @param pattern_marks the closest index in the right neighbourhood for which a match's already found in string2
+    @param string_marks the closest index in the right neighbourhood for which a match's already found in string2
     @return returns the size of the match
 
     """

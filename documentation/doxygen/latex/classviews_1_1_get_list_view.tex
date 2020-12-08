@@ -1,0 +1,36 @@
+\hypertarget{classviews_1_1_get_list_view}{}\doxysection{Get\+List\+View Class Reference}
+\label{classviews_1_1_get_list_view}\index{GetListView@{GetListView}}
+Inheritance diagram for Get\+List\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classviews_1_1_get_list_view}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classviews_1_1_get_list_view_a66d0238c52124114cedaa72be4b95b47}{post}} (self, \mbox{\hyperlink{server_8service_8js_a566411bc360a18f1c21523a0f43e2f45}{request}}, ss)
+\begin{DoxyCompactList}\small\item\em Creates different plots only for the selected files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classviews_1_1_get_list_view_a66d0238c52124114cedaa72be4b95b47}\label{classviews_1_1_get_list_view_a66d0238c52124114cedaa72be4b95b47}} 
+\index{GetListView@{GetListView}!post@{post}}
+\index{post@{post}!GetListView@{GetListView}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily def post (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{ss }\end{DoxyParamCaption})}
+
+
+
+Creates different plots only for the selected files. 
+
+First all the previous plot files present in the plots folder is deleted and then a command line argument is passed with an argument S (selected) and another argument having the list of files to be plotted to run the plots creating file with files present within the session folder and then 3 files are created. One is a surface plot, second one is a heatmap and lastly a markers text file denoting only the selected files and all three files are saved within the plots folder within the session (user) folder.
+
+@params self reference to the current instance of the class @params request passes the state through the system @params ss refers to the current session of the user \begin{DoxyReturn}{Returns}
+response with status 200 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/shabnamsahay/\+Documents/cs-\/251-\/ssl/project/coding\+\_\+for\+\_\+senpai/documentation/src/django-\/server/\mbox{\hyperlink{views_8py}{views.\+py}}\end{DoxyCompactItemize}

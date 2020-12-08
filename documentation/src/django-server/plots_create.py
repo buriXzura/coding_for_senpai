@@ -31,6 +31,7 @@ if sys.argv[2]=='S':
         my_dict[files[i]] = i
     #sys.argv[3] gives the files selected(ie , subset of total files)
     files = sys.argv[3].split(',')
+    ##temporary 2D np array for processing the data
     a = np.empty([len(files),len(files)])
     for i in range(len(files)):
         for j in range(len(files)):
@@ -38,8 +39,11 @@ if sys.argv[2]=='S':
     data = a
 
 #creating x and y axis dimensions and grid
+##x axis dimension
 x = np.linspace(0, len(files), len(files))
+##y axis dimension
 y = np.linspace(0, len(files), len(files))
+##x and y grid
 X, Y = np.meshgrid(x, y)
 
 #make directory if does not exist already
@@ -47,6 +51,7 @@ if not os.path.exists(directory+"/plots"):
     os.makedirs(directory+"/plots")
 
 #set figure dimensions
+##figure that will contain the surface plot
 fig = plt.figure(figsize=(6,6))
 
 #plotting the surface plot
@@ -66,6 +71,7 @@ plt.close()
 
 #plotting heat map (ses colour gradient to depict values)
 fig = plt.figure(figsize=(4,4))
+##heatmap figure object that uses color gradient to depict values
 heatmap = plt.pcolor(data,cmap=cm.coolwarm)
 fig.colorbar(heatmap)
 #saving heat map to this provided location

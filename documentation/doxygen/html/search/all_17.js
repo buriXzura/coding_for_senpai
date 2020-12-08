@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_108',['y',['../namespaceplots__create.html#a2fb1c5cf58867b5bbc9a1b145a86f3a0',1,'plots_create.y()'],['../namespaceplots__create.html#a0867f43e27585e019c13f7f4b7c4ab6b',1,'plots_create.Y()']]]
+  ['x_119',['X',['../namespaceplots__create.html#ac51b57a703ba1c5869228690c93e1701',1,'plots_create.X()'],['../namespaceplots__create.html#a9336ebf25087d91c818ee6e9ec29f8c1',1,'plots_create.x()']]]
 ];

@@ -65,10 +65,174 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">profile.js File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Method implementations for login/authentication server.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7f3341255b805bd92d1033378a0a0c6b"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#a7f3341255b805bd92d1033378a0a0c6b">express</a></td></tr>
+<tr class="memdesc:a7f3341255b805bd92d1033378a0a0c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Importing the express library.  <a href="profile_8js.html#a7f3341255b805bd92d1033378a0a0c6b">More...</a><br /></td></tr>
+<tr class="separator:a7f3341255b805bd92d1033378a0a0c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747d1b72de6ab889492fc886b4568fc2"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#a747d1b72de6ab889492fc886b4568fc2">bcrypt</a></td></tr>
+<tr class="memdesc:a747d1b72de6ab889492fc886b4568fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Importing the bcryptjs library.  <a href="profile_8js.html#a747d1b72de6ab889492fc886b4568fc2">More...</a><br /></td></tr>
+<tr class="separator:a747d1b72de6ab889492fc886b4568fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2658a9fb6f28777aa3320892c7014b"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#a0f2658a9fb6f28777aa3320892c7014b">sqlite3</a></td></tr>
+<tr class="memdesc:a0f2658a9fb6f28777aa3320892c7014b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Importing the sqlite3 library.  <a href="profile_8js.html#a0f2658a9fb6f28777aa3320892c7014b">More...</a><br /></td></tr>
+<tr class="separator:a0f2658a9fb6f28777aa3320892c7014b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803dd7ac38c3ed9050878f3ccf4cd7ba"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#a803dd7ac38c3ed9050878f3ccf4cd7ba">nJwt</a></td></tr>
+<tr class="memdesc:a803dd7ac38c3ed9050878f3ccf4cd7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Importing the njwt library.  <a href="profile_8js.html#a803dd7ac38c3ed9050878f3ccf4cd7ba">More...</a><br /></td></tr>
+<tr class="separator:a803dd7ac38c3ed9050878f3ccf4cd7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac120c9ce32d189166215752b0b1a76"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#aeac120c9ce32d189166215752b0b1a76">config</a></td></tr>
+<tr class="memdesc:aeac120c9ce32d189166215752b0b1a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defining the path for the config file.  <a href="profile_8js.html#aeac120c9ce32d189166215752b0b1a76">More...</a><br /></td></tr>
+<tr class="separator:aeac120c9ce32d189166215752b0b1a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a1b1fd00c35062aea99d6f37a15054"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#ac6a1b1fd00c35062aea99d6f37a15054">db</a></td></tr>
+<tr class="memdesc:ac6a1b1fd00c35062aea99d6f37a15054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defining the path for the user information database.  <a href="profile_8js.html#ac6a1b1fd00c35062aea99d6f37a15054">More...</a><br /></td></tr>
+<tr class="separator:ac6a1b1fd00c35062aea99d6f37a15054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af100c40b3949fbe4f9f71d346fc5f852"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#af100c40b3949fbe4f9f71d346fc5f852">router</a></td></tr>
+<tr class="memdesc:af100c40b3949fbe4f9f71d346fc5f852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the router for the server.  <a href="profile_8js.html#af100c40b3949fbe4f9f71d346fc5f852">More...</a><br /></td></tr>
+<tr class="separator:af100c40b3949fbe4f9f71d346fc5f852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeaa7f12ff7df455f65b0216e165d017"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="profile_8js.html#afeaa7f12ff7df455f65b0216e165d017">jwtAuth</a></td></tr>
+<tr class="memdesc:afeaa7f12ff7df455f65b0216e165d017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defining a variable to pass to methods which require authentication to be used.  <a href="profile_8js.html#afeaa7f12ff7df455f65b0216e165d017">More...</a><br /></td></tr>
+<tr class="separator:afeaa7f12ff7df455f65b0216e165d017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Method implementations for login/authentication server. </p>
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a id="a747d1b72de6ab889492fc886b4568fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747d1b72de6ab889492fc886b4568fc2">&#9670;&nbsp;</a></span>bcrypt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var bcrypt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Importing the bcryptjs library. </p>
+
+</div>
+</div>
+<a id="aeac120c9ce32d189166215752b0b1a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac120c9ce32d189166215752b0b1a76">&#9670;&nbsp;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var config</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defining the path for the config file. </p>
+
+</div>
+</div>
+<a id="ac6a1b1fd00c35062aea99d6f37a15054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a1b1fd00c35062aea99d6f37a15054">&#9670;&nbsp;</a></span>db</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var db</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defining the path for the user information database. </p>
+
+</div>
+</div>
+<a id="a7f3341255b805bd92d1033378a0a0c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f3341255b805bd92d1033378a0a0c6b">&#9670;&nbsp;</a></span>express</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var express</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Importing the express library. </p>
+
+</div>
+</div>
+<a id="afeaa7f12ff7df455f65b0216e165d017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeaa7f12ff7df455f65b0216e165d017">&#9670;&nbsp;</a></span>jwtAuth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var jwtAuth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defining a variable to pass to methods which require authentication to be used. </p>
+
+</div>
+</div>
+<a id="a803dd7ac38c3ed9050878f3ccf4cd7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a803dd7ac38c3ed9050878f3ccf4cd7ba">&#9670;&nbsp;</a></span>nJwt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var nJwt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Importing the njwt library. </p>
+
+</div>
+</div>
+<a id="af100c40b3949fbe4f9f71d346fc5f852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af100c40b3949fbe4f9f71d346fc5f852">&#9670;&nbsp;</a></span>router</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var router</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the router for the server. </p>
+
+</div>
+</div>
+<a id="a0f2658a9fb6f28777aa3320892c7014b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2658a9fb6f28777aa3320892c7014b">&#9670;&nbsp;</a></span>sqlite3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var sqlite3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Importing the sqlite3 library. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

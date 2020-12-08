@@ -17,166 +17,115 @@ function get_session(ss){
 }
 
 /*!
-* @brief <brief description of upload function>
-* @param type:<formData ka type daalna idhar> formData <formData kya hai?>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief updates the session with the email id retrieved from the server
+* @param type:FormData formData information of the file to be uploaded and its contents
+* @return type:FileLikeObject the data associated with registering of the file in the model
 */
-function upload(formData){
-}
-public upload(formData) {
-  return this.http.post<any>(`${this.DJANGO_SERVER}/file/upload`, formData);
-}
+function upload(formData){}
 
 /*!
-* @brief <brief description of DownloadResults function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief allows the user to download the result(.csv) file registered in the model
+* @return type:arrayBuffer the contents of file
 */
-function DownloadResults(){
-}
-public DownloadResults() {
-  return this.http.get(`${this.DJANGO_SERVER}/file/results/download/${this.session}`, {responseType: 'arraybuffer'});
-}
+function DownloadResults(){}
 
 /*!
-* @brief <brief description of list function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief gets the list of files uploaded
+* @return type:Object the list of files requested
 */
 function list(){
 }
-public list() {
-  return this.http.get(`${this.DJANGO_SERVER}/file/list/${this.session}`);
-}
 
 /*!
-* @brief <brief description of delete function>
-* @param type:<id ka type daalna idhar> id <id kya hai?>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief deletes the file from the data base as well as from the backend
+* @param type:number id the primary key of the file regitered in model
+* @return type:object the status of delete request
 */
 function delete(id){
 }
-public delete(id) {
-  return this.http.delete(`${this.DJANGO_SERVER}/file/delete/${id}`);
-}
 
 /*!
-* @brief <brief description of deleteall function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief deletes all the files wth a given session
+* @return type:object the status of the delete request
 */
 function deleteall(){
 }
-public deleteall() {
-  return this.http.delete(`${this.DJANGO_SERVER}/file/deleteall/${this.session}`);
-}
 
 /*!
-* @brief <brief description of delete1 function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief deletes the stub file provided (if any)
+* @return type:object the status of the delete request
 */
 function delete1(){
 }
-public delete1() {
-  return this.http.delete(`${this.DJANGO_SERVER}/file/stub/delete/${this.session}`);
-}
 
 /*!
-* @brief <brief description of deleteResults function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief deleted the generated result file
+* @return type:object the status of the delete request
 */
 function deleteResults(){
 }
-public deleteResults() {
-  return this.http.delete(`${this.DJANGO_SERVER}/file/results/delete/${this.session}`);
-}
 
 /*!
-* @brief <brief description of List1 function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief provides the list of stub files (single/no file in our case)
+* @return type:Object the list of files requested
 */
 function List1(){
 }
-public List1() {
-  return this.http.get<Blob[]>(`${this.DJANGO_SERVER}/file/stub/list/${this.session}`);
-}
 
 /*!
-* @brief <brief description of resultsList function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief provides the result file's information
+* @return type:Object the result file's associated data
 */
 function resultsList(){
 }
-public resultsList() {
-  return this.http.get<Blob[]>(`${this.DJANGO_SERVER}/file/results/list/${this.session}`);
-}
 
 /*!
-* @brief <brief description of generate function>
+* @brief generates the result (.csv) file
 * @param type:boolean cpp defines whether the files to be processed are cpp files or not
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @return type:Object the data associated with the generated file
 */
 function generate(cpp){
 }
-public generate(cpp: boolean) {
-  if(cpp) return this.http.get(`${this.DJANGO_SERVER}/file/results/generate/true/${this.session}`);
-  else return this.http.get(`${this.DJANGO_SERVER}/file/results/generate/false/${this.session}`);
-}
 
 /*!
-* @brief <brief description of getImage function>
-* @return type:Observable<Blob> <kya return ho raha?>
+* @brief requests the server to create plots and return the surface plot
+* @return type:Observable<Blob> the contents of surfacePlot.png file
 */
 function getImage(){
 }
-public getImage(): Observable<Blob> {
-  return this.http.get(`${this.DJANGO_SERVER}/file/plots/show/${this.session}`, {responseType: 'blob'});
-}
 
 /*!
-* @brief <brief description of getMarkers function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief requests the server for markers.txt file
+* @return type:JSON the contents of markers.txt file
 */
 function getMarkers(){
 }
-public getMarkers() {
-  return this.http.get(`${this.DJANGO_SERVER}/file/plots/marker/${this.session}`, {responseType: 'text' as 'json'});
-}
 
 /*!
-* @brief <brief description of getHeat function>
-* @return type:Observable<Blob> <kya return ho raha?>
+* @brief requests the server for heatmap.png file
+* @return type:Observable<Blob> the contents of heatmap.png file
 */
 function getHeat(){
 }
-public getHeat(): Observable<Blob> {
-  return this.http.get(`${this.DJANGO_SERVER}/file/plots/heat/${this.session}`, {responseType: 'blob'});
-}
 
 /*!
-* @brief <brief description of sendList function>
-* @param type:<formData ka type daalna idhar> formData <formData kya hai?>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief sends the list of files for which plots are requested to the server and asks for the computation
+* @param type:FormData formData the list of the concerned files
+* @return type:Object status of the request
 */
 function sendList(formData){
 }
-public sendList(formData) {
-  return this.http.post<any>(`${this.DJANGO_SERVER}/file/plots/list/${this.session}`, formData);
-}
 
 /*!
-* @brief <brief description of someplot function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief requests the server for surfacePlot.png file
+* @return type:Observable<Blob> the contents of surfacePlot.png file
 */
 function someplot(){
 }
-public someplot() {
-  return this.http.get(`${this.DJANGO_SERVER}/file/plots/some/${this.session}`, {responseType: 'blob'});
-}
 
 /*!
-* @brief <brief description of deleteplots function>
-* @return type:<return type daalna idhar> <kya return ho raha?>
+* @brief requests the server to delete the plots and markers file
+* @return type:Object status of the delete request
 */
 function deleteplots(){
-}
-public deleteplots() {
-  return this.http.delete(`${this.DJANGO_SERVER}/file/plots/delete/${this.session}`);
 }

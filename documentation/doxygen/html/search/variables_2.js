@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['data_103',['data',['../namespaceplag__check.html#a018aaab493af92ea83348b0db6e32328',1,'plag_check.data()'],['../namespaceplots__create.html#a511ae0b1c13f95e5f08f1a0dd3da3d93',1,'plots_create.data()']]],
-  ['debug_104',['DEBUG',['../namespacetp.html#a48f76a8c0dc23567f303ed6aa221e078',1,'tp']]],
-  ['dictionary_105',['Dictionary',['../namespaceplag__check.html#a5a1270fc81b85ff7d2fe588424eab142',1,'plag_check']]],
-  ['directory_106',['directory',['../namespaceplag__check.html#aedf03b9517092eee7dae1588bbc00e19',1,'plag_check.directory()'],['../namespaceplots__create.html#aedf03b9517092eee7dae1588bbc00e19',1,'plots_create.directory()']]],
-  ['dpi_107',['dpi',['../namespaceplots__create.html#ab4024db5b48e2ddd9bcd43847f10f016',1,'plots_create']]]
+  ['config_199',['config',['../profile_8js.html#aeac120c9ce32d189166215752b0b1a76',1,'profile.js']]],
+  ['cors_200',['cors',['../index_8js.html#a17bb635e2c64e220b8d6758e332ca76e',1,'index.js']]],
+  ['cov_201',['Cov',['../namespaceplag__check.html#a0896bd81ccc18cea601a7cbf2fce983a',1,'plag_check']]],
+  ['cpp_202',['cpp',['../namespaceplag__check.html#af5dc55049c9faea66128791bf5b2debc',1,'plag_check']]]
 ];

@@ -1,0 +1,60 @@
+\hypertarget{classviews_1_1_stub_list_view}{}\doxysection{Stub\+List\+View Class Reference}
+\label{classviews_1_1_stub_list_view}\index{StubListView@{StubListView}}
+
+
+The class that lists the stub files.  
+
+
+Inheritance diagram for Stub\+List\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classviews_1_1_stub_list_view}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classviews_1_1_stub_list_view_aee51c04d5e6ee8f975072ae7c85b2ac8}{get}} (self, \mbox{\hyperlink{server_8service_8js_a566411bc360a18f1c21523a0f43e2f45}{request}}, ss)
+\begin{DoxyCompactList}\small\item\em Lists the stub files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{classviews_1_1_stub_list_view_a9731b74a10637eafda354101c4e3c755}{parser\+\_\+class}} = (File\+Upload\+Parser,)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class that lists the stub files. 
+
+It queries the database for the stub files with the provided session and returns the resulting list of stub files. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classviews_1_1_stub_list_view_aee51c04d5e6ee8f975072ae7c85b2ac8}\label{classviews_1_1_stub_list_view_aee51c04d5e6ee8f975072ae7c85b2ac8}} 
+\index{StubListView@{StubListView}!get@{get}}
+\index{get@{get}!StubListView@{StubListView}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{ss }\end{DoxyParamCaption})}
+
+
+
+Lists the stub files. 
+
+The stub files which are uploaded by post function are listed under that user\textquotesingle{}s stub folder which is within the session folder.
+
+@params self reference to the current instance of the class @params request passes the state through the system @params ss refers to the current session of the user \begin{DoxyReturn}{Returns}
+response with status 200 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classviews_1_1_stub_list_view_a9731b74a10637eafda354101c4e3c755}\label{classviews_1_1_stub_list_view_a9731b74a10637eafda354101c4e3c755}} 
+\index{StubListView@{StubListView}!parser\_class@{parser\_class}}
+\index{parser\_class@{parser\_class}!StubListView@{StubListView}}
+\doxysubsubsection{\texorpdfstring{parser\_class}{parser\_class}}
+{\footnotesize\ttfamily tuple parser\+\_\+class = (File\+Upload\+Parser,)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/shabnamsahay/\+Documents/cs-\/251-\/ssl/project/coding\+\_\+for\+\_\+senpai/documentation/src/django-\/server/\mbox{\hyperlink{views_8py}{views.\+py}}\end{DoxyCompactItemize}
