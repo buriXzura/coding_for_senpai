@@ -1,0 +1,108 @@
+\hypertarget{classsensors_1_1_temp_sensor}{}\doxysection{Temp\+Sensor Class Reference}
+\label{classsensors_1_1_temp_sensor}\index{TempSensor@{TempSensor}}
+
+
+The temperature sensor class.  
+
+
+Inheritance diagram for Temp\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsensors_1_1_temp_sensor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsensors_1_1_temp_sensor_ac39655f8e9d10a10a16c3b688d212b37}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classsensors_1_1_sensor_ab74e6bf80237ddc4109968cedc58c151}{name}}, \mbox{\hyperlink{classsensors_1_1_temp_sensor_a382b9040d9c3849b9350104bb5b3acfc}{unit}}=\char`\"{}F\char`\"{})
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classsensors_1_1_temp_sensor}{Temp\+Sensor}} class initializer. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classsensors_1_1_temp_sensor_a23e8041ce1015febe4fdace3225714f9}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Retrieves the temperature sensor\textquotesingle{}s description. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classsensors_1_1_temp_sensor_aa79167cfcefa8c47d94e8d58ef60cb13}{set\+\_\+unit}} (self, \mbox{\hyperlink{classsensors_1_1_temp_sensor_a382b9040d9c3849b9350104bb5b3acfc}{unit}})
+\begin{DoxyCompactList}\small\item\em Sets the temperature unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsensors_1_1_temp_sensor_a382b9040d9c3849b9350104bb5b3acfc}{unit}}
+\begin{DoxyCompactList}\small\item\em The temperature unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The temperature sensor class. 
+
+Provides access to the connected temperature sensor. Supported units are \char`\"{}\+F\char`\"{} (Fahrenheit), \char`\"{}\+C\char`\"{} (Celsius), and \char`\"{}\+K\char`\"{} (Kelvin) with \char`\"{}\+F\char`\"{} being the default unit. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsensors_1_1_temp_sensor_ac39655f8e9d10a10a16c3b688d212b37}\label{classsensors_1_1_temp_sensor_ac39655f8e9d10a10a16c3b688d212b37}} 
+\index{TempSensor@{TempSensor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!TempSensor@{TempSensor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{unit = {\ttfamily \char`\"{}F\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classsensors_1_1_temp_sensor}{Temp\+Sensor}} class initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the temperature sensor. \\
+\hline
+{\em unit} & The unit of the temperature sensor, defaults to \char`\"{}\+F\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the \mbox{\hyperlink{classsensors_1_1_temp_sensor}{Temp\+Sensor}} class initialized with the specified name and unit. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsensors_1_1_temp_sensor_a23e8041ce1015febe4fdace3225714f9}\label{classsensors_1_1_temp_sensor_a23e8041ce1015febe4fdace3225714f9}} 
+\index{TempSensor@{TempSensor}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!TempSensor@{TempSensor}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def \+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Retrieves the temperature sensor\textquotesingle{}s description. 
+
+\begin{DoxyReturn}{Returns}
+A description of the temperature sensor. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsensors_1_1_sensor_a23e8041ce1015febe4fdace3225714f9}{Sensor}}.
+
+\mbox{\Hypertarget{classsensors_1_1_temp_sensor_aa79167cfcefa8c47d94e8d58ef60cb13}\label{classsensors_1_1_temp_sensor_aa79167cfcefa8c47d94e8d58ef60cb13}} 
+\index{TempSensor@{TempSensor}!set\_unit@{set\_unit}}
+\index{set\_unit@{set\_unit}!TempSensor@{TempSensor}}
+\doxysubsubsection{\texorpdfstring{set\_unit()}{set\_unit()}}
+{\footnotesize\ttfamily def set\+\_\+unit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{unit }\end{DoxyParamCaption})}
+
+
+
+Sets the temperature unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit} & The temperature unit (\char`\"{}\+F\char`\"{}, \char`\"{}\+C\char`\"{}, or \char`\"{}\+K\char`\"{}), defaults to \char`\"{}\+F\char`\"{} if a valid unit is not provided. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classsensors_1_1_temp_sensor_a382b9040d9c3849b9350104bb5b3acfc}\label{classsensors_1_1_temp_sensor_a382b9040d9c3849b9350104bb5b3acfc}} 
+\index{TempSensor@{TempSensor}!unit@{unit}}
+\index{unit@{unit}!TempSensor@{TempSensor}}
+\doxysubsubsection{\texorpdfstring{unit}{unit}}
+{\footnotesize\ttfamily unit}
+
+
+
+The temperature unit. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/shabnamsahay/\+Documents/cs-\/251-\/ssl/project/document/\+My\+Doxygen\+Example/src/\mbox{\hyperlink{sensors_8py}{sensors.\+py}}\end{DoxyCompactItemize}

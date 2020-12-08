@@ -1,0 +1,47 @@
+\hypertarget{plots__create_8py}{}\doxysection{/\+Users/shabnamsahay/\+Documents/cs-\/251-\/ssl/project/coding\+\_\+for\+\_\+senpai/documentation/src/django-\/server/plots\+\_\+create.py File Reference}
+\label{plots__create_8py}\index{/Users/shabnamsahay/Documents/cs-\/251-\/ssl/project/coding\_for\_senpai/documentation/src/django-\/server/plots\_create.py@{/Users/shabnamsahay/Documents/cs-\/251-\/ssl/project/coding\_for\_senpai/documentation/src/django-\/server/plots\_create.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceplots__create}{plots\+\_\+create}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceplots__create_aedf03b9517092eee7dae1588bbc00e19}{directory}} = sys.\+argv\mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em the directory where the result csv file is present and the plots are to be saved \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceplots__create_a7c4682f71f44768fe514fcb55f7fcf40}{result}} = directory+\char`\"{}/results/result.\+csv\char`\"{}
+\begin{DoxyCompactList}\small\item\em the address of results.\+csv \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplots__create_ae8f626807b2dddc1872b3005556939cd}{header}} = ft.\+readline()
+\begin{DoxyCompactList}\small\item\em one line from results.\+csv \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}} = header.\+split(\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em a list obtained on splitting \textquotesingle{}header\textquotesingle{} by commas \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplots__create_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}} = np.\+genfromtxt(result, dtype=float, delimiter=\textquotesingle{},\textquotesingle{}, skip\+\_\+header=1)
+\begin{DoxyCompactList}\small\item\em stores the resulting output after removing \textquotesingle{}~\newline
+\textquotesingle{} from the last column of the csv file \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{namespaceplots__create_a2d163db2dd2050926a0bc5e76f88c4d8}{my\+\_\+dict}} = \{\}
+\begin{DoxyCompactList}\small\item\em stores the data from the result file corresponding to the selected files \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplots__create_a4124bc0a9335c27f086f24ba207a4912}{a}} = np.\+empty(\mbox{[}len(files),len(files)\mbox{]})
+\item 
+\mbox{\hyperlink{namespaceplots__create_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = np.\+linspace(0, len(files), len(files))
+\item 
+\mbox{\hyperlink{namespaceplots__create_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}} = np.\+linspace(0, len(files), len(files))
+\item 
+\mbox{\hyperlink{namespaceplots__create_ac51b57a703ba1c5869228690c93e1701}{X}}
+\item 
+\mbox{\hyperlink{namespaceplots__create_a0867f43e27585e019c13f7f4b7c4ab6b}{Y}}
+\item 
+\mbox{\hyperlink{namespaceplots__create_a64aa603bc3c6c1587e7c6542452481ac}{fig}} = plt.\+figure(figsize=(6,6))
+\item 
+\mbox{\hyperlink{namespaceplots__create_af8dd95942a665dc2de84d6fb11fe52e5}{ax1}} = fig.\+add\+\_\+subplot(111,projection=\textquotesingle{}3d\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceplots__create_a74bd156b084de6e36332db67fdc1a4f0}{my\+\_\+col}} = cm.\+jet(data/np.\+amax(data))
+\item 
+\mbox{\hyperlink{namespaceplots__create_af7c855ca0385b2fc4635b2f8fb25c0a3}{surf}} = ax1.\+plot\+\_\+surface(X, Y, data, cmap = cm.\+coolwarm, linewidth=0, antialiased=False)
+\item 
+\mbox{\hyperlink{namespaceplots__create_ac5fc6e200c34376449ba20a234061eb4}{orientation}}
+\item 
+\mbox{\hyperlink{namespaceplots__create_ab4024db5b48e2ddd9bcd43847f10f016}{dpi}}
+\item 
+\mbox{\hyperlink{namespaceplots__create_a4c6f2549afdecf016a32812b531c474b}{heatmap}} = plt.\+pcolor(data,cmap=cm.\+coolwarm)
+\end{DoxyCompactItemize}

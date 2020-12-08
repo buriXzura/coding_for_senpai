@@ -1,0 +1,297 @@
+\hypertarget{namespaceplag__doc__karo}{}\doxysection{plag\+\_\+doc\+\_\+karo Namespace Reference}
+\label{namespaceplag__doc__karo}\index{plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_a12d4fd9126fdd65b1c5dc297cf1baf1c}{window}} (w, has)
+\begin{DoxyCompactList}\small\item\em This fn builds windows and selects fingerprints using hash values passed. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_a03eba6bd3bb505023784777c5751dda1}{tokenization}} (file, \mbox{\hyperlink{namespaceplag__doc__karo_af5dc55049c9faea66128791bf5b2debc}{cpp}})
+\begin{DoxyCompactList}\small\item\em This fn is for refining the data file passed by the following steps\+: -\/if the data file given is a cpp file $\ast$removing the comments(single line \& multi lined) -\/if cpp/not cpp $\ast$replace the strings and variables by X $\ast$remove punctuations,newline char,spaces and convert all letters to lowercase. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_aeec3832cfaae628516c2ff1cd96d3f03}{hashing}} (\mbox{\hyperlink{namespaceplag__doc__karo_a161b26342abb693d578d36cfb682d62a}{K\+Grams}}, \mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}})
+\begin{DoxyCompactList}\small\item\em this fn maps an arbitrarily large string (K\+Grams) to hashes which uniquely identify the original string The rolling hash function makes it possible to efficiently compute the current hash of the i th k-\/gram from the preceding hash of the i − 1 th k-\/gram in constant time. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_afd324990448ee6316f2d50d0007decef}{hash\+Table\+\_\+\+G\+ST}} (\mbox{\hyperlink{namespaceplag__doc__karo_a6b20a61379c99bb09483889215c02101}{Hashes}})
+\begin{DoxyCompactList}\small\item\em this fn creats a hash table, which maps keys to hash values appends index i to the key hashes\mbox{[}i\mbox{]} if hashes\mbox{[}i\mbox{]} already exits in the table; else creates a new mapping from the key hashes\mbox{[}i\mbox{]} to i \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_a165e8d079724e00a725fb904fd5ad924}{max\+\_\+match}} (pattern\+\_\+hash, index, s, \mbox{\hyperlink{namespaceplag__doc__karo_a6b20a61379c99bb09483889215c02101}{Hashes}}, string\+\_\+index, pattern\+\_\+marks, string\+\_\+marks)
+\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_a1d9efb6d279e542ccf7dfe2279f161fe}{Greedy\+String\+Tiling}} (File\+\_\+\+Hashes, \mbox{\hyperlink{namespaceplag__doc__karo_af90955ba567714cb946aac3901dd8e23}{Stub\+\_\+\+Hashes}}, file\+\_\+data, \mbox{\hyperlink{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}, \mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespaceplag__doc__karo_a5a1270fc81b85ff7d2fe588424eab142}{Dictionary}} = \{ \textquotesingle{}=\textquotesingle{}\+: 0, \textquotesingle{}!\textquotesingle{}\+: 1, \textquotesingle{}\%\textquotesingle{}\+: 2, \textquotesingle{}$^\wedge$\textquotesingle{}\+: 4, \textquotesingle{}\&\textquotesingle{}\+: 5, \textquotesingle{}$\ast$\textquotesingle{}\+: 6, \textquotesingle{}+\textquotesingle{}\+: 7, \textquotesingle{}-\/\textquotesingle{}\+: 8, \textquotesingle{}\+:\textquotesingle{}\+: 9, \textquotesingle{}$\vert$\textquotesingle{}\+: 10, \textquotesingle{}\textbackslash{}\textbackslash{}\textquotesingle{}\+: 11, \textquotesingle{}/\textquotesingle{}\+: 12, \textquotesingle{}$<$\textquotesingle{}\+: 13, \textquotesingle{}$>$\textquotesingle{}\+: 14, \textquotesingle{}?\textquotesingle{}\+: 15, \textquotesingle{}$\sim$\textquotesingle{}\+: 16, \textquotesingle{}1\textquotesingle{}\+: 17, \textquotesingle{}2\textquotesingle{}\+: 18, \textquotesingle{}3\textquotesingle{}\+: 19, \textquotesingle{}4\textquotesingle{}\+: 20, \textquotesingle{}5\textquotesingle{}\+: 21, \textquotesingle{}6\textquotesingle{}\+: 22, \textquotesingle{}7\textquotesingle{}\+: 23, \textquotesingle{}8\textquotesingle{}\+: 24, \textquotesingle{}9\textquotesingle{}\+: 25, \textquotesingle{}0\textquotesingle{}\+: 26, \textquotesingle{}\mbox{[}\textquotesingle{}\+: 27, \textquotesingle{}\mbox{]}\textquotesingle{}\+: 28, \textquotesingle{}\{\textquotesingle{}\+: 29, \textquotesingle{}\}\textquotesingle{}\+: 30, \textquotesingle{}(\textquotesingle{}\+: 31, \textquotesingle{})\textquotesingle{}\+: 32, \textquotesingle{}@\textquotesingle{}\+: 33, \textquotesingle{}\$\textquotesingle{}\+: 34, \textquotesingle{}\#\textquotesingle{}\+: 35, \textquotesingle{}a\textquotesingle{}\+: 36, \textquotesingle{}b\textquotesingle{}\+: 37, \textquotesingle{}c\textquotesingle{}\+: 38, \textquotesingle{}d\textquotesingle{}\+: 39, \textquotesingle{}e\textquotesingle{}\+: 40, \textquotesingle{}f\textquotesingle{}\+: 41, \textquotesingle{}g\textquotesingle{}\+: 42, \textquotesingle{}h\textquotesingle{}\+: 43, \textquotesingle{}i\textquotesingle{}\+: 44, \textquotesingle{}j\textquotesingle{}\+: 45, \textquotesingle{}k\textquotesingle{}\+: 46, \textquotesingle{}l\textquotesingle{}\+: 47, \textquotesingle{}\mbox{\hyperlink{namespaceplag__doc__karo_ab3cd915d758008bd19d0f2428fbb354a}{m}}\textquotesingle{}\+: 48, \textquotesingle{}\mbox{\hyperlink{namespaceplag__doc__karo_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}\textquotesingle{}\+: 49, \textquotesingle{}o\textquotesingle{}\+: 50, \textquotesingle{}p\textquotesingle{}\+: 51, \textquotesingle{}q\textquotesingle{}\+: 52, \textquotesingle{}r\textquotesingle{}\+: 53, \textquotesingle{}s\textquotesingle{}\+: 54, \textquotesingle{}t\textquotesingle{}\+: 55, \textquotesingle{}u\textquotesingle{}\+: 56, \textquotesingle{}v\textquotesingle{}\+: 57, \textquotesingle{}w\textquotesingle{}\+: 58, \textquotesingle{}x\textquotesingle{}\+: 59, \textquotesingle{}y\textquotesingle{}\+: 60, \textquotesingle{}z\textquotesingle{}\+: 61, \textquotesingle{}\+\_\+\textquotesingle{}\+: 3 \}
+\item 
+\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}} = sys.\+argv\mbox{[}1\mbox{]}
+\item 
+bool \mbox{\hyperlink{namespaceplag__doc__karo_af5dc55049c9faea66128791bf5b2debc}{cpp}} = True
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}} = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/\char`\"{}+name)\mbox{]}
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_a161b26342abb693d578d36cfb682d62a}{K\+Grams}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_a6b20a61379c99bb09483889215c02101}{Hashes}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_a018aaab493af92ea83348b0db6e32328}{data}} = \mbox{[}\char`\"{}\char`\"{}\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+\item 
+int \mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}} = 10
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_ab67197572b0ad384d2295afe307ee6c4}{stub}} = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub\char`\"{}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub/\char`\"{}+name)\mbox{]}\mbox{[}0\mbox{]}
+\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}} = \mbox{\hyperlink{namespaceplag__doc__karo_a03eba6bd3bb505023784777c5751dda1}{tokenization}}(\mbox{\hyperlink{namespaceplag__doc__karo_ab67197572b0ad384d2295afe307ee6c4}{stub}},\mbox{\hyperlink{namespaceplag__doc__karo_af5dc55049c9faea66128791bf5b2debc}{cpp}})
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}{Stub\+\_\+\+K\+Grams}} = \mbox{[} \mbox{\hyperlink{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}\mbox{[}x\+:x+\mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}}\mbox{]} for x in range(len(\mbox{\hyperlink{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}})-\/\mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}}+1) \mbox{]}
+\item 
+def \mbox{\hyperlink{namespaceplag__doc__karo_af90955ba567714cb946aac3901dd8e23}{Stub\+\_\+\+Hashes}} = \mbox{\hyperlink{namespaceplag__doc__karo_aeec3832cfaae628516c2ff1cd96d3f03}{hashing}}(\mbox{\hyperlink{namespaceplag__doc__karo_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}{Stub\+\_\+\+K\+Grams}}, \mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}})
+\item 
+int \mbox{\hyperlink{namespaceplag__doc__karo_a2dd51e03005d5cb52315290d27f61870}{W}} = 7
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_af30f3f44bbef411e0d6ec429261c29b4}{fingerprints}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_a0896bd81ccc18cea601a7cbf2fce983a}{Cov}} = \mbox{[}\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}}(range(len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))) for i in range(len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))\mbox{]}
+\item 
+\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}{sizes}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+\item 
+int \mbox{\hyperlink{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}{inter}} = 0
+\item 
+\mbox{\hyperlink{namespaceplag__doc__karo_ab3cd915d758008bd19d0f2428fbb354a}{m}} = j
+\item 
+\mbox{\hyperlink{namespaceplag__doc__karo_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = i
+\item 
+int \mbox{\hyperlink{namespaceplag__doc__karo_af8c4f37cebba9b50a276b6cd16b525ac}{Ans1}} = \mbox{\hyperlink{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}{inter}}/(\mbox{\hyperlink{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}{sizes}}\mbox{[}i\mbox{]}+\mbox{\hyperlink{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}{sizes}}\mbox{[}j\mbox{]}-\/\mbox{\hyperlink{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}{inter}})
+\item 
+int \mbox{\hyperlink{namespaceplag__doc__karo_af3aeedca123b03d84e22cc81855edd1e}{Ans2}} = \mbox{\hyperlink{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}{inter}}/\mbox{\hyperlink{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}{sizes}}\mbox{[}\mbox{\hyperlink{namespaceplag__doc__karo_ab3cd915d758008bd19d0f2428fbb354a}{m}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceplag__doc__karo_a0328b2b476ba0d019492a722f334d2b6}{write}} = csv.\+writer(f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceplag__doc__karo_a1d9efb6d279e542ccf7dfe2279f161fe}\label{namespaceplag__doc__karo_a1d9efb6d279e542ccf7dfe2279f161fe}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!GreedyStringTiling@{GreedyStringTiling}}
+\index{GreedyStringTiling@{GreedyStringTiling}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{GreedyStringTiling()}{GreedyStringTiling()}}
+{\footnotesize\ttfamily def plag\+\_\+doc\+\_\+karo.\+Greedy\+String\+Tiling (\begin{DoxyParamCaption}\item[{}]{File\+\_\+\+Hashes,  }\item[{}]{Stub\+\_\+\+Hashes,  }\item[{}]{file\+\_\+data,  }\item[{}]{stub\+\_\+data,  }\item[{}]{K }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_aeec3832cfaae628516c2ff1cd96d3f03}\label{namespaceplag__doc__karo_aeec3832cfaae628516c2ff1cd96d3f03}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!hashing@{hashing}}
+\index{hashing@{hashing}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{hashing()}{hashing()}}
+{\footnotesize\ttfamily def plag\+\_\+doc\+\_\+karo.\+hashing (\begin{DoxyParamCaption}\item[{}]{K\+Grams,  }\item[{}]{K }\end{DoxyParamCaption})}
+
+
+
+this fn maps an arbitrarily large string (K\+Grams) to hashes which uniquely identify the original string The rolling hash function makes it possible to efficiently compute the current hash of the i th k-\/gram from the preceding hash of the i − 1 th k-\/gram in constant time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em K\+Grams} & $<$string whose hash value has to be returned$>$ \\
+\hline
+{\em K} & $<$minimum length of kgram beyond which hash value will be computed$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$hash of inputted K\+Gram$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceplag__doc__karo_afd324990448ee6316f2d50d0007decef}\label{namespaceplag__doc__karo_afd324990448ee6316f2d50d0007decef}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!hashTable\_GST@{hashTable\_GST}}
+\index{hashTable\_GST@{hashTable\_GST}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{hashTable\_GST()}{hashTable\_GST()}}
+{\footnotesize\ttfamily def plag\+\_\+doc\+\_\+karo.\+hash\+Table\+\_\+\+G\+ST (\begin{DoxyParamCaption}\item[{}]{Hashes }\end{DoxyParamCaption})}
+
+
+
+this fn creats a hash table, which maps keys to hash values appends index i to the key hashes\mbox{[}i\mbox{]} if hashes\mbox{[}i\mbox{]} already exits in the table; else creates a new mapping from the key hashes\mbox{[}i\mbox{]} to i 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Hashes} & 
+\begin{DoxyItemize}
+\end{DoxyItemize}{\begin{tabularx}{\linewidth}{|*{0}{>{\raggedright\arraybackslash}X|}}\hline
+\end{tabularx}}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceplag__doc__karo_a165e8d079724e00a725fb904fd5ad924}\label{namespaceplag__doc__karo_a165e8d079724e00a725fb904fd5ad924}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!max\_match@{max\_match}}
+\index{max\_match@{max\_match}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{max\_match()}{max\_match()}}
+{\footnotesize\ttfamily def plag\+\_\+doc\+\_\+karo.\+max\+\_\+match (\begin{DoxyParamCaption}\item[{}]{pattern\+\_\+hash,  }\item[{}]{index,  }\item[{}]{s,  }\item[{}]{Hashes,  }\item[{}]{string\+\_\+index,  }\item[{}]{pattern\+\_\+marks,  }\item[{}]{string\+\_\+marks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a03eba6bd3bb505023784777c5751dda1}\label{namespaceplag__doc__karo_a03eba6bd3bb505023784777c5751dda1}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!tokenization@{tokenization}}
+\index{tokenization@{tokenization}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{tokenization()}{tokenization()}}
+{\footnotesize\ttfamily def plag\+\_\+doc\+\_\+karo.\+tokenization (\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{cpp }\end{DoxyParamCaption})}
+
+
+
+This fn is for refining the data file passed by the following steps\+: -\/if the data file given is a cpp file $\ast$removing the comments(single line \& multi lined) -\/if cpp/not cpp $\ast$replace the strings and variables by X $\ast$remove punctuations,newline char,spaces and convert all letters to lowercase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & $<$files to be tokenized$>$ \\
+\hline
+{\em cpp} & $<$boolean value depicting whether passed file is cpp or not$>$ \\
+\hline
+{\em data} & $<$storing data in single file out of a list of files passed$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$tokenized data ,ie ,data free from punctuations,comments,newline char,comments having transformed variables$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceplag__doc__karo_a12d4fd9126fdd65b1c5dc297cf1baf1c}\label{namespaceplag__doc__karo_a12d4fd9126fdd65b1c5dc297cf1baf1c}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!window@{window}}
+\index{window@{window}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}}
+{\footnotesize\ttfamily def plag\+\_\+doc\+\_\+karo.\+window (\begin{DoxyParamCaption}\item[{}]{w,  }\item[{}]{has }\end{DoxyParamCaption})}
+
+
+
+This fn builds windows and selects fingerprints using hash values passed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & $<$size of the window to be formed$>$ \\
+\hline
+{\em has} & 
+\begin{DoxyItemize}
+\end{DoxyItemize}w functions to check whether the result of window forming is already suitable with value w that has been determined.\\
+\hline
+\end{DoxyParams}
+Fingerprint selection-\/ It is conducted by selecting the minimum hash value of each different window that has been made before. If there are similar values in a different window, just choose one of those value to be the fingerprint. This process uses the looping function to select the minimum value on each window and array\+\_\+unique function to ensure that there is no similar value on the array as the result of fingerprint selection. \begin{DoxyReturn}{Returns}
+$<$fingerprints dictionary$>$ 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceplag__doc__karo_af8c4f37cebba9b50a276b6cd16b525ac}\label{namespaceplag__doc__karo_af8c4f37cebba9b50a276b6cd16b525ac}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!Ans1@{Ans1}}
+\index{Ans1@{Ans1}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{Ans1}{Ans1}}
+{\footnotesize\ttfamily int Ans1 = \mbox{\hyperlink{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}{inter}}/(\mbox{\hyperlink{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}{sizes}}\mbox{[}i\mbox{]}+\mbox{\hyperlink{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}{sizes}}\mbox{[}j\mbox{]}-\/\mbox{\hyperlink{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}{inter}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_af3aeedca123b03d84e22cc81855edd1e}\label{namespaceplag__doc__karo_af3aeedca123b03d84e22cc81855edd1e}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!Ans2@{Ans2}}
+\index{Ans2@{Ans2}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{Ans2}{Ans2}}
+{\footnotesize\ttfamily int Ans2 = \mbox{\hyperlink{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}{inter}}/\mbox{\hyperlink{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}{sizes}}\mbox{[}\mbox{\hyperlink{namespaceplag__doc__karo_ab3cd915d758008bd19d0f2428fbb354a}{m}}\mbox{]}}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a0896bd81ccc18cea601a7cbf2fce983a}\label{namespaceplag__doc__karo_a0896bd81ccc18cea601a7cbf2fce983a}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!Cov@{Cov}}
+\index{Cov@{Cov}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{Cov}{Cov}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} Cov = \mbox{[}\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}}(range(len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))) for i in range(len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))\mbox{]}}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_af5dc55049c9faea66128791bf5b2debc}\label{namespaceplag__doc__karo_af5dc55049c9faea66128791bf5b2debc}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!cpp@{cpp}}
+\index{cpp@{cpp}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{cpp}{cpp}}
+{\footnotesize\ttfamily bool cpp = True}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a018aaab493af92ea83348b0db6e32328}\label{namespaceplag__doc__karo_a018aaab493af92ea83348b0db6e32328}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!data@{data}}
+\index{data@{data}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} data = \mbox{[}\char`\"{}\char`\"{}\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a5a1270fc81b85ff7d2fe588424eab142}\label{namespaceplag__doc__karo_a5a1270fc81b85ff7d2fe588424eab142}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!Dictionary@{Dictionary}}
+\index{Dictionary@{Dictionary}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{Dictionary}{Dictionary}}
+{\footnotesize\ttfamily dictionary Dictionary = \{ \textquotesingle{}=\textquotesingle{}\+: 0, \textquotesingle{}!\textquotesingle{}\+: 1, \textquotesingle{}\%\textquotesingle{}\+: 2, \textquotesingle{}$^\wedge$\textquotesingle{}\+: 4, \textquotesingle{}\&\textquotesingle{}\+: 5, \textquotesingle{}$\ast$\textquotesingle{}\+: 6, \textquotesingle{}+\textquotesingle{}\+: 7, \textquotesingle{}-\/\textquotesingle{}\+: 8, \textquotesingle{}\+:\textquotesingle{}\+: 9, \textquotesingle{}$\vert$\textquotesingle{}\+: 10, \textquotesingle{}\textbackslash{}\textbackslash{}\textquotesingle{}\+: 11, \textquotesingle{}/\textquotesingle{}\+: 12, \textquotesingle{}$<$\textquotesingle{}\+: 13, \textquotesingle{}$>$\textquotesingle{}\+: 14, \textquotesingle{}?\textquotesingle{}\+: 15, \textquotesingle{}$\sim$\textquotesingle{}\+: 16, \textquotesingle{}1\textquotesingle{}\+: 17, \textquotesingle{}2\textquotesingle{}\+: 18, \textquotesingle{}3\textquotesingle{}\+: 19, \textquotesingle{}4\textquotesingle{}\+: 20, \textquotesingle{}5\textquotesingle{}\+: 21, \textquotesingle{}6\textquotesingle{}\+: 22, \textquotesingle{}7\textquotesingle{}\+: 23, \textquotesingle{}8\textquotesingle{}\+: 24, \textquotesingle{}9\textquotesingle{}\+: 25, \textquotesingle{}0\textquotesingle{}\+: 26, \textquotesingle{}\mbox{[}\textquotesingle{}\+: 27, \textquotesingle{}\mbox{]}\textquotesingle{}\+: 28, \textquotesingle{}\{\textquotesingle{}\+: 29, \textquotesingle{}\}\textquotesingle{}\+: 30, \textquotesingle{}(\textquotesingle{}\+: 31, \textquotesingle{})\textquotesingle{}\+: 32, \textquotesingle{}@\textquotesingle{}\+: 33, \textquotesingle{}\$\textquotesingle{}\+: 34, \textquotesingle{}\#\textquotesingle{}\+: 35, \textquotesingle{}a\textquotesingle{}\+: 36, \textquotesingle{}b\textquotesingle{}\+: 37, \textquotesingle{}c\textquotesingle{}\+: 38, \textquotesingle{}d\textquotesingle{}\+: 39, \textquotesingle{}e\textquotesingle{}\+: 40, \textquotesingle{}f\textquotesingle{}\+: 41, \textquotesingle{}g\textquotesingle{}\+: 42, \textquotesingle{}h\textquotesingle{}\+: 43, \textquotesingle{}i\textquotesingle{}\+: 44, \textquotesingle{}j\textquotesingle{}\+: 45, \textquotesingle{}k\textquotesingle{}\+: 46, \textquotesingle{}l\textquotesingle{}\+: 47, \textquotesingle{}\mbox{\hyperlink{namespaceplag__doc__karo_ab3cd915d758008bd19d0f2428fbb354a}{m}}\textquotesingle{}\+: 48, \textquotesingle{}\mbox{\hyperlink{namespaceplag__doc__karo_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}\textquotesingle{}\+: 49, \textquotesingle{}o\textquotesingle{}\+: 50, \textquotesingle{}p\textquotesingle{}\+: 51, \textquotesingle{}q\textquotesingle{}\+: 52, \textquotesingle{}r\textquotesingle{}\+: 53, \textquotesingle{}s\textquotesingle{}\+: 54, \textquotesingle{}t\textquotesingle{}\+: 55, \textquotesingle{}u\textquotesingle{}\+: 56, \textquotesingle{}v\textquotesingle{}\+: 57, \textquotesingle{}w\textquotesingle{}\+: 58, \textquotesingle{}x\textquotesingle{}\+: 59, \textquotesingle{}y\textquotesingle{}\+: 60, \textquotesingle{}z\textquotesingle{}\+: 61, \textquotesingle{}\+\_\+\textquotesingle{}\+: 3 \}}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}\label{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!directory@{directory}}
+\index{directory@{directory}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{directory}{directory}}
+{\footnotesize\ttfamily directory = sys.\+argv\mbox{[}1\mbox{]}}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}\label{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!files@{files}}
+\index{files@{files}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{files}{files}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} files = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/\char`\"{}+name)\mbox{]}}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_af30f3f44bbef411e0d6ec429261c29b4}\label{namespaceplag__doc__karo_af30f3f44bbef411e0d6ec429261c29b4}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!fingerprints@{fingerprints}}
+\index{fingerprints@{fingerprints}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{fingerprints}{fingerprints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} fingerprints = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a6b20a61379c99bb09483889215c02101}\label{namespaceplag__doc__karo_a6b20a61379c99bb09483889215c02101}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!Hashes@{Hashes}}
+\index{Hashes@{Hashes}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{Hashes}{Hashes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} Hashes = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}\label{namespaceplag__doc__karo_a31bc6dc20d15325dc236b4e74586325b}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!inter@{inter}}
+\index{inter@{inter}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{inter}{inter}}
+{\footnotesize\ttfamily int inter = 0}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}\label{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!K@{K}}
+\index{K@{K}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily int K = 10}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a161b26342abb693d578d36cfb682d62a}\label{namespaceplag__doc__karo_a161b26342abb693d578d36cfb682d62a}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!KGrams@{KGrams}}
+\index{KGrams@{KGrams}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{KGrams}{KGrams}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} K\+Grams = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_ab3cd915d758008bd19d0f2428fbb354a}\label{namespaceplag__doc__karo_ab3cd915d758008bd19d0f2428fbb354a}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!m@{m}}
+\index{m@{m}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily m = j}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_aeab71244afb687f16d8c4f5ee9d6ef0e}\label{namespaceplag__doc__karo_aeab71244afb687f16d8c4f5ee9d6ef0e}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!n@{n}}
+\index{n@{n}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily n = i}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}\label{namespaceplag__doc__karo_a1633162830cf2d2447e2cfee92828aa5}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!sizes@{sizes}}
+\index{sizes@{sizes}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{sizes}{sizes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} sizes = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__doc__karo_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_ab67197572b0ad384d2295afe307ee6c4}\label{namespaceplag__doc__karo_ab67197572b0ad384d2295afe307ee6c4}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!stub@{stub}}
+\index{stub@{stub}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{stub}{stub}}
+{\footnotesize\ttfamily string stub = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub\char`\"{}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__doc__karo_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub/\char`\"{}+name)\mbox{]}\mbox{[}0\mbox{]}}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}\label{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!stub\_data@{stub\_data}}
+\index{stub\_data@{stub\_data}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{stub\_data}{stub\_data}}
+{\footnotesize\ttfamily def stub\+\_\+data = \mbox{\hyperlink{namespaceplag__doc__karo_a03eba6bd3bb505023784777c5751dda1}{tokenization}}(\mbox{\hyperlink{namespaceplag__doc__karo_ab67197572b0ad384d2295afe307ee6c4}{stub}},\mbox{\hyperlink{namespaceplag__doc__karo_af5dc55049c9faea66128791bf5b2debc}{cpp}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_af90955ba567714cb946aac3901dd8e23}\label{namespaceplag__doc__karo_af90955ba567714cb946aac3901dd8e23}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!Stub\_Hashes@{Stub\_Hashes}}
+\index{Stub\_Hashes@{Stub\_Hashes}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{Stub\_Hashes}{Stub\_Hashes}}
+{\footnotesize\ttfamily def Stub\+\_\+\+Hashes = \mbox{\hyperlink{namespaceplag__doc__karo_aeec3832cfaae628516c2ff1cd96d3f03}{hashing}}(\mbox{\hyperlink{namespaceplag__doc__karo_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}{Stub\+\_\+\+K\+Grams}}, \mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}})}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}\label{namespaceplag__doc__karo_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!Stub\_KGrams@{Stub\_KGrams}}
+\index{Stub\_KGrams@{Stub\_KGrams}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{Stub\_KGrams}{Stub\_KGrams}}
+{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} Stub\+\_\+\+K\+Grams = \mbox{[} \mbox{\hyperlink{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}\mbox{[}x\+:x+\mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}}\mbox{]} for x in range(len(\mbox{\hyperlink{namespaceplag__doc__karo_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}})-\/\mbox{\hyperlink{namespaceplag__doc__karo_a2689c4b3931025b79053532a5f1b0a85}{K}}+1) \mbox{]}}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a2dd51e03005d5cb52315290d27f61870}\label{namespaceplag__doc__karo_a2dd51e03005d5cb52315290d27f61870}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!W@{W}}
+\index{W@{W}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{W}{W}}
+{\footnotesize\ttfamily int W = 7}
+
+\mbox{\Hypertarget{namespaceplag__doc__karo_a0328b2b476ba0d019492a722f334d2b6}\label{namespaceplag__doc__karo_a0328b2b476ba0d019492a722f334d2b6}} 
+\index{plag\_doc\_karo@{plag\_doc\_karo}!write@{write}}
+\index{write@{write}!plag\_doc\_karo@{plag\_doc\_karo}}
+\doxysubsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily write = csv.\+writer(f)}
+
