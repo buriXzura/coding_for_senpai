@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tokenization_187',['tokenization',['../namespaceplag__check.html#a3b2aba03324447ea51d834c5cbcefa17',1,'plag_check']]]
+  ['window_177',['window',['../namespaceplag__check.html#a268f64fcd888c7d68682cf777576f526',1,'plag_check']]]
 ];

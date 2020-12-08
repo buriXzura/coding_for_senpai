@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isloggedin_174',['isLoggedIn',['../auth_8service_8js.html#ac25e70c2e8ee9115981114e3abb193d2',1,'auth.service.js']]]
+  ['max_5fmatch_168',['max_match',['../namespaceplag__check.html#a201ff1bc57a2272240b5bd4669960776',1,'plag_check']]]
 ];

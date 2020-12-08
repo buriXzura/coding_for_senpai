@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jwtauth_60',['jwtAuth',['../profile_8js.html#afeaa7f12ff7df455f65b0216e165d017',1,'profile.js']]]
+  ['k_59',['K',['../namespaceplag__check.html#a2689c4b3931025b79053532a5f1b0a85',1,'plag_check']]],
+  ['kgrams_60',['KGrams',['../namespaceplag__check.html#a161b26342abb693d578d36cfb682d62a',1,'plag_check']]]
 ];

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['hashing_172',['hashing',['../namespaceplag__check.html#ad8168749dbce6954dc043987121724d1',1,'plag_check']]],
-  ['hashtable_5fgst_173',['hashTable_GST',['../namespaceplag__check.html#a1ed3cc039900d1e0489fca820cf6b9e7',1,'plag_check']]]
+  ['list_164',['list',['../file_8service_8js.html#ab13d51f45a37423e955d7d9203cbbe44',1,'file.service.js']]],
+  ['list1_165',['List1',['../class_list1.html#a87c833837910033e15d4cd193b0f043b',1,'List1']]],
+  ['login_166',['login',['../auth_8service_8js.html#ac3ecf0fb671678e55a7a6a7d448b9d12',1,'auth.service.js']]],
+  ['logout_167',['logout',['../auth_8service_8js.html#a1af55df87e37292a150f183f1307ac43',1,'auth.service.js']]]
 ];

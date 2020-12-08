@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['list_63',['list',['../file_8service_8js.html#ab13d51f45a37423e955d7d9203cbbe44',1,'file.service.js']]],
-  ['list1_64',['List1',['../class_list1.html',1,'List1'],['../class_list1.html#a87c833837910033e15d4cd193b0f043b',1,'List1::List1()']]],
-  ['login_65',['login',['../auth_8service_8js.html#ac3ecf0fb671678e55a7a6a7d448b9d12',1,'auth.service.js']]],
-  ['logout_66',['logout',['../auth_8service_8js.html#a1af55df87e37292a150f183f1307ac43',1,'auth.service.js']]]
+  ['m_65',['m',['../namespaceplag__check.html#ab3cd915d758008bd19d0f2428fbb354a',1,'plag_check']]],
+  ['markersview_66',['MarkersView',['../classviews_1_1_markers_view.html',1,'views']]],
+  ['max_5fmatch_67',['max_match',['../namespaceplag__check.html#a201ff1bc57a2272240b5bd4669960776',1,'plag_check']]],
+  ['my_5fcol_68',['my_col',['../namespaceplots__create.html#a74bd156b084de6e36332db67fdc1a4f0',1,'plots_create']]],
+  ['my_5fdict_69',['my_dict',['../namespaceplots__create.html#a2d163db2dd2050926a0bc5e76f88c4d8',1,'plots_create']]]
 ];

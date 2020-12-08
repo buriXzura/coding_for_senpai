@@ -68,7 +68,6 @@ var menudata={children:[
 {text:"Class Hierarchy",url:"hierarchy.html"},
 {text:"Class Members",url:"functions.html",children:[
 {text:"All",url:"functions.html",children:[
-{text:"_",url:"functions.html#index__5F"},
 {text:"d",url:"functions.html#index_d"},
 {text:"g",url:"functions.html#index_g"},
 {text:"l",url:"functions.html#index_l"},

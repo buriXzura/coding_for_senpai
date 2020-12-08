@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['views_114',['views',['../namespaceviews.html',1,'']]],
-  ['views_2epy_115',['views.py',['../views_8py.html',1,'']]]
+  ['w_110',['W',['../namespaceplag__check.html#a2dd51e03005d5cb52315290d27f61870',1,'plag_check']]],
+  ['window_111',['window',['../namespaceplag__check.html#a268f64fcd888c7d68682cf777576f526',1,'plag_check']]],
+  ['write_112',['write',['../namespaceplag__check.html#a0328b2b476ba0d019492a722f334d2b6',1,'plag_check']]]
 ];

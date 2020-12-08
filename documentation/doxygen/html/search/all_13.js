@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['tokenization_109',['tokenization',['../namespaceplag__check.html#a3b2aba03324447ea51d834c5cbcefa17',1,'plag_check']]],
-  ['trueresultsprocessview_110',['TrueResultsProcessView',['../classviews_1_1_true_results_process_view.html',1,'views']]],
-  ['ttt_111',['ttt',['../namespacettt.html',1,'']]],
-  ['ttt_2epy_112',['ttt.py',['../ttt_8py.html',1,'']]]
+  ['upload_107',['upload',['../file_8service_8js.html#a77337659d00969a74d1a0c9be8203f36',1,'file.service.js']]]
 ];

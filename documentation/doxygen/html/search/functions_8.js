@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['post_180',['post',['../classviews_1_1_file_upload_view.html#a3a35debc9ba8363a01d9088960cc0349',1,'views.FileUploadView.post()'],['../classviews_1_1_get_list_view.html#a66d0238c52124114cedaa72be4b95b47',1,'views.GetListView.post()']]],
-  ['pymethod_181',['PyMethod',['../classttt_1_1_py_class.html#a06331a3bf023b9e7a180422e737b0381',1,'ttt::PyClass']]]
+  ['sendlist_172',['sendList',['../file_8service_8js.html#a312b1e8a3dc296feb9b269f459307db8',1,'file.service.js']]],
+  ['setloggedin_173',['setLoggedIn',['../server_8service_8js.html#a0d8c7f008de79719763b32ee20479455',1,'server.service.js']]],
+  ['someplot_174',['someplot',['../file_8service_8js.html#af29a6b8a7e73dd5f0003d003e89f3369',1,'file.service.js']]]
 ];

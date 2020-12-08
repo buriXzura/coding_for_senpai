@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['request_182',['request',['../server_8service_8js.html#a566411bc360a18f1c21523a0f43e2f45',1,'server.service.js']]],
-  ['resultslist_183',['resultsList',['../file_8service_8js.html#ad4bbae55a669a5553dbaf66c51f56380',1,'file.service.js']]]
+  ['tokenization_175',['tokenization',['../namespaceplag__check.html#a3b2aba03324447ea51d834c5cbcefa17',1,'plag_check']]]
 ];

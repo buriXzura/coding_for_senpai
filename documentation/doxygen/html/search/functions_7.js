@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['max_5fmatch_179',['max_match',['../namespaceplag__check.html#a201ff1bc57a2272240b5bd4669960776',1,'plag_check']]]
+  ['request_170',['request',['../server_8service_8js.html#a566411bc360a18f1c21523a0f43e2f45',1,'server.service.js']]],
+  ['resultslist_171',['resultsList',['../file_8service_8js.html#ad4bbae55a669a5553dbaf66c51f56380',1,'file.service.js']]]
 ];

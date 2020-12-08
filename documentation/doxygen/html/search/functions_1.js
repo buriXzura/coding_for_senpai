@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['delete_157',['delete',['../classviews_1_1_file_delete_view.html#abc70fb1714790197a7f294620e12ab7e',1,'views.FileDeleteView.delete()'],['../classviews_1_1_delete_all_view.html#a106bf912622dee1ef9617095da96ec4e',1,'views.DeleteAllView.delete()'],['../classviews_1_1_stub_file_delete_view.html#a106bf912622dee1ef9617095da96ec4e',1,'views.StubFileDeleteView.delete()'],['../classviews_1_1_results_file_delete_view.html#a106bf912622dee1ef9617095da96ec4e',1,'views.ResultsFileDeleteView.delete()'],['../classviews_1_1_delete_plots_view.html#a106bf912622dee1ef9617095da96ec4e',1,'views.DeletePlotsView.delete()'],['../file_8service_8js.html#a4a1b8ca320dc719b50f9e5cee1f1c975',1,'delete():&#160;file.service.js']]],
-  ['delete1_158',['delete1',['../file_8service_8js.html#a44eb39bf9642fb6021d0ac0a1e7e65b1',1,'file.service.js']]],
-  ['deleteall_159',['deleteall',['../file_8service_8js.html#a210f1904a302a93e614c803655311b58',1,'file.service.js']]],
-  ['deleteplots_160',['deleteplots',['../file_8service_8js.html#a11e2221523400965bec54784fc54b68d',1,'file.service.js']]],
-  ['deleteresults_161',['deleteResults',['../file_8service_8js.html#a6de2c2b4a6bf4f32cfe0ec1832e5507e',1,'file.service.js']]],
-  ['downloadresults_162',['DownloadResults',['../class_download_results.html#af58b314c19abdfb3f90790771871681a',1,'DownloadResults']]]
+  ['generate_153',['generate',['../file_8service_8js.html#afb79b8b31e70f790b41712bdea1eb973',1,'file.service.js']]],
+  ['get_154',['get',['../classviews_1_1_file_list_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.FileListView.get()'],['../classviews_1_1_stub_list_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.StubListView.get()'],['../classviews_1_1_results_list_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.ResultsListView.get()'],['../classviews_1_1_results_download_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.ResultsDownloadView.get()'],['../classviews_1_1_false_results_process_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.FalseResultsProcessView.get()'],['../classviews_1_1_true_results_process_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.TrueResultsProcessView.get()'],['../classviews_1_1_create_plots_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.CreatePlotsView.get()'],['../classviews_1_1_heat_map_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.HeatMapView.get()'],['../classviews_1_1_markers_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.MarkersView.get()'],['../classviews_1_1_some_plot_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8',1,'views.SomePlotView.get()'],['../server_8service_8js.html#af801e5d8c2f1fe8c393467977d23fb0e',1,'get():&#160;server.service.js']]],
+  ['get_5fobject_155',['get_object',['../classviews_1_1_file_delete_view.html#a3a39ec541a82eaf4b891eaa4f70b5d7e',1,'views::FileDeleteView']]],
+  ['get_5fsession_156',['get_session',['../file_8service_8js.html#a42ccf0e174a31486b751b2ad7ef2709b',1,'file.service.js']]],
+  ['getheat_157',['getHeat',['../file_8service_8js.html#a50e21421efe29d62d735c6e5f6187be7',1,'file.service.js']]],
+  ['getimage_158',['getImage',['../file_8service_8js.html#a604568673adb9552425d7af198938a85',1,'file.service.js']]],
+  ['getmarkers_159',['getMarkers',['../file_8service_8js.html#abe4e448e1959d6287f5817d95ee58d5f',1,'file.service.js']]],
+  ['greedystringtiling_160',['GreedyStringTiling',['../namespaceplag__check.html#a98c1ef1eae0cbaffbd9c5953b0505754',1,'plag_check']]]
 ];
