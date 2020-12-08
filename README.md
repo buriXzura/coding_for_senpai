@@ -14,19 +14,28 @@
 
 *   Frontend: Angular CLI: 10.1.7, Node: 12.0
 *   User data backend: Express JS (Node 10.1.0)
-*   File upload/download backend: Express JS (Node 10.1.0)
-*   (Alternate File upload backend): Django 2.7.1
+*   File upload/download backend: Django 2.7.1
 
 **How the tool is supposed to be run:**
 
 
 *   Angular CLI, node (including versions 10.1.0 and 12.0) and nvm should be installed on the system
 *   Clone this repository into a suitable directory
-*   **Navigate into jwt-server and run <code>npm-install</code>
+
+*   Run <code>python3 -m venv .env</code> (this creates a virtual environment)
+*   Activate the virtual environment by running <code>source .env/bin/activate</code>
+
+*   Navigate into django-server and run <code> pip install -r requirements.txt </code> to install the Python packages
+*   Start the file backend server using <code> python manage.py runserver </code>
+
+
+*   In a new terminal, navigate into jwt-server and run <code>npm-install</code>
 *   Still within jwt-server, run <code>npm start </code> (this starts the backend server)
+
 *   In a new terminal, navigate into jwt-client and if the node version in use is not 12.0, run <code>nvm use 12.0</code>. Then run <code>npm-install</code>
 *   Finally, run <code>ng serve -o </code>to start the web interface
-*   Navigation in the web interface is self-explanatory as of now
+
+*   Navigation in the web interface: to be updated
 
 **What is yet to be done:**
 

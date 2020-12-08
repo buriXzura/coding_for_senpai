@@ -21,6 +21,7 @@ import { StubComponent } from './stub/stub.component';
 import { MainComponent } from './main/main.component';
 import { ResultsComponent } from './results/results.component';
 import { UploadDownloadComponent } from './upload-download/upload-download.component';
+import { RedirComponent } from './redir/redir.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { UploadDownloadComponent } from './upload-download/upload-download.compo
     MainComponent,
     ResultsComponent,
     UploadDownloadComponent,
+    RedirComponent,
   ],
   imports: [
     BrowserModule,
