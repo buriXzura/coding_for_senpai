@@ -92,6 +92,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a9731b74a10637eafda354101c4e3c755"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviews_1_1_delete_all_view.html#a9731b74a10637eafda354101c4e3c755">parser_class</a> = (FileUploadParser,)</td></tr>
+<tr class="memdesc:a9731b74a10637eafda354101c4e3c755"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file upload parser for the class.  <a href="classviews_1_1_delete_all_view.html#a9731b74a10637eafda354101c4e3c755">More...</a><br /></td></tr>
 <tr class="separator:a9731b74a10637eafda354101c4e3c755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -132,7 +133,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Deletes all files. </p>
 <p>Gets all the files particular to that session (user) which are currently there in the backend and then deletes each file one by one unless any file went missing in which case it will throw an error and thereafter also deletes the folder corresponding to that particular session.</p>
-<p>@params self reference to the current instance of the class @params request passes the state through the system @params ss refers to the current session of the user </p><dl class="section return"><dt>Returns</dt><dd>response with status 200 if successful deletion, else response with status 404 if any file not found </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>reference to the current instance of the class </td></tr>
+    <tr><td class="paramname">request</td><td>passes the state through the system </td></tr>
+    <tr><td class="paramname">ss</td><td>refers to the current session of the user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>response with status 200 if successful deletion, else response with status 404 if any file not found </dd></dl>
 
 </div>
 </div>
@@ -156,6 +165,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The file upload parser for the class. </p>
 
 </div>
 </div>

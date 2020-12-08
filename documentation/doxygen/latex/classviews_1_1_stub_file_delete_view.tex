@@ -20,7 +20,7 @@ def \mbox{\hyperlink{classviews_1_1_stub_file_delete_view_a106bf912622dee1ef9617
 \begin{DoxyCompactItemize}
 \item 
 tuple \mbox{\hyperlink{classviews_1_1_stub_file_delete_view_a9731b74a10637eafda354101c4e3c755}{parser\+\_\+class}} = (File\+Upload\+Parser,)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The file upload parser for the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -41,7 +41,16 @@ Deletes the stub files.
 
 Gets the stub files particular to that session (user) which are currently present in the backend inside the stub folder within the current session folder and then deletes the files unless some error is thrown and thereafter also deletes the stub folder corresponding to that particular session.
 
-@params self reference to the current instance of the class @params request passes the state through the system @params ss refers to the current session of the user \begin{DoxyReturn}{Returns}
+
+\begin{DoxyParams}{Parameters}
+{\em self} & reference to the current instance of the class \\
+\hline
+{\em request} & passes the state through the system \\
+\hline
+{\em ss} & refers to the current session of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 response with status 200 if successful deletion, else response with status 404 if any file not found 
 \end{DoxyReturn}
 
@@ -52,6 +61,10 @@ response with status 200 if successful deletion, else response with status 404 i
 \index{parser\_class@{parser\_class}!StubFileDeleteView@{StubFileDeleteView}}
 \doxysubsubsection{\texorpdfstring{parser\_class}{parser\_class}}
 {\footnotesize\ttfamily tuple parser\+\_\+class = (File\+Upload\+Parser,)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The file upload parser for the class. 
 
 
 

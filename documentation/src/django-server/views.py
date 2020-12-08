@@ -17,6 +17,7 @@ class FileUploadView(APIView):
     Registers the file in 'File model' and saves it in the media.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def post(self, request, *args, **kwargs):
@@ -24,10 +25,10 @@ class FileUploadView(APIView):
         uploaded to the server and the data is saved in case
         of success and error is returned in case of failure.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params *args used to pass a non-key worded, variable-length argument list
-        @params **kwargs used to pass a keyworded, variable-length argument list
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param *args used to pass a non-key worded, variable-length argument list
+        @param **kwargs used to pass a keyworded, variable-length argument list
         @return response with requested data if valid and a status 201,
                  else response with error and a status 400
         """
@@ -48,6 +49,7 @@ class FileListView(APIView):
     and returns the resulting list of files.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def get(self, request, ss):
@@ -55,9 +57,9 @@ class FileListView(APIView):
         """! Lists the uploaded files. The files which are uploaded by post function are
         listed under that user's session folder.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200
         """
 
@@ -72,13 +74,14 @@ class FileDeleteView(APIView):
     Child functions retrieve the instance of that file and then delete that single file.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def get_object(self, pk):
 
         """! Gets that particular file object instance
-        @params self reference to the current instance of the class
-        @params pk instance of that particular file
+        @param self reference to the current instance of the class
+        @param pk instance of that particular file
         @return the file instance
         """
 
@@ -89,9 +92,9 @@ class FileDeleteView(APIView):
         """! Deletes a single file. It first checks if the file exists and if it does then gets the
         file object instance and deletes it from the backend server.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params pk instance of that particular file
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param pk instance of that particular file
         @return response with status 200 if successful deletion,
                  else response with 404 if file not found
         """
@@ -113,6 +116,7 @@ class DeleteAllView(APIView):
     there in the backend and then deletes each file one by one.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def delete(self, request, ss):
@@ -122,9 +126,9 @@ class DeleteAllView(APIView):
         file went missing in which case it will throw an error and thereafter
         also deletes the folder corresponding to that particular session.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200 if successful deletion,
                  else response with status 404 if any file not found
         """
@@ -153,6 +157,7 @@ class StubFileDeleteView(APIView):
     there in the backend and then deletes them as well as the stub folder.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def delete(self, request, ss):
@@ -162,9 +167,9 @@ class StubFileDeleteView(APIView):
         folder and then deletes the files unless some error is thrown and thereafter
         also deletes the stub folder corresponding to that particular session.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200 if successful deletion,
                  else response with status 404 if any file not found
         """
@@ -197,6 +202,7 @@ class StubListView(APIView):
     and returns the resulting list of stub files.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def get(self, request, ss):
@@ -204,9 +210,9 @@ class StubListView(APIView):
         """! Lists the stub files. The stub files which are uploaded by post function are listed
         under that user's stub folder which is within the session folder.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200
         """
 
@@ -224,6 +230,7 @@ class ResultsFileDeleteView(APIView):
     there in the backend and then deletes them as well as the results folder.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def delete(self, request, ss):
@@ -233,9 +240,9 @@ class ResultsFileDeleteView(APIView):
         folder and then deletes the files unless some error is thrown and thereafter
         also deletes the results folder corresponding to that particular session.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200 if successful deletion,
                  else response with status 404 if any file not found
         """
@@ -268,6 +275,7 @@ class ResultsListView(APIView):
     and returns the resulting list of result files.
     """
 
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def get(self, request, ss):
@@ -275,9 +283,9 @@ class ResultsListView(APIView):
         """! Lists the results files. The results files which are uploaded by post function are listed
         under that user's results folder which is within the session folder.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200
         """
 
@@ -290,6 +298,12 @@ class ResultsListView(APIView):
 
 
 class ResultsDownloadView(APIView):
+
+    """! The download class for the csv result file.
+    Creates an instance of the csv file and downloads it.
+    """
+
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def get(self, request, ss):
@@ -297,9 +311,9 @@ class ResultsDownloadView(APIView):
         """! Downloads csv file. Creates an instance of csv file which will contain the
         covariance matrix and associated parameters are given to it.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return file response associated with csv file
         """
 
@@ -319,6 +333,12 @@ class ResultsDownloadView(APIView):
 
 
 class FalseResultsProcessView(APIView):
+
+    """! The class that processes false results. The core logic is run on files
+    in the current session folder, and the resulting csv file is saved in the backend.
+    """
+
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def get(self, request, ss):
@@ -328,9 +348,9 @@ class FalseResultsProcessView(APIView):
         and then csv file is created and saved in the backend present
         within the results folder inside the session (user) folder.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200
         """
 
@@ -353,6 +373,12 @@ class FalseResultsProcessView(APIView):
 
 
 class TrueResultsProcessView(APIView):
+
+    """! The class that processes true results. The core logic is run on files
+    in the current session folder, and the resulting csv file is saved in the backend.
+    """
+
+    ## The file upload parser for the class
     parser_class = (FileUploadParser,)
 
     def get(self, request, ss):
@@ -362,9 +388,9 @@ class TrueResultsProcessView(APIView):
         and then csv file is created and saved in the backend present
         within the results folder inside the session (user) folder.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200
         """
 
@@ -387,6 +413,11 @@ class TrueResultsProcessView(APIView):
 
 class CreatePlotsView(APIView):
 
+    """! The class that creates different plots and returns the instance for surface plot.
+    The plots_create file is run on the result csv files present in the backend corresponding
+    to the current session. A surface plot, heatmap and markers text file are created and saved to the backend.
+    """
+
     def get(self, request, ss):
 
         """! Creates different plots and returns the instance for surface plot. First all the previous plot files present in the plots folder is deleted
@@ -396,9 +427,9 @@ class CreatePlotsView(APIView):
         lastly a markers text file denoting all the files and all three files are
         saved within the plots folder within the session (user) folder.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return file response associated with the surface plot file
         """
 
@@ -455,13 +486,17 @@ class CreatePlotsView(APIView):
 
 class HeatMapView(APIView):
 
+    """! The class that returns the instance for the result heatmap.
+    Retrieves the heatmap instance from the file backend given the session id of the current user.
+    """
+
     def get(self, request, ss):
 
         """! Returns the instance for the heatmap.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return file response associated with the heatmap file
         """
 
@@ -480,13 +515,17 @@ class HeatMapView(APIView):
 
 class MarkersView(APIView):
 
+    """! The class that returns the instance for the result markers text file.
+    Retrieves the markers text file instance from the file backend given the session id of the current user.
+    """
+
     def get(self, request, ss):
 
         """! Returns the instance for markers text file.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return file response associated with the markers text file
         """
 
@@ -505,6 +544,11 @@ class MarkersView(APIView):
 
 class GetListView(APIView):
 
+    """! The class that creates different plots only for the selected files.
+    Given a list of files to be plotted and the current session folder, the surface plot,
+    heatmap and markers text file are generated and saved only for the selected files.
+    """
+
     def post(self, request, ss):
 
         """! Creates different plots only for the selected files. First all the previous plot files present in the plots folder is deleted and
@@ -515,9 +559,9 @@ class GetListView(APIView):
         only the selected files and all three files are saved within the plots folder
         within the session (user) folder.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return  response with status 200
         """
         print(request.data['list'])
@@ -560,13 +604,17 @@ class GetListView(APIView):
 
 class SomePlotView(APIView):
 
+    """! The class that returns the instance for the result surface plot.
+    Retrieves the surface plott instance from the file backend given the session id of the current user.
+    """
+
     def get(self,request,ss):
         #
         """! Returns the instance for the surface plot.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return file response associated with the surface plot file
         """
 
@@ -586,6 +634,11 @@ class SomePlotView(APIView):
 
 class DeletePlotsView(APIView):
 
+    """! The class that deletes the plot files.
+    It queries the database for files in the plot folder with the provided session
+    and deletes the files followed by the plot folder as well.
+    """
+
      def delete(self, request, ss):
 
         """Deletes the plot files. Gets the plot files particular to that session (user) which are currently
@@ -593,9 +646,9 @@ class DeletePlotsView(APIView):
         folder and then deletes the files unless some error is thrown and thereafter
         also deletes the plots folder corresponding to that particular session.
 
-        @params self reference to the current instance of the class
-        @params request passes the state through the system
-        @params ss refers to the current session of the user
+        @param self reference to the current instance of the class
+        @param request passes the state through the system
+        @param ss refers to the current session of the user
         @return response with status 200 if successful deletion,
                  else response with 404 if file not found
         """

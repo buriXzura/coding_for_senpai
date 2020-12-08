@@ -92,6 +92,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a9731b74a10637eafda354101c4e3c755"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviews_1_1_file_upload_view.html#a9731b74a10637eafda354101c4e3c755">parser_class</a> = (FileUploadParser,)</td></tr>
+<tr class="memdesc:a9731b74a10637eafda354101c4e3c755"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file upload parser for the class.  <a href="classviews_1_1_file_upload_view.html#a9731b74a10637eafda354101c4e3c755">More...</a><br /></td></tr>
 <tr class="separator:a9731b74a10637eafda354101c4e3c755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -138,7 +139,16 @@ Static Public Attributes</h2></td></tr>
 
 <p>Uploads the files. </p>
 <p>After the files are added to the queue, the files are uploaded to the server and the data is saved in case of success and error is returned in case of failure.</p>
-<p>@params self reference to the current instance of the class @params request passes the state through the system @params *args used to pass a non-key worded, variable-length argument list @params **kwargs used to pass a keyworded, variable-length argument list </p><dl class="section return"><dt>Returns</dt><dd>response with requested data if valid and a status 201, else response with error and a status 400 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>reference to the current instance of the class </td></tr>
+    <tr><td class="paramname">request</td><td>passes the state through the system </td></tr>
+    <tr><td class="paramname">*args</td><td>used to pass a non-key worded, variable-length argument list </td></tr>
+    <tr><td class="paramname">**kwargs</td><td>used to pass a keyworded, variable-length argument list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>response with requested data if valid and a status 201, else response with error and a status 400 </dd></dl>
 
 </div>
 </div>
@@ -162,6 +172,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The file upload parser for the class. </p>
 
 </div>
 </div>

@@ -24,7 +24,7 @@ function get_session(ss){
 function upload(formData){}
 
 /*!
-* @brief allows the user to download the result(.csv) file registered in the model
+* @brief allows the user to download the result csv file registered in the model
 * @return type:arrayBuffer the contents of file
 */
 function DownloadResults(){}
@@ -66,7 +66,7 @@ function deleteResults(){
 }
 
 /*!
-* @brief provides the list of stub files (single/no file in our case)
+* @brief provides the list of stub files - single/no file in our case
 * @return type:Object the list of files requested
 */
 function List1(){

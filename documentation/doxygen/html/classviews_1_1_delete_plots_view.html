@@ -72,6 +72,9 @@ $(function() {
 <div class="title">DeletePlotsView Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The class that deletes the plot files.  
+ <a href="classviews_1_1_delete_plots_view.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for DeletePlotsView:</div>
 <div class="dyncontent">
@@ -84,7 +87,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a106bf912622dee1ef9617095da96ec4e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviews_1_1_delete_plots_view.html#a106bf912622dee1ef9617095da96ec4e">delete</a> (self, <a class="el" href="server_8service_8js.html#a566411bc360a18f1c21523a0f43e2f45">request</a>, ss)</td></tr>
 <tr class="separator:a106bf912622dee1ef9617095da96ec4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The class that deletes the plot files. </p>
+<p>It queries the database for files in the plot folder with the provided session and deletes the files followed by the plot folder as well. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a106bf912622dee1ef9617095da96ec4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a106bf912622dee1ef9617095da96ec4e">&#9670;&nbsp;</a></span>delete()</h2>
 
@@ -121,9 +127,9 @@ present in the backend inside the plots folder within the current session
 folder and then deletes the files unless some error is thrown and thereafter
 also deletes the plots folder corresponding to that particular session.
 
-@params self reference to the current instance of the class
-@params request passes the state through the system
-@params ss refers to the current session of the user
+@param self reference to the current instance of the class
+@param request passes the state through the system
+@param ss refers to the current session of the user
 @return response with status 200 if successful deletion,
          else response with 404 if file not found
 </pre> 

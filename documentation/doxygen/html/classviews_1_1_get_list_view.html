@@ -72,6 +72,9 @@ $(function() {
 <div class="title">GetListView Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The class that creates different plots only for the selected files.  
+ <a href="classviews_1_1_get_list_view.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for GetListView:</div>
 <div class="dyncontent">
@@ -85,7 +88,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a66d0238c52124114cedaa72be4b95b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates different plots only for the selected files.  <a href="classviews_1_1_get_list_view.html#a66d0238c52124114cedaa72be4b95b47">More...</a><br /></td></tr>
 <tr class="separator:a66d0238c52124114cedaa72be4b95b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The class that creates different plots only for the selected files. </p>
+<p>Given a list of files to be plotted and the current session folder, the surface plot, heatmap and markers text file are generated and saved only for the selected files. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a66d0238c52124114cedaa72be4b95b47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66d0238c52124114cedaa72be4b95b47">&#9670;&nbsp;</a></span>post()</h2>
 
@@ -120,7 +126,15 @@ Public Member Functions</h2></td></tr>
 
 <p>Creates different plots only for the selected files. </p>
 <p>First all the previous plot files present in the plots folder is deleted and then a command line argument is passed with an argument S (selected) and another argument having the list of files to be plotted to run the plots creating file with files present within the session folder and then 3 files are created. One is a surface plot, second one is a heatmap and lastly a markers text file denoting only the selected files and all three files are saved within the plots folder within the session (user) folder.</p>
-<p>@params self reference to the current instance of the class @params request passes the state through the system @params ss refers to the current session of the user </p><dl class="section return"><dt>Returns</dt><dd>response with status 200 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>reference to the current instance of the class </td></tr>
+    <tr><td class="paramname">request</td><td>passes the state through the system </td></tr>
+    <tr><td class="paramname">ss</td><td>refers to the current session of the user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>response with status 200 </dd></dl>
 
 </div>
 </div>

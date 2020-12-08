@@ -1,5 +1,10 @@
 \hypertarget{classviews_1_1_delete_plots_view}{}\doxysection{Delete\+Plots\+View Class Reference}
 \label{classviews_1_1_delete_plots_view}\index{DeletePlotsView@{DeletePlotsView}}
+
+
+The class that deletes the plot files.  
+
+
 Inheritance diagram for Delete\+Plots\+View\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,6 +18,11 @@ def \mbox{\hyperlink{classviews_1_1_delete_plots_view_a106bf912622dee1ef9617095d
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+The class that deletes the plot files. 
+
+It queries the database for files in the plot folder with the provided session and deletes the files followed by the plot folder as well. 
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classviews_1_1_delete_plots_view_a106bf912622dee1ef9617095da96ec4e}\label{classviews_1_1_delete_plots_view_a106bf912622dee1ef9617095da96ec4e}} 
 \index{DeletePlotsView@{DeletePlotsView}!delete@{delete}}
@@ -25,9 +35,9 @@ present in the backend inside the plots folder within the current session
 folder and then deletes the files unless some error is thrown and thereafter
 also deletes the plots folder corresponding to that particular session.
 
-@params self reference to the current instance of the class
-@params request passes the state through the system
-@params ss refers to the current session of the user
+@param self reference to the current instance of the class
+@param request passes the state through the system
+@param ss refers to the current session of the user
 @return response with status 200 if successful deletion,
          else response with 404 if file not found
 \end{DoxyVerb}

@@ -72,6 +72,9 @@ $(function() {
 <div class="title">CreatePlotsView Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The class that creates different plots and returns the instance for surface plot.  
+ <a href="classviews_1_1_create_plots_view.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CreatePlotsView:</div>
 <div class="dyncontent">
@@ -85,7 +88,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aee51c04d5e6ee8f975072ae7c85b2ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates different plots and returns the instance for surface plot.  <a href="classviews_1_1_create_plots_view.html#aee51c04d5e6ee8f975072ae7c85b2ac8">More...</a><br /></td></tr>
 <tr class="separator:aee51c04d5e6ee8f975072ae7c85b2ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The class that creates different plots and returns the instance for surface plot. </p>
+<p>The <a class="el" href="namespaceplots__create.html">plots_create</a> file is run on the result csv files present in the backend corresponding to the current session. A surface plot, heatmap and markers text file are created and saved to the backend. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aee51c04d5e6ee8f975072ae7c85b2ac8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee51c04d5e6ee8f975072ae7c85b2ac8">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -120,7 +126,15 @@ Public Member Functions</h2></td></tr>
 
 <p>Creates different plots and returns the instance for surface plot. </p>
 <p>First all the previous plot files present in the plots folder is deleted and then a command line argument is passed with an argument A (all) to run the plots creating file with files present within the session folder and then 3 files are created. One is a surface plot, second one is a heatmap and lastly a markers text file denoting all the files and all three files are saved within the plots folder within the session (user) folder.</p>
-<p>@params self reference to the current instance of the class @params request passes the state through the system @params ss refers to the current session of the user </p><dl class="section return"><dt>Returns</dt><dd>file response associated with the surface plot file </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>reference to the current instance of the class </td></tr>
+    <tr><td class="paramname">request</td><td>passes the state through the system </td></tr>
+    <tr><td class="paramname">ss</td><td>refers to the current session of the user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>file response associated with the surface plot file </dd></dl>
 
 </div>
 </div>

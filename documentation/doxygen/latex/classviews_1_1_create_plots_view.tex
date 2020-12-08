@@ -1,5 +1,10 @@
 \hypertarget{classviews_1_1_create_plots_view}{}\doxysection{Create\+Plots\+View Class Reference}
 \label{classviews_1_1_create_plots_view}\index{CreatePlotsView@{CreatePlotsView}}
+
+
+The class that creates different plots and returns the instance for surface plot.  
+
+
 Inheritance diagram for Create\+Plots\+View\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,6 +17,11 @@ Inheritance diagram for Create\+Plots\+View\+:\begin{figure}[H]
 def \mbox{\hyperlink{classviews_1_1_create_plots_view_aee51c04d5e6ee8f975072ae7c85b2ac8}{get}} (self, \mbox{\hyperlink{server_8service_8js_a566411bc360a18f1c21523a0f43e2f45}{request}}, ss)
 \begin{DoxyCompactList}\small\item\em Creates different plots and returns the instance for surface plot. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The class that creates different plots and returns the instance for surface plot. 
+
+The \mbox{\hyperlink{namespaceplots__create}{plots\+\_\+create}} file is run on the result csv files present in the backend corresponding to the current session. A surface plot, heatmap and markers text file are created and saved to the backend. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classviews_1_1_create_plots_view_aee51c04d5e6ee8f975072ae7c85b2ac8}\label{classviews_1_1_create_plots_view_aee51c04d5e6ee8f975072ae7c85b2ac8}} 
@@ -26,7 +36,16 @@ Creates different plots and returns the instance for surface plot.
 
 First all the previous plot files present in the plots folder is deleted and then a command line argument is passed with an argument A (all) to run the plots creating file with files present within the session folder and then 3 files are created. One is a surface plot, second one is a heatmap and lastly a markers text file denoting all the files and all three files are saved within the plots folder within the session (user) folder.
 
-@params self reference to the current instance of the class @params request passes the state through the system @params ss refers to the current session of the user \begin{DoxyReturn}{Returns}
+
+\begin{DoxyParams}{Parameters}
+{\em self} & reference to the current instance of the class \\
+\hline
+{\em request} & passes the state through the system \\
+\hline
+{\em ss} & refers to the current session of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 file response associated with the surface plot file 
 \end{DoxyReturn}
 

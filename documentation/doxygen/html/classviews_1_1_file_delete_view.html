@@ -86,7 +86,7 @@ Inheritance diagram for FileDeleteView:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a39ec541a82eaf4b891eaa4f70b5d7e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviews_1_1_file_delete_view.html#a3a39ec541a82eaf4b891eaa4f70b5d7e">get_object</a> (self, pk)</td></tr>
-<tr class="memdesc:a3a39ec541a82eaf4b891eaa4f70b5d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets that particular file object instance @params self reference to the current instance of the class @params pk instance of that particular file.  <a href="classviews_1_1_file_delete_view.html#a3a39ec541a82eaf4b891eaa4f70b5d7e">More...</a><br /></td></tr>
+<tr class="memdesc:a3a39ec541a82eaf4b891eaa4f70b5d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets that particular file object instance.  <a href="classviews_1_1_file_delete_view.html#a3a39ec541a82eaf4b891eaa4f70b5d7e">More...</a><br /></td></tr>
 <tr class="separator:a3a39ec541a82eaf4b891eaa4f70b5d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc70fb1714790197a7f294620e12ab7e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviews_1_1_file_delete_view.html#abc70fb1714790197a7f294620e12ab7e">delete</a> (self, <a class="el" href="server_8service_8js.html#a566411bc360a18f1c21523a0f43e2f45">request</a>, pk)</td></tr>
 <tr class="memdesc:abc70fb1714790197a7f294620e12ab7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a single file.  <a href="classviews_1_1_file_delete_view.html#abc70fb1714790197a7f294620e12ab7e">More...</a><br /></td></tr>
@@ -95,6 +95,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a9731b74a10637eafda354101c4e3c755"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviews_1_1_file_delete_view.html#a9731b74a10637eafda354101c4e3c755">parser_class</a> = (FileUploadParser,)</td></tr>
+<tr class="memdesc:a9731b74a10637eafda354101c4e3c755"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file upload parser for the class.  <a href="classviews_1_1_file_delete_view.html#a9731b74a10637eafda354101c4e3c755">More...</a><br /></td></tr>
 <tr class="separator:a9731b74a10637eafda354101c4e3c755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -135,7 +136,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Deletes a single file. </p>
 <p>It first checks if the file exists and if it does then gets the file object instance and deletes it from the backend server.</p>
-<p>@params self reference to the current instance of the class @params request passes the state through the system @params pk instance of that particular file </p><dl class="section return"><dt>Returns</dt><dd>response with status 200 if successful deletion, else response with 404 if file not found </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>reference to the current instance of the class </td></tr>
+    <tr><td class="paramname">request</td><td>passes the state through the system </td></tr>
+    <tr><td class="paramname">pk</td><td>instance of that particular file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>response with status 200 if successful deletion, else response with 404 if file not found </dd></dl>
 
 </div>
 </div>
@@ -165,7 +174,14 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets that particular file object instance @params self reference to the current instance of the class @params pk instance of that particular file. </p>
+<p>Gets that particular file object instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>reference to the current instance of the class </td></tr>
+    <tr><td class="paramname">pk</td><td>instance of that particular file </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>the file instance </dd></dl>
 
 </div>
@@ -190,6 +206,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The file upload parser for the class. </p>
 
 </div>
 </div>
