@@ -55,6 +55,7 @@ def tokenization(file,cpp):
                 node.attr = "x"
         data = astunparse.unparse(tree)
         data = re.sub('#[^\n]+', '', data)
+        data = re.sub('import[^\n]+')
         #data = re.sub('//[^\n]+', '', data)
         #data = re.sub('\/\*([^\*\/]+|[^\*]+|[^\/]+)\*\/', '', data)
         #comments removal
