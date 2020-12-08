@@ -1,4 +1,4 @@
-import re,os,sys,csv,ast,astunparser
+import re,os,sys,csv,ast,astunparse
 
 Dictionary = { '=': 0, '!': 1, '%': 2, '^': 4, '&': 5, '*': 6, '+': 7, '-': 8, ':': 9, '|': 10, '\\': 11, '/': 12, '<': 13, '>': 14, '?': 15, '~': 16, '1': 17, '2': 18, '3': 19, '4': 20, '5': 21, '6': 22, '7': 23, '8': 24, '9': 25, '0': 26, '[': 27, ']': 28, '{': 29, '}': 30, '(': 31, ')': 32, '@': 33, '$': 34, '#': 35, 'a': 36, 'b': 37, 'c': 38, 'd': 39, 'e': 40, 'f': 41, 'g': 42, 'h': 43, 'i': 44, 'j': 45, 'k': 46, 'l': 47, 'm': 48, 'n': 49, 'o': 50, 'p': 51, 'q': 52, 'r': 53, 's': 54, 't': 55, 'u': 56, 'v': 57, 'w': 58, 'x': 59, 'y': 60, 'z': 61, '_': 3 }
 
@@ -53,7 +53,7 @@ def tokenization(file,cpp):
                 node.name = "x"
             elif isinstance(node,ast.Attribute):
                 node.attr = "x"
-        data = astunparser.unparse(tree)
+        data = astunparse.unparse(tree)
         data = re.sub('#[^\n]+', '', data)
         #data = re.sub('//[^\n]+', '', data)
         #data = re.sub('\/\*([^\*\/]+|[^\*]+|[^\/]+)\*\/', '', data)
