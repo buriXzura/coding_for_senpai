@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['k_53',['K',['../namespaceplag__check.html#a2689c4b3931025b79053532a5f1b0a85',1,'plag_check']]],
-  ['kgrams_54',['KGrams',['../namespaceplag__check.html#a161b26342abb693d578d36cfb682d62a',1,'plag_check']]]
+  ['orientation_42',['orientation',['../namespaceplots__create.html#ac5fc6e200c34376449ba20a234061eb4',1,'plots_create']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['port_203',['port',['../index_8js.html#a8919360cd4b4bb6c42169b3735ca2a39',1,'index.js']]],
-  ['profile_204',['profile',['../index_8js.html#ad71185e6cb2b367a40c7e3d3c6b59d6e',1,'index.js']]]
+  ['x_135',['x',['../namespaceplots__create.html#a9336ebf25087d91c818ee6e9ec29f8c1',1,'plots_create.x()'],['../namespaceplots__create.html#ac51b57a703ba1c5869228690c93e1701',1,'plots_create.X()']]]
 ];

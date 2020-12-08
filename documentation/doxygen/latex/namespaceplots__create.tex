@@ -8,13 +8,14 @@
 string \mbox{\hyperlink{namespaceplots__create_a7c4682f71f44768fe514fcb55f7fcf40}{result}} = \mbox{\hyperlink{namespaceplots__create_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/results/result.\+csv\char`\"{}
 \begin{DoxyCompactList}\small\item\em the address of results.\+csv \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_ae8f626807b2dddc1872b3005556939cd}{header}} = ft.\+readline()
-\item 
+\begin{DoxyCompactList}\small\item\em one line from results.\+csv \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}} = header.\+split(\textquotesingle{},\textquotesingle{})
-\item 
+\begin{DoxyCompactList}\small\item\em a list obtained on splitting \textquotesingle{}header\textquotesingle{} by commas \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}} = np.\+genfromtxt(\mbox{\hyperlink{namespaceplots__create_a7c4682f71f44768fe514fcb55f7fcf40}{result}}, dtype=float, delimiter=\textquotesingle{},\textquotesingle{}, skip\+\_\+header=1)
-\item 
+\begin{DoxyCompactList}\small\item\em stores the resulting output after removing \textquotesingle{}~\newline
+\textquotesingle{} from the last column of the csv file \end{DoxyCompactList}\item 
 dictionary \mbox{\hyperlink{namespaceplots__create_a2d163db2dd2050926a0bc5e76f88c4d8}{my\+\_\+dict}} = \{\}
-\item 
+\begin{DoxyCompactList}\small\item\em stores the data from the result file corresponding to the selected files \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceplots__create_a4124bc0a9335c27f086f24ba207a4912}{a}} = np.\+empty(\mbox{[}len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}),len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}})\mbox{]})
 \item 
 \mbox{\hyperlink{namespaceplots__create_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = np.\+linspace(0, len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}), len(\mbox{\hyperlink{namespaceplots__create_afafecb95aca5e0525fd6959a5602fb89}{files}}))
@@ -60,7 +61,12 @@ dictionary \mbox{\hyperlink{namespaceplots__create_a2d163db2dd2050926a0bc5e76f88
 \doxysubsubsection{\texorpdfstring{data}{data}}
 {\footnotesize\ttfamily data = np.\+genfromtxt(\mbox{\hyperlink{namespaceplots__create_a7c4682f71f44768fe514fcb55f7fcf40}{result}}, dtype=float, delimiter=\textquotesingle{},\textquotesingle{}, skip\+\_\+header=1)}
 
-\mbox{\Hypertarget{namespaceplots__create_aedf03b9517092eee7dae1588bbc00e19}\label{namespaceplots__create_aedf03b9517092eee7dae1588bbc00e19}} 
+
+
+stores the resulting output after removing \textquotesingle{}~\newline
+\textquotesingle{} from the last column of the csv file 
+
+stores results.\+csv into an np array \mbox{\Hypertarget{namespaceplots__create_aedf03b9517092eee7dae1588bbc00e19}\label{namespaceplots__create_aedf03b9517092eee7dae1588bbc00e19}} 
 \index{plots\_create@{plots\_create}!directory@{directory}}
 \index{directory@{directory}!plots\_create@{plots\_create}}
 \doxysubsubsection{\texorpdfstring{directory}{directory}}
@@ -88,11 +94,19 @@ the directory where the result csv file is present and the plots are to be saved
 \doxysubsubsection{\texorpdfstring{files}{files}}
 {\footnotesize\ttfamily files = header.\+split(\textquotesingle{},\textquotesingle{})}
 
+
+
+a list obtained on splitting \textquotesingle{}header\textquotesingle{} by commas 
+
 \mbox{\Hypertarget{namespaceplots__create_ae8f626807b2dddc1872b3005556939cd}\label{namespaceplots__create_ae8f626807b2dddc1872b3005556939cd}} 
 \index{plots\_create@{plots\_create}!header@{header}}
 \index{header@{header}!plots\_create@{plots\_create}}
 \doxysubsubsection{\texorpdfstring{header}{header}}
 {\footnotesize\ttfamily header = ft.\+readline()}
+
+
+
+one line from results.\+csv 
 
 \mbox{\Hypertarget{namespaceplots__create_a4c6f2549afdecf016a32812b531c474b}\label{namespaceplots__create_a4c6f2549afdecf016a32812b531c474b}} 
 \index{plots\_create@{plots\_create}!heatmap@{heatmap}}
@@ -111,6 +125,10 @@ the directory where the result csv file is present and the plots are to be saved
 \index{my\_dict@{my\_dict}!plots\_create@{plots\_create}}
 \doxysubsubsection{\texorpdfstring{my\_dict}{my\_dict}}
 {\footnotesize\ttfamily dictionary my\+\_\+dict = \{\}}
+
+
+
+stores the data from the result file corresponding to the selected files 
 
 \mbox{\Hypertarget{namespaceplots__create_ac5fc6e200c34376449ba20a234061eb4}\label{namespaceplots__create_ac5fc6e200c34376449ba20a234061eb4}} 
 \index{plots\_create@{plots\_create}!orientation@{orientation}}

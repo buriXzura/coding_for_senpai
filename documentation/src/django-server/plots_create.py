@@ -12,16 +12,20 @@ result = directory+"/results/result.csv"
 
 
 with open(result,'r') as ft:
+    ##one line from results.csv
     header = ft.readline()
+    ##a list obtained on splitting 'header' by commas
     files = header.split(',')
+    ##stores the resulting output after removing '\n' from the last column of the csv file
     files[len(files)-1] = files[len(files)-1].split('\n')[0] #remove '\n' form the last column of csv file
 
-
+##stores results.csv into an np array
 data = np.genfromtxt(result, dtype=float, delimiter=',', skip_header=1)
 
 #if plot required for a few selected files only
 #extacting the data from the result file corresponding to the selected files
 if sys.argv[2]=='S':
+    ##stores the data from the result file corresponding to the selected files
     my_dict = {}
     for i in range(len(files)):
         my_dict[files[i]] = i

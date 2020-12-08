@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pymethod_153',['PyMethod',['../classttt_1_1_py_class.html#a06331a3bf023b9e7a180422e737b0381',1,'ttt::PyClass']]]
+  ['window_96',['window',['../namespaceplag__check.html#a268f64fcd888c7d68682cf777576f526',1,'plag_check']]]
 ];

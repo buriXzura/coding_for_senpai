@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['result_205',['result',['../namespaceplots__create.html#a7c4682f71f44768fe514fcb55f7fcf40',1,'plots_create']]],
-  ['router_206',['router',['../profile_8js.html#af100c40b3949fbe4f9f71d346fc5f852',1,'profile.js']]]
+  ['y_136',['Y',['../namespaceplots__create.html#a0867f43e27585e019c13f7f4b7c4ab6b',1,'plots_create.Y()'],['../namespaceplots__create.html#a2fb1c5cf58867b5bbc9a1b145a86f3a0',1,'plots_create.y()']]]
 ];

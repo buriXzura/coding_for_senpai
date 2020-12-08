@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['plag_5fcheck_72',['plag_check',['../namespaceplag__check.html',1,'']]],
-  ['plag_5fcheck_2epy_73',['plag_check.py',['../plag__check_8py.html',1,'']]],
-  ['plots_5fcreate_74',['plots_create',['../namespaceplots__create.html',1,'']]],
-  ['plots_5fcreate_2epy_75',['plots_create.py',['../plots__create_8py.html',1,'']]],
-  ['port_76',['port',['../index_8js.html#a8919360cd4b4bb6c42169b3735ca2a39',1,'index.js']]],
-  ['profile_77',['profile',['../index_8js.html#ad71185e6cb2b367a40c7e3d3c6b59d6e',1,'index.js']]],
-  ['profile_2ejs_78',['profile.js',['../profile_8js.html',1,'']]],
-  ['pyclass_79',['PyClass',['../classttt_1_1_py_class.html',1,'ttt']]],
-  ['pymethod_80',['PyMethod',['../classttt_1_1_py_class.html#a06331a3bf023b9e7a180422e737b0381',1,'ttt::PyClass']]]
+  ['w_64',['W',['../namespaceplag__check.html#a2dd51e03005d5cb52315290d27f61870',1,'plag_check']]],
+  ['window_65',['window',['../namespaceplag__check.html#a268f64fcd888c7d68682cf777576f526',1,'plag_check']]],
+  ['write_66',['write',['../namespaceplag__check.html#a0328b2b476ba0d019492a722f334d2b6',1,'plag_check']]]
 ];

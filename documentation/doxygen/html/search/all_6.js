@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['fig_29',['fig',['../namespaceplots__create.html#a64aa603bc3c6c1587e7c6542452481ac',1,'plots_create']]],
-  ['file_2eservice_2ejs_30',['file.service.js',['../file_8service_8js.html',1,'']]],
-  ['files_31',['files',['../namespaceplag__check.html#ae49a09f7c1e8876c2becb188c4c9d681',1,'plag_check.files()'],['../namespaceplots__create.html#afafecb95aca5e0525fd6959a5602fb89',1,'plots_create.files()']]],
-  ['fingerprints_32',['fingerprints',['../namespaceplag__check.html#af30f3f44bbef411e0d6ec429261c29b4',1,'plag_check']]],
-  ['func_33',['func',['../namespacettt.html#adac4d7ced62eb3f99ae029fe1aa3ce9c',1,'ttt']]]
+  ['hashes_19',['Hashes',['../namespaceplag__check.html#a6b20a61379c99bb09483889215c02101',1,'plag_check']]],
+  ['hashing_20',['hashing',['../namespaceplag__check.html#ad8168749dbce6954dc043987121724d1',1,'plag_check']]],
+  ['hashtable_5fgst_21',['hashTable_GST',['../namespaceplag__check.html#a1ed3cc039900d1e0489fca820cf6b9e7',1,'plag_check']]],
+  ['header_22',['header',['../namespaceplots__create.html#ae8f626807b2dddc1872b3005556939cd',1,'plots_create']]],
+  ['heatmap_23',['heatmap',['../namespaceplots__create.html#a4c6f2549afdecf016a32812b531c474b',1,'plots_create']]]
 ];

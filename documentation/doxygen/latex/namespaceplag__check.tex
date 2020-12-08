@@ -24,31 +24,31 @@ dictionary \mbox{\hyperlink{namespaceplag__check_a5a1270fc81b85ff7d2fe588424eab1
 \begin{DoxyCompactList}\small\item\em directory containing files that need to be checked for plagarism \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespaceplag__check_af5dc55049c9faea66128791bf5b2debc}{cpp}} = True
 \item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}} = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/\char`\"{}+name)\mbox{]}
+list \mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}} = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/\char`\"{}+name)\mbox{]}
 \begin{DoxyCompactList}\small\item\em list of files in the selected directory \end{DoxyCompactList}\item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_a161b26342abb693d578d36cfb682d62a}{K\+Grams}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+list \mbox{\hyperlink{namespaceplag__check_a161b26342abb693d578d36cfb682d62a}{K\+Grams}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
 \begin{DoxyCompactList}\small\item\em list of length equal to number of files; for storing K\+Gram for i th file at the i th index \end{DoxyCompactList}\item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_a6b20a61379c99bb09483889215c02101}{Hashes}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+list \mbox{\hyperlink{namespaceplag__check_a6b20a61379c99bb09483889215c02101}{Hashes}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
 \begin{DoxyCompactList}\small\item\em list of length equal to number of files; for storing Hash Values for i th file at the i th index \end{DoxyCompactList}\item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_a018aaab493af92ea83348b0db6e32328}{data}} = \mbox{[}\char`\"{}\char`\"{}\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+list \mbox{\hyperlink{namespaceplag__check_a018aaab493af92ea83348b0db6e32328}{data}} = \mbox{[}\char`\"{}\char`\"{}\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
 \begin{DoxyCompactList}\small\item\em list of length equal to number of files; for storing tokenized data for i th file at the i th index \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}} = 10
 \begin{DoxyCompactList}\small\item\em value of K for the K\+Grams function \end{DoxyCompactList}\item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}} = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub\char`\"{}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub/\char`\"{}+name)\mbox{]}\mbox{[}0\mbox{]}
+list \mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}} = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub\char`\"{}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/stub/\char`\"{}+name)\mbox{]}\mbox{[}0\mbox{]}
 \begin{DoxyCompactList}\small\item\em storing path of the stubfile in the directory \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}} = \mbox{\hyperlink{namespaceplag__check_a3b2aba03324447ea51d834c5cbcefa17}{tokenization}}(\mbox{\hyperlink{namespaceplag__check_ab67197572b0ad384d2295afe307ee6c4}{stub}},\mbox{\hyperlink{namespaceplag__check_af5dc55049c9faea66128791bf5b2debc}{cpp}})
 \begin{DoxyCompactList}\small\item\em stores tokenized form of the stub file \end{DoxyCompactList}\item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}{Stub\+\_\+\+K\+Grams}} = \mbox{[} \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}\mbox{[}x\+:x+\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}\mbox{]} for x in range(len(\mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}})-\/\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}+1) \mbox{]}
+list \mbox{\hyperlink{namespaceplag__check_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}{Stub\+\_\+\+K\+Grams}} = \mbox{[} \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}\mbox{[}x\+:x+\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}\mbox{]} for x in range(len(\mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}})-\/\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}+1) \mbox{]}
 \begin{DoxyCompactList}\small\item\em stores the result of performing K\+Grams on the tokenized stub file \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceplag__check_af90955ba567714cb946aac3901dd8e23}{Stub\+\_\+\+Hashes}} = \mbox{\hyperlink{namespaceplag__check_ad8168749dbce6954dc043987121724d1}{hashing}}(\mbox{\hyperlink{namespaceplag__check_ae9e32c2ae3aaeed38bf05b6e16e2cbfe}{Stub\+\_\+\+K\+Grams}}, \mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}})
 \begin{DoxyCompactList}\small\item\em stores the result of running hashing on Stub\+\_\+\+K\+Grams \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespaceplag__check_a2dd51e03005d5cb52315290d27f61870}{W}} = 7
 \begin{DoxyCompactList}\small\item\em sets the length of the window for the window function \end{DoxyCompactList}\item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_af30f3f44bbef411e0d6ec429261c29b4}{fingerprints}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+list \mbox{\hyperlink{namespaceplag__check_af30f3f44bbef411e0d6ec429261c29b4}{fingerprints}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
 \item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_a0896bd81ccc18cea601a7cbf2fce983a}{Cov}} = \mbox{[}\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}}(range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))) for i in range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))\mbox{]}
+list \mbox{\hyperlink{namespaceplag__check_a0896bd81ccc18cea601a7cbf2fce983a}{Cov}} = \mbox{[}list(range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))) for i in range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))\mbox{]}
 \begin{DoxyCompactList}\small\item\em nxn matrix for storing similarity measures corresponding to each file pair, where n is the number of files \end{DoxyCompactList}\item 
-\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} \mbox{\hyperlink{namespaceplag__check_a1633162830cf2d2447e2cfee92828aa5}{sizes}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
+list \mbox{\hyperlink{namespaceplag__check_a1633162830cf2d2447e2cfee92828aa5}{sizes}} = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})
 \begin{DoxyCompactList}\small\item\em list whose ith index stores sum of fingerprints of ith file \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespaceplag__check_a31bc6dc20d15325dc236b4e74586325b}{inter}} = 0
 \item 
@@ -226,7 +226,7 @@ fingerprints dictionary
 \index{plag\_check@{plag\_check}!Cov@{Cov}}
 \index{Cov@{Cov}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{Cov}{Cov}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} Cov = \mbox{[}\mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}}(range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))) for i in range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))\mbox{]}}
+{\footnotesize\ttfamily list Cov = \mbox{[}list(range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))) for i in range(len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}}))\mbox{]}}
 
 
 
@@ -242,7 +242,7 @@ nxn matrix for storing similarity measures corresponding to each file pair, wher
 \index{plag\_check@{plag\_check}!data@{data}}
 \index{data@{data}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{data}{data}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} data = \mbox{[}\char`\"{}\char`\"{}\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+{\footnotesize\ttfamily list data = \mbox{[}\char`\"{}\char`\"{}\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
 
 
 
@@ -272,7 +272,7 @@ directory containing files that need to be checked for plagarism
 \index{plag\_check@{plag\_check}!files@{files}}
 \index{files@{files}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{files}{files}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} files = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/\char`\"{}+name)\mbox{]}}
+{\footnotesize\ttfamily list files = \mbox{[}name for name in os.\+listdir(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}) if os.\+path.\+isfile(\mbox{\hyperlink{namespaceplag__check_aedf03b9517092eee7dae1588bbc00e19}{directory}}+\char`\"{}/\char`\"{}+name)\mbox{]}}
 
 
 
@@ -282,13 +282,13 @@ list of files in the selected directory
 \index{plag\_check@{plag\_check}!fingerprints@{fingerprints}}
 \index{fingerprints@{fingerprints}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{fingerprints}{fingerprints}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} fingerprints = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+{\footnotesize\ttfamily list fingerprints = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
 
 \mbox{\Hypertarget{namespaceplag__check_a6b20a61379c99bb09483889215c02101}\label{namespaceplag__check_a6b20a61379c99bb09483889215c02101}} 
 \index{plag\_check@{plag\_check}!Hashes@{Hashes}}
 \index{Hashes@{Hashes}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{Hashes}{Hashes}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} Hashes = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+{\footnotesize\ttfamily list Hashes = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
 
 
 
@@ -314,7 +314,7 @@ value of K for the K\+Grams function
 \index{plag\_check@{plag\_check}!KGrams@{KGrams}}
 \index{KGrams@{KGrams}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{KGrams}{KGrams}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} K\+Grams = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+{\footnotesize\ttfamily list K\+Grams = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
 
 
 
@@ -336,7 +336,7 @@ list of length equal to number of files; for storing K\+Gram for i th file at th
 \index{plag\_check@{plag\_check}!sizes@{sizes}}
 \index{sizes@{sizes}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{sizes}{sizes}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} sizes = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
+{\footnotesize\ttfamily list sizes = \mbox{[}0\mbox{]}$\ast$len(\mbox{\hyperlink{namespaceplag__check_ae49a09f7c1e8876c2becb188c4c9d681}{files}})}
 
 
 
@@ -376,7 +376,7 @@ stores the result of running hashing on Stub\+\_\+\+K\+Grams
 \index{plag\_check@{plag\_check}!Stub\_KGrams@{Stub\_KGrams}}
 \index{Stub\_KGrams@{Stub\_KGrams}!plag\_check@{plag\_check}}
 \doxysubsubsection{\texorpdfstring{Stub\_KGrams}{Stub\_KGrams}}
-{\footnotesize\ttfamily \mbox{\hyperlink{file_8service_8js_a022d1f395133922ce1f7a473c1e72d0c}{list}} Stub\+\_\+\+K\+Grams = \mbox{[} \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}\mbox{[}x\+:x+\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}\mbox{]} for x in range(len(\mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}})-\/\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}+1) \mbox{]}}
+{\footnotesize\ttfamily list Stub\+\_\+\+K\+Grams = \mbox{[} \mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}}\mbox{[}x\+:x+\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}\mbox{]} for x in range(len(\mbox{\hyperlink{namespaceplag__check_a3ca630b7d03851dc8dfe7f38546d5255}{stub\+\_\+data}})-\/\mbox{\hyperlink{namespaceplag__check_a2689c4b3931025b79053532a5f1b0a85}{K}}+1) \mbox{]}}
 
 
 

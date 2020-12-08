@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['orientation_202',['orientation',['../namespaceplots__create.html#ac5fc6e200c34376449ba20a234061eb4',1,'plots_create']]]
+  ['w_133',['W',['../namespaceplag__check.html#a2dd51e03005d5cb52315290d27f61870',1,'plag_check']]],
+  ['write_134',['write',['../namespaceplag__check.html#a0328b2b476ba0d019492a722f334d2b6',1,'plag_check']]]
 ];

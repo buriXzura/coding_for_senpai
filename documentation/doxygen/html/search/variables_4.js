@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['express_182',['express',['../index_8js.html#a7f3341255b805bd92d1033378a0a0c6b',1,'express():&#160;index.js'],['../profile_8js.html#a7f3341255b805bd92d1033378a0a0c6b',1,'express():&#160;profile.js']]]
+  ['hashes_111',['Hashes',['../namespaceplag__check.html#a6b20a61379c99bb09483889215c02101',1,'plag_check']]],
+  ['header_112',['header',['../namespaceplots__create.html#ae8f626807b2dddc1872b3005556939cd',1,'plots_create']]],
+  ['heatmap_113',['heatmap',['../namespaceplots__create.html#a4c6f2549afdecf016a32812b531c474b',1,'plots_create']]]
 ];

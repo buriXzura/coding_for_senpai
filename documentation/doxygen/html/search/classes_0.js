@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['downloadresults_109',['DownloadResults',['../class_download_results.html',1,'']]]
+  ['pyclass_69',['PyClass',['../classttt_1_1_py_class.html',1,'ttt']]]
 ];
