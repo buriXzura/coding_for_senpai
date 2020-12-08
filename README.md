@@ -2,8 +2,8 @@
 
 **Part 1: The Core Logic**
 
-*Implemented Winnowing Algorithm for similarity detection*
-*Implemented RKR-GST (Running Karp Rabin-Greedy String Tiling) Algorithm for stub code removal
+*  Implemented Winnowing Algorithm for similarity detection*
+*  Implemented RKR-GST (Running Karp Rabin-Greedy String Tiling) Algorithm for stub code removal*
 
 **Part 2: The Frontend**
 
